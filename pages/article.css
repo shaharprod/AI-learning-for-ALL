@@ -564,6 +564,20 @@
     margin-bottom: 1.5rem;
 }
 
+.quiz-model-tag {
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.quiz-model {
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
 #quiz-retry {
     padding: 0.75rem 2rem;
     background: white;

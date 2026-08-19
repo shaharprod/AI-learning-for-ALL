@@ -148,7 +148,9 @@ document.querySelectorAll('.card').forEach(card => {
     observer.observe(card);
 });
 
-console.log('AI Learning Website · שחר הפקות AI · B0.15 Loaded Successfully! 🤖');
+console.log('AI Learning Website · שחר הפקות AI · V1.0 Loaded Successfully! 🤖');
+
+var SITE_MODEL_NAME = 'שחר הפקות AI · V1.0';
 
 // Quiz Functionality
 function initQuiz() {
@@ -161,6 +163,14 @@ function initQuiz() {
     const percentSpan = document.getElementById('quiz-percent');
     const messageSpan = document.getElementById('quiz-message');
     const retryBtn = document.getElementById('quiz-retry');
+
+    var quizHeading = document.querySelector('#quiz-section h2');
+    if (quizHeading && !quizHeading.querySelector('.quiz-model-tag')) {
+        var tag = document.createElement('span');
+        tag.className = 'quiz-model-tag';
+        tag.textContent = ' · ' + SITE_MODEL_NAME;
+        quizHeading.appendChild(tag);
+    }
 
     submitBtn.addEventListener('click', () => {
         const questions = quizForm.querySelectorAll('.quiz-question');
@@ -259,6 +269,13 @@ function initQuiz() {
             emoji = '💪';
         }
         messageSpan.textContent = emoji + ' ' + message;
+
+        if (!resultsDiv.querySelector('.quiz-model')) {
+            var modelLine = document.createElement('p');
+            modelLine.className = 'quiz-model';
+            modelLine.textContent = SITE_MODEL_NAME;
+            resultsDiv.appendChild(modelLine);
+        }
 
         // Show results
         resultsDiv.style.display = 'block';

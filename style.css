@@ -181,6 +181,7 @@ a:hover {
 }
 
 .logo-text {
+    order: 0;
     overflow-wrap: break-word;
     word-break: break-word;
     color: #000000;
@@ -207,7 +208,8 @@ html[lang="hi"] .logo-stack {
     align-items: flex-start;
 }
 
-.logo-byline {
+.logo-dedication {
+    order: 1;
     font-size: var(--logo-brand-font-size) !important;
     font-weight: 500;
     line-height: 1.2;
@@ -216,7 +218,8 @@ html[lang="hi"] .logo-stack {
     max-width: min(36rem, 96vw);
 }
 
-.logo-dedication {
+.logo-byline {
+    order: 2;
     font-size: calc(var(--logo-brand-font-size) * 0.82) !important;
     font-weight: 500;
     line-height: 1.25;
@@ -225,7 +228,7 @@ html[lang="hi"] .logo-stack {
     max-width: min(36rem, 96vw);
 }
 
-/* English: אותו גודל פונט לשתי שורות הלוגו + עיצוב כמו עברית (פס LTR) */
+/* LTR: אותם יחסי גודל כמו בעברית — COMBE למעלה בגדול, שחר הפקות למטה בקטן */
 html[dir="ltr"] .header::after,
 html[lang="en"] .header::after {
     background:
@@ -271,14 +274,24 @@ html[lang="en"] .logo-text {
     line-height: 1.2;
 }
 
-html[dir="ltr"] .logo-byline,
-html[lang="en"] .logo-byline {
+html[dir="ltr"] .logo-dedication,
+html[lang="en"] .logo-dedication {
     font-size: var(--logo-brand-font-size) !important;
     max-width: min(36rem, 96vw);
     color: #2b6df2;
     opacity: 1;
     font-weight: 500;
     line-height: 1.2;
+}
+
+html[dir="ltr"] .logo-byline,
+html[lang="en"] .logo-byline {
+    font-size: calc(var(--logo-brand-font-size) * 0.82) !important;
+    max-width: min(36rem, 96vw);
+    color: #1d4ed8;
+    opacity: 0.95;
+    font-weight: 500;
+    line-height: 1.25;
 }
 
 .nav-links {
@@ -670,19 +683,35 @@ html[lang="en"] .logo-byline {
         line-height: 1.2;
     }
 
-    .logo-byline {
+    .logo-dedication {
         font-size: var(--logo-brand-font-size) !important;
         font-weight: 500;
         max-width: min(34rem, 94vw);
         color: #2b6df2;
     }
 
-    html[dir="ltr"] .logo-byline,
-    html[lang="en"] .logo-byline {
+    .logo-byline {
+        font-size: calc(var(--logo-brand-font-size) * 0.82) !important;
+        font-weight: 500;
+        max-width: min(34rem, 94vw);
+        color: #1d4ed8;
+    }
+
+    html[dir="ltr"] .logo-dedication,
+    html[lang="en"] .logo-dedication {
         font-size: var(--logo-brand-font-size) !important;
         max-width: min(34rem, 94vw);
         color: #2b6df2;
         opacity: 1;
+        font-weight: 500;
+    }
+
+    html[dir="ltr"] .logo-byline,
+    html[lang="en"] .logo-byline {
+        font-size: calc(var(--logo-brand-font-size) * 0.82) !important;
+        max-width: min(34rem, 94vw);
+        color: #1d4ed8;
+        opacity: 0.95;
         font-weight: 500;
     }
 
@@ -876,9 +905,15 @@ html[lang="en"] .logo-byline {
         font-size: var(--logo-brand-font-size) !important;
     }
 
+    .logo-dedication,
+    html[lang="en"] .logo-dedication {
+        font-size: var(--logo-brand-font-size) !important;
+        font-weight: 500;
+    }
+
     .logo-byline,
     html[lang="en"] .logo-byline {
-        font-size: var(--logo-brand-font-size) !important;
+        font-size: calc(var(--logo-brand-font-size) * 0.82) !important;
         font-weight: 500;
     }
 
