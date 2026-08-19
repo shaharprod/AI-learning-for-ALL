@@ -8,6 +8,7 @@
     if (path.indexOf('-en.') !== -1) searchPage = 'search-en.html';
     else if (path.indexOf('-ar.') !== -1) searchPage = 'search-ar.html';
     else if (path.indexOf('-hi.') !== -1) searchPage = 'search-hi.html';
+    else if (path.indexOf('-ru.') !== -1) searchPage = 'search-ru.html';
     form.action = base + searchPage;
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -148,9 +149,9 @@ document.querySelectorAll('.card').forEach(card => {
     observer.observe(card);
 });
 
-console.log('AI Learning Website · שחר הפקות AI · V1.0 Loaded Successfully! 🤖');
+console.log('AI Learning Website · שחר הפקות AI · V1.1 Loaded Successfully! 🤖');
 
-var SITE_MODEL_NAME = 'שחר הפקות AI · V1.0';
+var SITE_MODEL_NAME = 'שחר הפקות AI · V1.1';
 
 // Quiz Functionality
 function initQuiz() {
@@ -252,6 +253,12 @@ function initQuiz() {
                 good: 'शाबाश! विषय की अच्छी समझ',
                 ok: 'ठीक है! सामग्री दोबारा देखना अच्छा होगा',
                 low: 'पाठ को फिर से पढ़ने की सलाह'
+            },
+            ru: {
+                excellent: 'Отлично! Вы уверенно владеете материалом!',
+                good: 'Молодец! Тема понята хорошо',
+                ok: 'Неплохо! Стоит ещё раз повторить материал',
+                low: 'Рекомендуем прочитать урок ещё раз'
             }
         };
         const msgs = quizMessages[lang] || quizMessages.he;

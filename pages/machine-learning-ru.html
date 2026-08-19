@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" data-version="V1.1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="V1.1">
+    <meta name="application-name" content="שחר הפקות AI V1.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Машинное обучение | Обучение ИИ · שחר הפקות AI · V1.1 · Создано для: COMBE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>body { direction: ltr; }</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index-ru.html">
+                    <img src="../images/colorful%20digital%20media%20sy.png" alt="Логотип" class="logo-icon">
+                    <span class="logo-stack">
+                        <span class="logo-text">Обучение ИИ</span>
+                        <span class="logo-byline">שחר הפקות AI · V1.1</span>
+                        <span class="logo-dedication">Создано для: COMBE</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index-ru.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="../index-ru.html#topics" class="dropdown-toggle">Уроки ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="intro-to-ai-ru.html">1. Введение в ИИ</a></li>
+                        <li><a href="ai-history-ru.html">2. История ИИ</a></li>
+                        <li><a href="machine-learning-ru.html">3. Машинное обучение</a></li>
+                        <li><a href="ai-daily-life-ru.html">4. ИИ в повседневной жизни</a></li>
+                        <li><a href="ai-tools-ru.html">5. Практические инструменты</a></li>
+                        <li><a href="prompt-engineering-ru.html">6. Промпт-инжиниринг</a></li>
+                        <li><a href="ai-ethics-ru.html">7. Этика ИИ</a></li>
+                        <li><a href="ai-future-ru.html">8. Будущее ИИ</a></li>
+                        <li><a href="glossary-ru.html">9. Словарь терминов</a></li>
+                    </ul>
+                </li>
+                <li><a href="glossary-ru.html">Словарь</a></li>
+                <li><a href="ai-tools-ru.html">Инструменты</a></li>
+                <li><a href="../index-ru.html#about">О сайте</a></li>
+            </ul>
+            <form class="nav-search" id="site-search" role="search">
+                <input type="search" name="q" placeholder="Поиск..." aria-label="Поиск" />
+                <button type="submit" aria-label="Поиск">🔍</button>
+            </form>
+            <nav class="lang-switcher" aria-label="Язык">
+                <a href="machine-learning.html" hreflang="he" lang="he">עברית</a>
+                <a href="machine-learning-en.html" hreflang="en" lang="en">English</a>
+                <a href="machine-learning-ar.html" hreflang="ar" lang="ar">العربية</a>
+                <a href="machine-learning-hi.html" hreflang="hi" lang="hi">हिन्दी</a>
+                <span class="lang-active" aria-current="page">Русский</span>
+            </nav>
+            <button type="button" class="mobile-menu-btn" aria-label="Меню"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+    <main class="article">
+        <div class="container">
+            <div class="breadcrumb"><a href="../index-ru.html">Главная</a> / <span>Машинное обучение</span></div>
+            <article class="article-content">
+                <h1>Машинное обучение</h1>
+                <p class="article-meta">🔮 Время чтения: 20 мин | Уровень: начальный–средний</p>
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop" alt="Машинное обучение — нейронная сеть" class="article-header-image">
+
+                <section>
+                    <h2 id="what-is-ml">Что такое машинное обучение?</h2>
+                    <p>
+                        Машинное обучение (ML) — центральная и самая важная ветвь искусственного интеллекта сегодня.
+                        Это технология, которая стоит почти за всем, что мы называем ИИ, — от ChatGPT до рекомендаций Netflix.
+                    </p>
+                    <p>
+                        <strong>Формальное определение:</strong> машинное обучение — область, которая позволяет компьютерам
+                        <strong>учиться на данных и улучшать выполнение задач</strong> — без явного программирования
+                        для каждой возможной ситуации.
+                    </p>
+
+                    <div class="info-card tip">
+                        <strong>💡 Главное отличие от обычного программирования:</strong>
+                        <ul>
+                            <li><strong>Обычное программирование:</strong> вы пишете правила → компьютер их выполняет</li>
+                            <li><strong>Машинное обучение:</strong> вы даёте примеры → компьютер сам находит правила</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        Звучит просто, но это революция. Вместо того чтобы программист продумывал каждый возможный случай и писал
+                        правило, компьютер сам учится на примерах и обнаруживает закономерности, которые человек мог бы и не заметить.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 id="how-it-works">Как это работает? Полная картина</h2>
+
+                    <h3 id="child-and-dog">Ребёнок и собака</h3>
+                    <p>
+                        Предположим, мы хотим научить маленького ребёнка, что такое «собака»:
+                    </p>
+                    <div class="example-box">
+                        <h4>👶 Традиционный способ (обычное программирование)</h4>
+                        <p>Мы объясняем ребёнку правила:</p>
+                        <ul>
+                            <li>«Собака — это животное с 4 лапами»</li>
+                            <li>«У неё есть шерсть»</li>
+                            <li>«У неё есть уши»</li>
+                            <li>«У неё есть хвост»</li>
+                        </ul>
+                        <p>❌ <strong>Проблемы:</strong></p>
+                        <ul>
+                            <li>У кошек тоже 4 лапы, шерсть, уши и хвост</li>
+                            <li>У некоторых собак нет хвоста</li>
+                            <li>У одних собак стоячие уши, у других — висячие</li>
+                            <li>Есть крошечные собаки и огромные</li>
+                            <li>Невозможно записать все правила!</li>
+                        </ul>
+                    </div>
+                    <div class="example-box">
+                        <h4>🧒 Способ машинного обучения</h4>
+                        <p>Мы показываем ребёнку тысячи изображений:</p>
+                        <ul>
+                            <li>«Это собака» (смотрит 1000 изображений)</li>
+                            <li>«Это не собака» (смотрит 1000 изображений кошек, кроликов и т. д.)</li>
+                        </ul>
+                        <p>✅ <strong>Что происходит:</strong></p>
+                        <ul>
+                            <li>Ребёнок сам усваивает закономерности</li>
+                            <li>Он не может точно объяснить, откуда знает, — но знает</li>
+                            <li>Он узнаёт новых собак, которых никогда не видел</li>
+                        </ul>
+                    </div>
+                    <p>
+                        <strong>Именно так работает машинное обучение!</strong> Компьютер видит много примеров,
+                        находит закономерности и строит внутреннюю «модель», которая позволяет обобщать на новые случаи.
+                    </p>
+
+                    <h3 id="technical-process">Технический процесс (упрощённо)</h3>
+                    <div class="example-box">
+                        <h4>📊 Шаг 1: Сбор данных</h4>
+                        <p>Собираем много примеров. Обычно чем больше, тем лучше.</p>
+                        <p><strong>Пример:</strong> 10 000 изображений собак и 10 000 изображений не-собак</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>🏷️ Шаг 2: Разметка (иногда)</h4>
+                        <p>Размечаем данные — какой правильный ответ у каждого примера.</p>
+                        <p><strong>Пример:</strong> каждое изображение помечено как «собака» или «не собака»</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>🏋️ Шаг 3: Обучение (training)</h4>
+                        <p>Компьютер проходит все примеры, анализирует их и ищет закономерности.</p>
+                        <p>Это как «готовиться к экзамену»: компьютер практикуется снова и снова, пока не начнёт справляться.</p>
+                        <p><strong>Время:</strong> от минут до недель — зависит от сложности</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>🎯 Шаг 4: Модель</h4>
+                        <p>Результат — «модель»: математическая структура, которая отражает то, чему компьютер научился.</p>
+                        <p>Модель — как «мозг», построенный в процессе обучения.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>🔮 Шаг 5: Вывод (inference)</h4>
+                        <p>Теперь модели можно дать новый вход, и она «угадает» ответ.</p>
+                        <p><strong>Пример:</strong> новое изображение → модель говорит: «с вероятностью 93% это собака»</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>📈 Шаг 6: Оценка и улучшение</h4>
+                        <p>Проверяем, как часто модель права. Если ошибок много — улучшаем и корректируем.</p>
+                        <p>Это итеративный процесс постоянного улучшения.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="three-types">Три вида машинного обучения</h2>
+                    <p>Есть три основных подхода, каждый подходит к разным ситуациям:</p>
+
+                    <h3 id="supervised">1. Обучение с учителем (supervised) 👨‍🏫</h3>
+                    <p>
+                        Самый распространённый вид. Компьютер получает примеры <strong>с правильными ответами</strong>
+                        (метками) и учится предсказывать ответ для новых примеров.
+                    </p>
+                    <div class="example-box">
+                        <h4>Как это работает:</h4>
+                        <p>Как учёба с учителем, который даёт упражнения с решениями:</p>
+                        <ul>
+                            <li>Компьютер видит: вход (X) → ответ (Y)</li>
+                            <li>Компьютер учится: какая связь между X и Y?</li>
+                            <li>Теперь, когда есть новый X → компьютер угадывает Y</li>
+                        </ul>
+                    </div>
+                    <div class="example-box">
+                        <h4>Примеры из реальной жизни:</h4>
+                        <ul>
+                            <li><strong>Обнаружение спама:</strong> тысячи писем с метками «спам» / «не спам» → модель учится их различать</li>
+                            <li><strong>Прогноз цены дома:</strong> данные о проданных домах и ценах → модель предсказывает цену нового дома</li>
+                            <li><strong>Медицинская диагностика:</strong> рентгеновские снимки с метками «здоров» / «болезнь» → модель выявляет заболевания</li>
+                            <li><strong>Распознавание лиц:</strong> изображения с именами → модель узнаёт, кто на фото</li>
+                            <li><strong>Перевод:</strong> миллионы переведённых предложений → модель учится переводить</li>
+                        </ul>
+                    </div>
+                    <div class="info-card tip">
+                        <strong>💡 Преимущество:</strong> точные и надёжные результаты<br>
+                        <strong>⚠️ Недостаток:</strong> нужно много размеченных данных (дорого и долго)
+                    </div>
+
+                    <h3 id="unsupervised">2. Обучение без учителя (unsupervised) 🔍</h3>
+                    <p>
+                        Компьютер получает данные <strong>без ответов</strong> и сам ищет закономерности и структуру.
+                        Как дать ребёнку кучу игрушек и попросить разложить их — не говоря как.
+                    </p>
+                    <div class="example-box">
+                        <h4>Как это работает:</h4>
+                        <ul>
+                            <li>Компьютер получает неразмеченные данные</li>
+                            <li>Ищет сходство между точками данных</li>
+                            <li>Кластеризует или находит скрытую структуру</li>
+                        </ul>
+                    </div>
+                    <div class="example-box">
+                        <h4>Примеры из реальной жизни:</h4>
+                        <ul>
+                            <li><strong>Сегментация клиентов:</strong> система анализирует покупательское поведение и делит на группы (VIP, разовые, «спящие»…)</li>
+                            <li><strong>Обнаружение аномалий:</strong> поиск необычных операций по кредитной карте</li>
+                            <li><strong>Сжатие данных:</strong> поиск более эффективного представления информации</li>
+                            <li><strong>Рекомендательные системы:</strong> группировка похожих товаров/пользователей</li>
+                            <li><strong>Анализ социальных сетей:</strong> поиск сообществ</li>
+                        </ul>
+                    </div>
+                    <div class="info-card tip">
+                        <strong>💡 Преимущество:</strong> не нужно размечать данные, обнаруживает скрытые закономерности<br>
+                        <strong>⚠️ Недостаток:</strong> сложнее оценить, хороши ли результаты
+                    </div>
+
+                    <h3 id="reinforcement">3. Обучение с подкреплением (reinforcement) 🎮</h3>
+                    <p>
+                        Компьютер учится методом <strong>проб и ошибок</strong>: совершает действия, получает обратную связь
+                        (награду или штраф) и учится, что стоит делать.
+                    </p>
+                    <div class="example-box">
+                        <h4>Как это работает:</h4>
+                        <p>Как дрессировка собаки:</p>
+                        <ul>
+                            <li><strong>Агент:</strong> кто учится (собака / программа)</li>
+                            <li><strong>Среда:</strong> мир, в котором он действует</li>
+                            <li><strong>Действия:</strong> что агент может делать</li>
+                            <li><strong>Награда:</strong> обратная связь по действиям (+1 за успех, −1 за неудачу)</li>
+                        </ul>
+                        <p>Агент постепенно учится, какие действия приносят наибольшую награду.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Примеры из реальной жизни:</h4>
+                        <ul>
+                            <li><strong>AlphaGo:</strong> научился играть в го на уровне чемпиона мира</li>
+                            <li><strong>Роботы:</strong> учатся ходить, брать предметы</li>
+                            <li><strong>Автономное вождение:</strong> обучение на опыте вождения</li>
+                            <li><strong>Видеоигры:</strong> ИИ, который обыгрывает людей</li>
+                            <li><strong>Оптимизация:</strong> управление электропитанием в центрах обработки данных</li>
+                        </ul>
+                    </div>
+                    <div class="info-card tip">
+                        <strong>💡 Преимущество:</strong> может осваивать сложные задачи и улучшаться без предела<br>
+                        <strong>⚠️ Недостаток:</strong> нужно много попыток, иногда нестабильно
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="deep-learning">Глубокое обучение</h2>
+                    <p>
+                        Глубокое обучение (deep learning) — подраздел машинного обучения, который двигал революцию последних лет.
+                        Это технология, стоящая за ChatGPT, распознаванием лиц, автоматическим переводом и многим другим.
+                    </p>
+
+                    <h3 id="what-is-neural-net">Что такое нейронная сеть?</h3>
+                    <p>
+                        Искусственная нейронная сеть — математическая структура, которая (в очень упрощённом виде)
+                        имитирует работу человеческого мозга.
+                    </p>
+                    <div class="example-box">
+                        <h4>Как это работает:</h4>
+                        <ul>
+                            <li><strong>Нейроны:</strong> небольшие вычислительные единицы, которые принимают вход и выдают выход</li>
+                            <li><strong>Слои:</strong> нейроны организованы в слои</li>
+                            <li><strong>Связи:</strong> каждый нейрон связан с нейронами следующего слоя</li>
+                            <li><strong>Веса:</strong> у каждой связи есть «вес», который задаёт её влияние</li>
+                        </ul>
+                        <p>В процессе обучения система подстраивает веса, чтобы улучшить результаты.</p>
+                    </div>
+
+                    <h3 id="why-deep">Почему «глубокое»?</h3>
+                    <p>
+                        «Глубокое» относится к числу слоёв. Современные нейронные сети могут иметь
+                        десятки и даже сотни слоёв — именно это позволяет им учиться сложным закономерностям.
+                    </p>
+                    <div class="example-box">
+                        <h4>Пример — распознавание лиц:</h4>
+                        <ul>
+                            <li><strong>Ранние слои:</strong> обнаруживают края и простые кривые</li>
+                            <li><strong>Средние слои:</strong> обнаруживают формы (глаза, нос, рот)</li>
+                            <li><strong>Глубокие слои:</strong> распознают целые лица и личность</li>
+                        </ul>
+                        <p>Каждый слой учится всё более абстрактным представлениям.</p>
+                    </div>
+
+                    <h3 id="network-types">Типы нейронных сетей</h3>
+                    <div class="example-box">
+                        <h4>CNN — свёрточные нейронные сети (Convolutional Neural Networks)</h4>
+                        <p>Специализируются на изображениях и видео. Используются для распознавания лиц, обнаружения объектов, анализа медицинских снимков.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>RNN / LSTM — рекуррентные нейронные сети (Recurrent Neural Networks)</h4>
+                        <p>Специализируются на последовательностях (текст, время). Используются для перевода, анализа тональности, прогнозирования.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Трансформеры (Transformers)</h4>
+                        <p>
+                            Революционная архитектура 2017 года. Основа GPT, BERT и большинства современных языковых моделей.
+                            Могут обрабатывать длинный вход и понимать далёкие связи в тексте.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="real-world-examples">Подробные примеры из реальной жизни</h2>
+
+                    <div class="example-box">
+                        <h4>🏥 Медицина — диагностика рака</h4>
+                        <p><strong>Проблема:</strong> врачи иногда пропускают небольшие опухоли на снимках</p>
+                        <p><strong>Решение:</strong></p>
+                        <ul>
+                            <li>Обучение на миллионах размеченных снимков</li>
+                            <li>Модель учится распознавать признаки опухоли</li>
+                            <li>Показывает врачу «подозрительные области»</li>
+                        </ul>
+                        <p><strong>Результат:</strong> уровень выявления 95%+, иногда лучше, чем у врачей-специалистов</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🏦 Банки — обнаружение мошенничества</h4>
+                        <p><strong>Проблема:</strong> миллионы операций в день, вручную всё не проверить</p>
+                        <p><strong>Решение:</strong></p>
+                        <ul>
+                            <li>Модель учится, что для каждого клиента «нормально»</li>
+                            <li>Обнаруживает аномалии: необычное место, сумма, характер покупок</li>
+                            <li>Отправляет оповещение или блокирует операцию</li>
+                        </ul>
+                        <p><strong>Результат:</strong> экономия миллиардов долларов в год</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎵 Spotify — рекомендации музыки</h4>
+                        <p><strong>Проблема:</strong> десятки миллионов песен — как найти то, что вам понравится?</p>
+                        <p><strong>Решение (сочетание подходов):</strong></p>
+                        <ul>
+                            <li><strong>Collaborative Filtering:</strong> «людям, которым нравилось X, также нравилось Y»</li>
+                            <li><strong>Content-Based:</strong> музыкальный анализ (темп, инструменты, жанр)</li>
+                            <li><strong>NLP:</strong> анализ текстов песен и описаний</li>
+                            <li><strong>Audio Analysis:</strong> анализ самого звука</li>
+                        </ul>
+                        <p><strong>Результат:</strong> Discover Weekly — персональный список, который каждую неделю вас удивляет</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🚗 Tesla — автономное вождение</h4>
+                        <p><strong>Проблема:</strong> вождение требует понимания сложной среды и реакций в реальном времени</p>
+                        <p><strong>Решение:</strong></p>
+                        <ul>
+                            <li><strong>Камеры:</strong> 8 камер вокруг автомобиля</li>
+                            <li><strong>Компьютерное зрение:</strong> обнаружение машин, пешеходов, знаков, полос</li>
+                            <li><strong>Прогноз:</strong> предсказание поведения других участников движения</li>
+                            <li><strong>Планирование пути:</strong> решение, куда ехать</li>
+                            <li><strong>Обучение флота:</strong> каждая поездка Tesla учит систему</li>
+                        </ul>
+                        <p><strong>Результат:</strong> миллиарды километров данных о вождении</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 ChatGPT — языковая модель</h4>
+                        <p><strong>Проблема:</strong> создать естественный разговор с компьютером</p>
+                        <p><strong>Решение:</strong></p>
+                        <ul>
+                            <li><strong>Предобучение (pre-training):</strong> обучение на триллионах слов из интернета</li>
+                            <li><strong>Задача:</strong> предсказать следующее слово в тексте</li>
+                            <li><strong>Дообучение (fine-tuning):</strong> настройка на примерах хороших диалогов</li>
+                            <li><strong>RLHF:</strong> обучение с подкреплением по обратной связи от людей</li>
+                        </ul>
+                        <p><strong>Результат:</strong> модель, которая может ответить почти на любой вопрос на естественном языке</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="what-it-takes">Что нужно, чтобы это работало?</h2>
+
+                    <div class="example-box">
+                        <h4>📊 1. Данные — топливо</h4>
+                        <p>Без данных машинного обучения нет. Нужны:</p>
+                        <ul>
+                            <li><strong>Количество:</strong> обычно чем больше, тем лучше (от тысяч до миллиардов)</li>
+                            <li><strong>Качество:</strong> чистые, точные данные без ошибок</li>
+                            <li><strong>Разнообразие:</strong> данные, которые представляют все возможные случаи</li>
+                            <li><strong>Разметка:</strong> при обучении с учителем ответы должны быть отмечены</li>
+                        </ul>
+                        <div class="info-card warning">
+                            <strong>⚠️ «Мусор на входе = мусор на выходе»</strong>
+                            <p>Если данные плохие или смещённые — модель тоже будет такой!</p>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💻 2. Вычислительные ресурсы</h4>
+                        <p>Обучение моделей требует тяжёлых вычислений:</p>
+                        <ul>
+                            <li><strong>GPU:</strong> графические процессоры, которые отлично справляются с параллельными вычислениями</li>
+                            <li><strong>TPU:</strong> специальные чипы Google для ML</li>
+                            <li><strong>Облако:</strong> AWS, Google Cloud, Azure предлагают мощное оборудование</li>
+                        </ul>
+                        <p><strong>Стоимость:</strong> обучение модели масштаба GPT-5 оценивается в десятки–сотни миллионов долларов.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🧮 3. Алгоритм</h4>
+                        <p>Математический метод, которым компьютер учится:</p>
+                        <ul>
+                            <li>Выбор архитектуры (CNN, Transformer и т. д.)</li>
+                            <li>Целевая функция (что модель пытается улучшить?)</li>
+                            <li>Оптимизация (как обновлять веса?)</li>
+                            <li>Гиперпараметры (скорость обучения, размер пакета и т. д.)</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>👨‍💻 4. Экспертиза</h4>
+                        <p>Нужны люди, которые понимают:</p>
+                        <ul>
+                            <li>Data Scientists — анализируют данные и строят модели</li>
+                            <li>ML Engineers — внедряют и разворачивают системы</li>
+                            <li>Domain Experts — разбираются в конкретной предметной области</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>⏰ 5. Время</h4>
+                        <p>Обучение занимает время:</p>
+                        <ul>
+                            <li>Небольшая модель: минуты–часы</li>
+                            <li>Средняя модель: часы–дни</li>
+                            <li>Большая модель (например, GPT-5): недели–месяцы</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="key-terms">Ключевые понятия</h2>
+
+                    <div class="example-box">
+                        <h4>🎯 Переобучение (overfitting)</h4>
+                        <p>Когда модель «запоминает» обучающие данные вместо того, чтобы усвоить общие закономерности.</p>
+                        <p><strong>Пример:</strong> ученик выучил все ответы тренировочного теста — но проваливает настоящий экзамен.</p>
+                        <p><strong>Решение:</strong> больше данных, регуляризация, проверка на новых данных.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📉 Недообучение (underfitting)</h4>
+                        <p>Когда модель слишком простая и не может усвоить закономерности.</p>
+                        <p><strong>Решение:</strong> более сложная модель, больше признаков (features), больше обучения.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🔄 Обучающая / валидационная / тестовая выборки (Training / Validation / Test Sets)</h4>
+                        <p>Данные делят на три набора:</p>
+                        <ul>
+                            <li><strong>Обучение (70%):</strong> для обучения модели</li>
+                            <li><strong>Валидация (15%):</strong> для настройки и калибровки</li>
+                            <li><strong>Тест (15%):</strong> для итоговой оценки — не трогать до конца!</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📊 Accuracy, Precision, Recall</h4>
+                        <p>Метрики качества модели:</p>
+                        <ul>
+                            <li><strong>Accuracy (доля верных ответов):</strong> как часто мы были правы в целом</li>
+                            <li><strong>Precision (точность):</strong> когда мы сказали «да» — как часто мы были правы?</li>
+                            <li><strong>Recall (полнота):</strong> из всех настоящих «да» — сколько мы нашли?</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>⚖️ Предвзятость (bias)</h4>
+                        <p>Когда модель систематически дискриминирует. Бывает из-за несбалансированных данных.</p>
+                        <p><strong>Пример:</strong> модель найма, обученная на существующих сотрудниках (в основном мужчинах), дискриминирует женщин.</p>
+                    </div>
+                </section>
+
+                <section class="summary-box">
+                    <h2 id="summary">Кратко 📝</h2>
+                    <ul>
+                        <li><strong>Машинное обучение:</strong> компьютеры учатся на примерах вместо явных правил</li>
+                        <li><strong>3 вида:</strong> с учителем (с ответами), без учителя (без ответов), с подкреплением (пробы и ошибки)</li>
+                        <li><strong>Глубокое обучение:</strong> нейронные сети со многими слоями — технология за ChatGPT</li>
+                        <li><strong>Что нужно:</strong> данные + вычисления + алгоритм + экспертиза + время</li>
+                        <li><strong>Примеры:</strong> рекомендации, обнаружение мошенничества, медицинская диагностика, автономное вождение</li>
+                        <li><strong>Вызовы:</strong> переобучение, предвзятость, потребность в большом объёме данных</li>
+                    </ul>
+                </section>
+
+                <section id="quiz-section" data-model="V1.1" class="quiz-section">
+                    <h2 id="quiz">📝 Проверьте себя</h2>
+                    <p class="quiz-intro">Ответьте на 10 вопросов, чтобы проверить, как вы поняли машинное обучение.</p>
+
+                    <form id="quiz-form" data-model="V1.1">
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">1</span> Что такое машинное обучение?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q1" value="a"><span>Программирование компьютеров с подробными инструкциями для каждой ситуации</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="b"><span>Компьютеры, которые учатся на данных и улучшаются без явного программирования</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="c"><span>Роботы, которые работают на заводах</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="d"><span>Компьютеры, которые разговаривают с людьми</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">2</span> Какие три основных вида обучения существуют?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q2" value="a"><span>С учителем, без учителя и с подкреплением</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="b"><span>Быстрое, медленное и среднее</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="c"><span>Лёгкое, трудное и невозможное</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="d"><span>Первичное, вторичное и третичное</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">3</span> Что получает система при обучении с учителем?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q3" value="a"><span>Только данные без меток</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="b"><span>Прямые команды, что делать</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="c"><span>Примеры с правильными ответами (метками)</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="d"><span>Только награды и штрафы</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">4</span> Какой вид обучения используют, чтобы научить робота играть в игры?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q4" value="a"><span>Обучение с учителем</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="b"><span>Обучение без учителя</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="c"><span>Пассивное обучение</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="d"><span>Обучение с подкреплением</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">5</span> Что такое нейронная сеть?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q5" value="a"><span>Сеть компьютеров, подключённых к интернету</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="b"><span>Математическая структура, имитирующая работу мозга</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="c"><span>Подключение биологических нейронов к компьютеру</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="d"><span>Тип сетевого кабеля</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">6</span> Что происходит при переобучении?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q6" value="a"><span>Модель запоминает обучающие данные и не обобщает на новые данные</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="b"><span>Модель работает слишком быстро</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="c"><span>Слишком много данных</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="d"><span>Компьютер перегревается</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">7</span> Что такое обучение без учителя?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q7" value="a"><span>Обучение без компьютера</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="b"><span>Обучение с человеком-учителем</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="c"><span>Поиск закономерностей в данных без заранее заданных меток</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="d"><span>Медленное обучение без присмотра</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">8</span> Почему важно делить данные на обучающую и тестовую выборки?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q8" value="a"><span>Чтобы сэкономить память</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="b"><span>Чтобы проверить, хорошо ли модель обобщает на новые данные</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="c"><span>Чтобы компьютер работал быстрее</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="d"><span>Особой причины нет, это просто традиция</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">9</span> Какова роль «весов» в нейронной сети?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q9" value="a"><span>Измерить, насколько тяжёлый компьютер</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="b"><span>Балансировать температуру</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="c"><span>Посчитать, сколько нейронов</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="d"><span>Задать силу связи между нейронами</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">10</span> Что нужно, чтобы машинное обучение удалось?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q10" value="a"><span>Большой объём качественных данных</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="b"><span>Только мощный компьютер</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="c"><span>Быстрое интернет-соединение</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="d"><span>Программист, который всё время сидит рядом с компьютером</span></label>
+                            </div>
+                        </div>
+                    </form>
+
+                    <button id="quiz-submit">Проверьте ответы</button>
+
+                    <div id="quiz-results" class="quiz-results">
+                        <h3 id="your-results">Ваши результаты</h3>
+                        <div class="score-display">
+                            <div class="score-item">
+                                <span id="quiz-score" class="score-number">0/10</span>
+                                <span class="score-label">Правильных ответов</span>
+                            </div>
+                            <div class="score-item">
+                                <span id="quiz-percent" class="score-number">0%</span>
+                                <span class="score-label">Процент успеха</span>
+                            </div>
+                        </div>
+                        <p id="quiz-message" class="quiz-message"></p>
+                        <button id="quiz-retry">Попробовать снова</button>
+                    </div>
+                </section>
+
+                <div class="article-nav">
+                    <a href="ai-history-ru.html" class="btn">→ 2. История ИИ</a>
+                    <a href="ai-daily-life-ru.html" class="btn btn-primary">4. ИИ в повседневной жизни — далее ←</a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="site-version" aria-label="version">V1.1 · שחר הפקות AI · Создано для: COMBE</p>
+            <p>© 2026 Обучение ИИ – Sam Shahar</p>
+            <p class="footer-contact">Телефон: <a href="tel:+972522603831">+972522603831</a> | Эл. почта: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

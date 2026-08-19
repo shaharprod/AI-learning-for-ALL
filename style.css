@@ -47,6 +47,11 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+html[lang="ru"] body {
+    font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    direction: ltr;
+}
+
 /* ===== Typography ===== */
 h1, h2, h3, h4 {
     font-weight: 700;
@@ -203,7 +208,8 @@ a:hover {
 
 html[dir="ltr"] .logo-stack,
 html[lang="en"] .logo-stack,
-html[lang="hi"] .logo-stack {
+html[lang="hi"] .logo-stack,
+html[lang="ru"] .logo-stack {
     text-align: left;
     align-items: flex-start;
 }

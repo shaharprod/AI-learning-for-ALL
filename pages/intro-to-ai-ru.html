@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" data-version="V1.1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="V1.1">
+    <meta name="application-name" content="שחר הפקות AI V1.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Введение в ИИ | Обучение ИИ · שחר הפקות AI · V1.1 · Создано для: COMBE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>body { direction: ltr; }</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index-ru.html">
+                    <img src="../images/colorful%20digital%20media%20sy.png" alt="Логотип" class="logo-icon">
+                    <span class="logo-stack">
+                        <span class="logo-text">Обучение ИИ</span>
+                        <span class="logo-byline">שחר הפקות AI · V1.1</span>
+                        <span class="logo-dedication">Создано для: COMBE</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index-ru.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="../index-ru.html#topics" class="dropdown-toggle">Уроки ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="intro-to-ai-ru.html">1. Введение в ИИ</a></li>
+                        <li><a href="ai-history-ru.html">2. История ИИ</a></li>
+                        <li><a href="machine-learning-ru.html">3. Машинное обучение</a></li>
+                        <li><a href="ai-daily-life-ru.html">4. ИИ в повседневной жизни</a></li>
+                        <li><a href="ai-tools-ru.html">5. Практические инструменты</a></li>
+                        <li><a href="prompt-engineering-ru.html">6. Промпт-инжиниринг</a></li>
+                        <li><a href="ai-ethics-ru.html">7. Этика ИИ</a></li>
+                        <li><a href="ai-future-ru.html">8. Будущее ИИ</a></li>
+                        <li><a href="glossary-ru.html">9. Словарь терминов</a></li>
+                    </ul>
+                </li>
+                <li><a href="glossary-ru.html">Словарь</a></li>
+                <li><a href="ai-tools-ru.html">Инструменты</a></li>
+                <li><a href="../index-ru.html#about">О сайте</a></li>
+            </ul>
+            <form class="nav-search" id="site-search" role="search">
+                <input type="search" name="q" placeholder="Поиск..." aria-label="Поиск" />
+                <button type="submit" aria-label="Поиск">🔍</button>
+            </form>
+            <nav class="lang-switcher" aria-label="Язык">
+                <a href="intro-to-ai.html" hreflang="he" lang="he">עברית</a>
+                <a href="intro-to-ai-en.html" hreflang="en" lang="en">English</a>
+                <a href="intro-to-ai-ar.html" hreflang="ar" lang="ar">العربية</a>
+                <a href="intro-to-ai-hi.html" hreflang="hi" lang="hi">हिन्दी</a>
+                <span class="lang-active" aria-current="page">Русский</span>
+            </nav>
+            <button type="button" class="mobile-menu-btn" aria-label="Меню"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+    <main class="article">
+        <div class="container">
+            <div class="breadcrumb"><a href="../index-ru.html">Главная</a> / <span>Введение в ИИ</span></div>
+            <article class="article-content">
+                <h1>Введение в искусственный интеллект</h1>
+                <p class="article-meta">📚 Время чтения: 15 мин | Уровень: для начинающих</p>
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="ИИ — цифровой мозг" class="article-header-image">
+
+                <section>
+                    <h2 id="what-is-ai">Что такое искусственный интеллект?</h2>
+                    <p>
+                        Искусственный интеллект (ИИ, AI) — это раздел информатики,
+                        который занимается созданием компьютерных систем, способных выполнять задачи, обычно требующие
+                        человеческого интеллекта. Но что это значит на практике?
+                    </p>
+                    <p>
+                        Когда мы говорим «человеческий интеллект», мы имеем в виду такие способности, как:
+                    </p>
+                    <ul class="benefits-list">
+                        <li><strong>Обучение:</strong> умение получать новые знания из опыта</li>
+                        <li><strong>Рассуждение:</strong> умение делать выводы из информации</li>
+                        <li><strong>Решение задач:</strong> поиск решений в новых ситуациях</li>
+                        <li><strong>Понимание языка:</strong> понимание и порождение естественного языка</li>
+                        <li><strong>Восприятие:</strong> распознавание и понимание изображений, звуков и окружающей среды</li>
+                        <li><strong>Планирование:</strong> построение планов для достижения целей</li>
+                    </ul>
+                    <p>
+                        Искусственный интеллект стремится создать компьютерные системы, которые могут выполнять часть этих способностей —
+                        или даже все.
+                    </p>
+
+                    <div class="info-card tip">
+                        <strong>💡 Чем это отличается от обычного программирования:</strong>
+                        <p>В обычном программировании разработчик точно пишет, что компьютер должен делать в каждой ситуации.
+                        В ИИ компьютер сам учится, что делать, на основе примеров и опыта.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="how-ai-works">Как работает ИИ? Основная идея</h2>
+                    <p>
+                        По сути, большинство современных систем ИИ работает по простому принципу:
+                        <strong>обучение на примерах</strong>.
+                    </p>
+
+                    <div class="example-box">
+                        <h4>Пример: учим компьютер распознавать кошек</h4>
+                        <p>Предположим, мы хотим научить компьютер находить кошек на фотографиях:</p>
+                        <ol>
+                            <li><strong>Шаг 1 — данные:</strong> показываем компьютеру миллионы изображений — часть с кошками, часть без</li>
+                            <li><strong>Шаг 2 — обучение:</strong> компьютер анализирует изображения и ищет закономерности, общие для фотографий кошек (заострённые уши, определённые глаза, форма морды…)</li>
+                            <li><strong>Шаг 3 — модель:</strong> в конце процесса у компьютера появляется внутренняя модель, которая описывает «что такое кошка»</li>
+                            <li><strong>Шаг 4 — использование:</strong> теперь, когда мы показываем новое изображение, компьютер может проверить, подходит ли оно к его модели</li>
+                        </ol>
+                    </div>
+
+                    <p>
+                        Это принципиально отличается от обычного программирования. Программист не может написать явные правила распознавания кошек —
+                        слишком много вариантов. А ИИ может выучить это сам по примерам.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 id="subfields">Подразделы искусственного интеллекта</h2>
+                    <p>ИИ — широкая область, которая включает много подразделов:</p>
+
+                    <div class="example-box">
+                        <h4>🧠 Машинное обучение (МО, ML)</h4>
+                        <p>
+                            Самое популярное направление. Компьютеры учатся на данных и со временем становятся лучше.
+                            Почти весь ИИ, который мы видим сегодня, основан на машинном обучении.
+                        </p>
+                        <p><strong>Примеры:</strong> рекомендации Netflix, обнаружение спама, прогноз погоды</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🔮 Глубокое обучение (DL)</h4>
+                        <p>
+                            Подраздел машинного обучения, который использует искусственные нейронные сети —
+                            структуры, упрощённо имитирующие человеческий мозг.
+                            Именно эта технология стоит за большинством впечатляющих успехов последних лет.
+                        </p>
+                        <p><strong>Примеры:</strong> ChatGPT, распознавание лиц, автоматический перевод</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 Обработка естественного языка (NLP)</h4>
+                        <p>
+                            Способность компьютеров понимать, интерпретировать и порождать человеческий язык.
+                            Именно благодаря этому мы можем говорить с Siri или общаться с ChatGPT.
+                        </p>
+                        <p><strong>Примеры:</strong> чат-боты, перевод, краткое изложение текста, анализ тональности</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>👁️ Компьютерное зрение (CV)</h4>
+                        <p>
+                            Способность компьютеров «видеть» и понимать изображения и видео.
+                            Сюда входят обнаружение объектов, лиц, движения и многое другое.
+                        </p>
+                        <p><strong>Примеры:</strong> Face ID, беспилотные автомобили, фильтрация изображений</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🤖 Робототехника</h4>
+                        <p>
+                            Сочетание ИИ с физическими машинами. Робот должен воспринимать мир,
+                            принимать решения и выполнять физические действия.
+                        </p>
+                        <p><strong>Примеры:</strong> промышленные роботы, роботы-пылесосы, дроны</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎮 Генеративный ИИ</h4>
+                        <p>
+                            Новая звезда! Системы, которые умеют создавать новый контент —
+                            текст, изображения, музыку, видео и код.
+                            Именно эту революцию мы переживаем сейчас.
+                        </p>
+                        <p><strong>Примеры:</strong> ChatGPT, DALL-E, Midjourney, GitHub Copilot</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="types-by-capability">Типы ИИ по возможностям</h2>
+                    <p>Учёные в области ИИ делят искусственный интеллект на три уровня:</p>
+
+                    <h3 id="narrow-ai">1. Узкий ИИ (Narrow AI, слабый ИИ) 🎯</h3>
+                    <p>
+                        Система, которая специализируется на одной конкретной задаче и отлично с ней справляется.
+                        <strong>Именно это у нас есть сегодня</strong> — и это уже очень впечатляет!
+                    </p>
+                    <div class="example-box">
+                        <h4>Особенности:</h4>
+                        <ul>
+                            <li>Специализируется на одной задаче или нескольких связанных задачах</li>
+                            <li>Не может переносить знания с одной задачи на другую</li>
+                            <li>На самом деле не «понимает» — только распознаёт закономерности</li>
+                            <li>Может быть превосходной в своей задаче — даже лучше человека</li>
+                        </ul>
+                        <p><strong>Примеры:</strong></p>
+                        <ul>
+                            <li>ChatGPT — отлично ведёт беседу, но не умеет водить машину</li>
+                            <li>AlphaGo — побеждает чемпионов мира в го, но не умеет играть в шахматы</li>
+                            <li>Система распознавания лиц — узнаёт лица, но не понимает эмоции</li>
+                        </ul>
+                    </div>
+
+                    <h3 id="agi">2. Общий ИИ (AGI — Artificial General Intelligence) 🧠</h3>
+                    <p>
+                        Система, которая может выполнять <strong>любую</strong> интеллектуальную задачу, доступную человеку,
+                        и переносить знания с одной задачи на другую.
+                    </p>
+                    <div class="example-box">
+                        <h4>Гипотетические особенности:</h4>
+                        <ul>
+                            <li>Способность учиться чему угодно новому</li>
+                            <li>Перенос знаний между областями</li>
+                            <li>Настоящее понимание, а не только распознавание закономерностей</li>
+                            <li>Способность действовать в физическом мире</li>
+                            <li>Возможно: самосознание?</li>
+                        </ul>
+                        <p><strong>Статус:</strong> не существует. Идут большие споры о том, когда и случится ли это вообще —
+                        прогнозы варьируются от 10 лет до «никогда».</p>
+                    </div>
+
+                    <h3 id="asi">3. Суперинтеллект (ASI) 🚀</h3>
+                    <p>
+                        Система умнее всех людей вместе взятых в любой области —
+                        наука, творчество, социальные навыки, эмоции.
+                    </p>
+                    <div class="info-card warning">
+                        <strong>⚠️ Чисто теоретически:</strong>
+                        <p>Это тема догадок и научной фантастики. Мы не знаем, возможно ли это,
+                        когда это может произойти и что это будет означать. Некоторые учёные обеспокоены,
+                        некоторые настроены оптимистично, а большинство считает, что беспокоиться ещё рано.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="everyday-examples">Подробные примеры из повседневной жизни</h2>
+                    <p>Искусственный интеллект уже вокруг нас. Вот как он работает:</p>
+
+                    <div class="example-box">
+                        <h4>🎬 Netflix и YouTube — рекомендательные системы</h4>
+                        <p><strong>Что происходит:</strong> Netflix точно знает, что вам порекомендовать</p>
+                        <p><strong>Как это работает:</strong></p>
+                        <ul>
+                            <li>Система собирает данные: что вы смотрели, как долго, когда остановились, что оценили</li>
+                            <li>Сравнивает вас с миллионами других пользователей с похожим вкусом</li>
+                            <li>Анализирует сам контент: жанры, актёры, темп, цвета</li>
+                            <li>Объединяет всё и считает: «Какова вероятность, что этому пользователю понравится этот фильм?»</li>
+                        </ul>
+                        <p><strong>Факт:</strong> 80% того, что люди смотрят на Netflix, приходит из рекомендаций ИИ!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📱 Face ID</h4>
+                        <p><strong>Что происходит:</strong> iPhone узнаёт ваше лицо за доли секунды</p>
+                        <p><strong>Как это работает:</strong></p>
+                        <ul>
+                            <li>Проецирует на лицо 30 000 инфракрасных точек</li>
+                            <li>Строит точную 3D-карту</li>
+                            <li>Нейронная сеть сравнивает её с сохранённой картой</li>
+                            <li>Работает в очках, с бородой, макияжем, в шапке</li>
+                        </ul>
+                        <p><strong>Факт:</strong> шанс, что чужой человек разблокирует ваш телефон: 1 к миллиону!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📧 Фильтрация спама — Gmail</h4>
+                        <p><strong>Что происходит:</strong> меньше 0,1% спама попадает во входящие</p>
+                        <p><strong>Как это работает:</strong></p>
+                        <ul>
+                            <li>Анализирует содержание: подозрительные слова, ссылки, изображения</li>
+                            <li>Проверяет отправителя: репутация, история, подлинность</li>
+                            <li>Учится на вашем поведении: что вы помечаете как спам</li>
+                            <li>Учится у всех: что помечают миллиарды пользователей</li>
+                        </ul>
+                        <p><strong>Факт:</strong> Gmail блокирует 10 миллионов спам-сообщений в минуту!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🚗 Waze — умная навигация</h4>
+                        <p><strong>Что происходит:</strong> всегда находит самый быстрый маршрут</p>
+                        <p><strong>Как это работает:</strong></p>
+                        <ul>
+                            <li>Собирает местоположение в реальном времени у миллионов водителей</li>
+                            <li>Обнаруживает пробки, аварии, препятствия</li>
+                            <li>Изучает транспортные закономерности: в какие часы какие дороги загружены</li>
+                            <li>Считает ожидаемое время для каждого возможного маршрута</li>
+                            <li>Обновляется в реальном времени, если условия меняются</li>
+                        </ul>
+                        <p><strong>Факт:</strong> Waze экономит водителям в среднем 5–10 минут за поездку!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 ChatGPT — разговор с ИИ</h4>
+                        <p><strong>Что происходит:</strong> можно общаться на естественном языке и получать умные ответы</p>
+                        <p><strong>Как это работает:</strong></p>
+                        <ul>
+                            <li>Обучен на триллионах слов из интернета, книг, статей</li>
+                            <li>Выучил структуру языка — грамматику, стиль, контекст</li>
+                            <li>Выучил факты о мире из текстов</li>
+                            <li>Когда получает вопрос, «предсказывает» наиболее вероятный ответ слово за словом</li>
+                        </ul>
+                        <p><strong>Важно понять:</strong> ChatGPT не «знает» и не «понимает» — он распознаёт статистические
+                        закономерности. Иногда он ошибается, выдумывает факты или «галлюцинирует».</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="history-link">История искусственного интеллекта</h2>
+                    <p>История ИИ — это история мечтаний, разочарований и прорывов: от Чарльза Бэббиджа и Аналитической машины (1837) через тест Тьюринга (1950) и Дартмутскую конференцию (1956) до ChatGPT и GPT-5. Подробная хронология с датами, именами и разработчиками до января 2026 года — на отдельной странице:</p>
+                    <p><a href="ai-history-ru.html" class="card-link">→ История ИИ — подробная хронология</a></p>
+                </section>
+
+                <section>
+                    <h2 id="why-it-matters">Почему это важно: влияние на мир</h2>
+                    <p>
+                        Искусственный интеллект меняет почти все сферы нашей жизни.
+                        Это не технология будущего — это происходит сейчас:
+                    </p>
+
+                    <div class="example-box">
+                        <h4>🏥 Медицина</h4>
+                        <ul>
+                            <li><strong>Диагностика:</strong> ИИ обнаруживает рак на снимках с точностью 95% — иногда лучше врача</li>
+                            <li><strong>Разработка лекарств:</strong> то, что занимало 10 лет, теперь занимает год с помощью ИИ</li>
+                            <li><strong>Хирургия:</strong> роботы выполняют более точные операции</li>
+                            <li><strong>Прогнозы:</strong> выявление болезней до появления симптомов</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎓 Образование</h4>
+                        <ul>
+                            <li><strong>Персонализированное обучение:</strong> индивидуальная программа для каждого ученика</li>
+                            <li><strong>Учитель доступен 24/7:</strong> ИИ, который отвечает на вопросы в любое время</li>
+                            <li><strong>Мгновенная обратная связь:</strong> проверка заданий и комментарии в реальном времени</li>
+                            <li><strong>Доступность:</strong> перевод, озвучивание, адаптация для нарушений обучения</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🚗 Транспорт</h4>
+                        <ul>
+                            <li><strong>Беспилотные автомобили:</strong> уже ездят в некоторых городах</li>
+                            <li><strong>Обслуживание:</strong> прогнозирование поломок до того, как они случатся</li>
+                            <li><strong>Управление движением:</strong> умные светофоры, которые подстраиваются</li>
+                            <li><strong>Логистика:</strong> оптимальные маршруты доставки</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💼 Работа и бизнес</h4>
+                        <ul>
+                            <li><strong>Автоматизация:</strong> ИИ выполняет рутинные задачи</li>
+                            <li><strong>Анализ:</strong> обработка огромных объёмов информации</li>
+                            <li><strong>Обслуживание клиентов:</strong> чат-боты 24/7</li>
+                            <li><strong>Творчество:</strong> помощь в письме, дизайне, коде</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎨 Творчество и развлечения</h4>
+                        <ul>
+                            <li><strong>Искусство:</strong> создание изображений, музыки, видео</li>
+                            <li><strong>Игры:</strong> более умные противники, адаптивные миры</li>
+                            <li><strong>Кино:</strong> спецэффекты, дубляж, перевод</li>
+                            <li><strong>Письмо:</strong> помощь в создании контента любого рода</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card warning">
+                        <strong>⚠️ Но есть и сложности:</strong>
+                        <ul>
+                            <li>Профессии, которые исчезнут или изменятся</li>
+                            <li>Вопросы конфиденциальности и слежки</li>
+                            <li>Предвзятость и дискриминация в алгоритмах</li>
+                            <li>Дезинформация и дипфейки</li>
+                            <li>Сложные этические вопросы</li>
+                        </ul>
+                        <p>Всё это мы разберём позже, на странице об этике ИИ.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="key-concepts">Ключевые понятия, которые стоит знать</h2>
+
+                    <div class="example-box">
+                        <h4>📊 Алгоритм</h4>
+                        <p>Точный набор инструкций для выполнения задачи. Как рецепт — шаг за шагом.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🧠 Нейронная сеть</h4>
+                        <p>Математическая структура, которая очень упрощённо имитирует мозг. Слои «нейронов», передающих информацию друг другу.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📚 Данные</h4>
+                        <p>Топливо ИИ. Чем больше качественных данных, тем лучше ИИ учится.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎯 Модель</h4>
+                        <p>Результат процесса обучения — «мозг», который ИИ построил из данных.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🏋️ Обучение (тренировка)</h4>
+                        <p>Процесс, в котором ИИ учится на данных. Может занимать от нескольких дней до месяцев.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 Промпт (prompt)</h4>
+                        <p>Инструкция, которую вы даёте ИИ. То, как вы формулируете запрос, сильно влияет на результат.</p>
+                    </div>
+                </section>
+
+                <section class="summary-box">
+                    <h2 id="summary">Кратко 📝</h2>
+                    <ul>
+                        <li><strong>ИИ = компьютеры, которые учатся на примерах</strong>, а не программируются под каждую ситуацию</li>
+                        <li><strong>Уже здесь:</strong> спам, Netflix, Waze, Face ID, ChatGPT — всё это ИИ</li>
+                        <li><strong>Типы:</strong> машинное обучение, глубокое обучение, NLP, компьютерное зрение, генеративный ИИ</li>
+                        <li><strong>Уровни:</strong> у нас есть узкий ИИ (специализация на одной задаче). Общего ИИ пока нет</li>
+                        <li><strong>История:</strong> 70 лет взлётов и падений, сейчас — революция</li>
+                        <li><strong>Влияние:</strong> меняет медицину, образование, транспорт, работу — всё</li>
+                        <li><strong>Важно:</strong> есть и сложности — работа, конфиденциальность, предвзятость, этика</li>
+                    </ul>
+                </section>
+
+                <section id="quiz-section" data-model="V1.1" class="quiz-section">
+                    <h2 id="quiz">📝 Проверьте себя</h2>
+                    <p class="quiz-intro">Ответьте на 10 вопросов, чтобы проверить, как вы поняли материал. Выберите один вариант ответа на каждый вопрос.</p>
+
+                    <form id="quiz-form" data-model="V1.1">
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">1</span> В чём главное отличие обычного программирования от искусственного интеллекта?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q1" value="a"><span>В обычном программировании компьютер быстрее</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="b"><span>В ИИ компьютер учится на примерах, а не по явным инструкциям</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="c"><span>ИИ работает только на новых компьютерах</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="d"><span>Между ними нет существенной разницы</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">2</span> Что такое «узкий ИИ» (Narrow AI)?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q2" value="a"><span>ИИ, который работает только на маленьких экранах</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="b"><span>ИИ, который умнее всех людей</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="c"><span>ИИ, который специализируется на одной конкретной задаче</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="d"><span>ИИ, который учится очень медленно</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">3</span> Чем отличается «глубокое обучение» (Deep Learning)?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q3" value="a"><span>Использованием искусственных нейронных сетей</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="b"><span>Обучением под водой</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="c"><span>Изучением глубоких философских тем</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="d"><span>Использованием особенно дорогого оборудования</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">4</span> Когда впервые появился термин «искусственный интеллект»?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q4" value="a"><span>1990</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="b"><span>2010</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="c"><span>1970</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="d"><span>1956</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">5</span> Какой процент контента, который смотрят на Netflix, приходит из рекомендаций ИИ?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q5" value="a"><span>20%</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="b"><span>80%</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="c"><span>50%</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="d"><span>10%</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">6</span> Чем занимается обработка естественного языка (NLP)?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q6" value="a"><span>Обрабатывает изображения природы</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="b"><span>Создаёт автоматическую музыку</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="c"><span>Позволяет компьютерам понимать и порождать человеческий язык</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="d"><span>Управляет дорожным движением</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">7</span> Кто предложил «тест Тьюринга»?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q7" value="a"><span>Алан Тьюринг</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="b"><span>Стив Джобс</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="c"><span>Билл Гейтс</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="d"><span>Илон Маск</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">8</span> Что произошло в 2022 году и вызвало революцию в ИИ?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q8" value="a"><span>Вышел первый iPhone</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="b"><span>Компьютер победил в шахматы</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="c"><span>Разработали интернет</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="d"><span>Запустился ChatGPT и набрал 100 миллионов пользователей</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">9</span> Что такое «промпт» (prompt)?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q9" value="a"><span>Тип мощного компьютера</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="b"><span>Инструкция, которую вы даёте ИИ</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="c"><span>Сбой системы</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="d"><span>Язык программирования</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">10</span> Что неверно в отношении ChatGPT?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q10" value="a"><span>Он был обучен на триллионах слов</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="b"><span>Он иногда ошибается или выдумывает информацию</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="c"><span>Он действительно «понимает» и «знает» как человек</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="d"><span>Он распознаёт статистические закономерности</span></label>
+                            </div>
+                        </div>
+                    </form>
+
+                    <button id="quiz-submit">Проверьте ответы</button>
+
+                    <div id="quiz-results" class="quiz-results">
+                        <h3 id="your-results">Ваши результаты</h3>
+                        <div class="score-display">
+                            <div class="score-item">
+                                <span id="quiz-score" class="score-number">0/10</span>
+                                <span class="score-label">Правильных ответов</span>
+                            </div>
+                            <div class="score-item">
+                                <span id="quiz-percent" class="score-number">0%</span>
+                                <span class="score-label">Процент успеха</span>
+                            </div>
+                        </div>
+                        <p id="quiz-message" class="quiz-message"></p>
+                        <button id="quiz-retry">Попробовать снова</button>
+                    </div>
+                </section>
+
+                <div class="article-nav">
+                    <a href="../index-ru.html" class="btn">→ Назад на главную</a>
+                    <a href="ai-history-ru.html" class="btn btn-primary">2. История ИИ – Далее ←</a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="site-version" aria-label="version">V1.1 · שחר הפקות AI · Создано для: COMBE</p>
+            <p>© 2026 Сайт для изучения искусственного интеллекта — все права принадлежат Шмулику Шахару, образовательному консультанту, который делает обучение ИИ доступным каждому.</p>
+            <p class="footer-contact">Телефон: <a href="tel:+972522603831">+972522603831</a> | Эл. почта: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

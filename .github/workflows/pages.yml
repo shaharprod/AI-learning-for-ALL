@@ -26,15 +26,16 @@ jobs:
 
       - name: Prepare site folder
         run: |
-          mkdir -p _site _site/en _site/ar _site/hi
-          cp index.html index-en.html index-ar.html index-hi.html _site/
-          cp search.html search-en.html search-ar.html search-hi.html _site/
+          mkdir -p _site _site/en _site/ar _site/hi _site/ru
+          cp index.html index-en.html index-ar.html index-hi.html index-ru.html _site/
+          cp search.html search-en.html search-ar.html search-hi.html search-ru.html _site/
           cp style.css script.js _site/
           cp -r pages _site/
           cp -r images _site/
           cp en/index.html _site/en/
           cp ar/index.html _site/ar/
           cp hi/index.html _site/hi/
+          cp ru/index.html _site/ru/
           touch _site/.nojekyll
           ls -la _site
           ls -la _site/pages | head -40

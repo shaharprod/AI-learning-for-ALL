@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" data-version="V1.1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="V1.1">
+    <meta name="application-name" content="שחר הפקות AI V1.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Промпт-инжиниринг | Обучение ИИ · שחר הפקות AI · V1.1 · Создано для: COMBE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>body { direction: ltr; }</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index-ru.html">
+                    <img src="../images/colorful%20digital%20media%20sy.png" alt="Логотип" class="logo-icon">
+                    <span class="logo-stack">
+                        <span class="logo-text">Обучение ИИ</span>
+                        <span class="logo-byline">שחר הפקות AI · V1.1</span>
+                        <span class="logo-dedication">Создано для: COMBE</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index-ru.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="../index-ru.html#topics" class="dropdown-toggle">Уроки ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="intro-to-ai-ru.html">1. Введение в ИИ</a></li>
+                        <li><a href="ai-history-ru.html">2. История ИИ</a></li>
+                        <li><a href="machine-learning-ru.html">3. Машинное обучение</a></li>
+                        <li><a href="ai-daily-life-ru.html">4. ИИ в повседневной жизни</a></li>
+                        <li><a href="ai-tools-ru.html">5. Практические инструменты</a></li>
+                        <li><a href="prompt-engineering-ru.html">6. Промпт-инжиниринг</a></li>
+                        <li><a href="ai-ethics-ru.html">7. Этика ИИ</a></li>
+                        <li><a href="ai-future-ru.html">8. Будущее ИИ</a></li>
+                        <li><a href="glossary-ru.html">9. Словарь терминов</a></li>
+                    </ul>
+                </li>
+                <li><a href="glossary-ru.html">Словарь</a></li>
+                <li><a href="ai-tools-ru.html">Инструменты</a></li>
+                <li><a href="../index-ru.html#about">О сайте</a></li>
+            </ul>
+            <form class="nav-search" id="site-search" role="search">
+                <input type="search" name="q" placeholder="Поиск..." aria-label="Поиск" />
+                <button type="submit" aria-label="Поиск">🔍</button>
+            </form>
+            <nav class="lang-switcher" aria-label="Язык">
+                <a href="prompt-engineering.html" hreflang="he" lang="he">עברית</a>
+                <a href="prompt-engineering-en.html" hreflang="en" lang="en">English</a>
+                <a href="prompt-engineering-ar.html" hreflang="ar" lang="ar">العربية</a>
+                <a href="prompt-engineering-hi.html" hreflang="hi" lang="hi">हिन्दी</a>
+                <span class="lang-active" aria-current="page">Русский</span>
+            </nav>
+            <button type="button" class="mobile-menu-btn" aria-label="Меню"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+    <main class="article">
+        <div class="container">
+            <div class="breadcrumb"><a href="../index-ru.html">Главная</a> / <span>Промпт-инжиниринг</span></div>
+            <article class="article-content">
+                <h1>Промпт-инжиниринг для языковых моделей</h1>
+                <p class="article-meta">✍️ Время чтения: 18 мин | Уровень: для всех</p>
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop" alt="Промпт-инжиниринг — клавиатура и чат" class="article-header-image">
+
+                <section>
+                    <h2 id="what-is-pe">Что такое промпт-инжиниринг?</h2>
+                    <p>
+                        Промпт-инжиниринг — это искусство и наука формулировать запросы к инструментам ИИ так, чтобы получать
+                        лучший результат. Это ключевой навык в эпоху ИИ:
+                        <strong>то, как вы спрашиваете, напрямую влияет на качество ответа.</strong>
+                    </p>
+                    <p>
+                        Представьте заказ в кафе: «Принесите что-нибудь вкусное» даст совсем другой результат,
+                        чем «Хочу пасту в томатном соусе, без лука, с тёртым сыром отдельно».
+                    </p>
+                    <p>
+                        В этом уроке мы используем <strong>модель CRAFT</strong> — простую схему из пяти букв для сборки эффективных промптов, плюс принципы и техники для лучших результатов.
+                    </p>
+                    <div class="info-card tip">
+                        <strong>💡 Почему это важно:</strong>
+                        <p>Один и тот же ИИ может дать посредственный или отличный ответ — в зависимости от того, как вы спросили. Изучить промпт-инжиниринг — лучшая инвестиция в эффективную работу с ИИ.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="core-principle">🎯 Главный принцип: ясность и планирование</h2>
+                    <p>
+                        Прежде чем набрать вопрос ИИ, остановитесь и подумайте. Эти вопросы соответствуют компонентам <strong>CRAFT</strong> — используйте их как быструю проверку:
+                    </p>
+                    <ul class="benefits-list">
+                        <li><strong>Что именно я хочу?</strong> — Короткий ответ? Длинный? Список? Таблицу?</li>
+                        <li><strong>Кто аудитория?</strong> — Эксперты? Новички? Дети?</li>
+                        <li><strong>Какой стиль?</strong> — Официальный? Дружелюбный? Технический?</li>
+                        <li><strong>Какой контекст?</strong> — Зачем мне это?</li>
+                        <li><strong>Чего я не хочу?</strong> — Чего избегать?</li>
+                    </ul>
+                    <div class="example-box">
+                        <h4>❌ Размытый промпт</h4>
+                        <p>«Расскажи про питон»</p>
+                        <p><em>Проблема: непонятно, имеется в виду язык программирования Python или змея. Даже если язык — что именно вы хотите узнать?</em></p>
+                    </div>
+                    <div class="example-box">
+                        <h4>✅ Ясный промпт</h4>
+                        <p>«Объясни язык программирования Python в 5 основных пунктах, на уровне полного новичка. Сделай акцент на преимуществах и типичных применениях.»</p>
+                        <p><em>Плюс: ясно, что нужно, сколько, для кого и на чём сфокусироваться.</em></p>
+                    </div>
+                    <h3 id="craft">Модель CRAFT — как собрать хороший промпт</h3>
+                    <p>
+                        <strong>CRAFT</strong> — простая схема: пять букв, которые покрывают, о чём подумать перед написанием промпта. Не обязательно использовать все пять каждый раз — уже 3–4 элемента заметно улучшают результат.
+                    </p>
+                    <ul class="benefits-list">
+                        <li><strong>C – Context (контекст):</strong> Дайте фон и ситуацию. Зачем это нужно? В какой области? Какие ограничения или условия?</li>
+                        <li><strong>R – Role (роль):</strong> Назначьте модели роль или экспертизу. Например: «Ты учитель математики с 15-летним стажем» или «Действуй как литературный редактор».</li>
+                        <li><strong>A – Action (действие):</strong> Чётко скажите, что нужно сделать. Конкретная задача — не «помоги мне», а «Напиши три абзаца о…» или «Составь список…».</li>
+                        <li><strong>F – Format (формат):</strong> Скажите, как должен выглядеть ответ: список, таблица, абзацы, маркеры, код, краткое резюме в двух предложениях.</li>
+                        <li><strong>T – Tone (тон):</strong> Задайте стиль и голос — официальный, дружелюбный, технический, простой для детей.</li>
+                    </ul>
+                    <div class="info-card tip">
+                        <strong>💡 Короткий пример CRAFT</strong>
+                        <p>«<strong>Контекст:</strong> Я готовлю выступление для восьмиклассников. <strong>Роль:</strong> Действуй как учитель естественных наук, который объясняет детям. <strong>Запрос:</strong> Объясни, что такое ДНК, тремя простыми предложениями. <strong>Формат:</strong> Три коротких абзаца. <strong>Тон:</strong> Дружелюбный и ясный, без тяжёлого жаргона.»</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="seven-principles">📋 7 золотых принципов</h2>
+                    <p>Когда CRAFT заполнен, эти принципы помогают заточить промпт и улучшить результат:</p>
+                    <div class="guidelines">
+                        <div class="guideline-item"><span class="guideline-number">1</span><div><h4>Будьте конкретны</h4><p>Чем точнее формулировка, тем релевантнее ответ. Вместо «помоги написать письмо» напишите: «Помоги написать деловое письмо с просьбой о повышении зарплаты, уважительное, но твёрдое, 150–200 слов.»</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">2</span><div><h4>Давайте контекст</h4><p>Сообщите нужный фон. «Я учитель 4 класса» или «Я разработчик с 5-летним опытом» — это полностью меняет ответ.</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">3</span><div><h4>Задайте формат</h4><p>Скажите, как хотите ответ: нумерованный список, таблица, короткие абзацы, маркеры, код с комментариями.</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">4</span><div><h4>Приводите примеры</h4><p>Если есть образец желаемого результата — покажите его. «Напиши в стиле этого примера…» помогает ИИ точно понять, чего вы хотите.</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">5</span><div><h4>Назначьте роль</h4><p>Попросите ИИ сыграть роль: «Действуй как учитель физики», «Представь, что ты юрист», «Ответь как эксперт по маркетингу».</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">6</span><div><h4>Ограничьте ответ</h4><p>Укажите длину, число пунктов или объём: «В 3 предложениях», «До 500 слов», «Только 5 идей».</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">7</span><div><h4>Итерируйте</h4><p>Не останавливайтесь на первом ответе. Попросите: «Раскрой второй пункт», «Дай ещё один пример» или «Скажи это проще».</p></div></div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="techniques">🔧 Продвинутые техники</h2>
+                    <h3 id="chain-of-thought">1. Chain of Thought (цепочка рассуждений)</h3>
+                    <p>Попросите ИИ объяснить ход мыслей шаг за шагом. Это повышает точность на сложных задачах.</p>
+                    <div class="example-box"><h4>Пример:</h4><p>«Реши задачу по шагам и объясни логику на каждом шаге: у Димы 3 яблока, у Маши вдвое больше, и они отдали половину маме…»</p></div>
+                    <h3 id="few-shot">2. Few-Shot Learning (обучение на нескольких примерах)</h3>
+                    <p>Дайте 2–3 примера того, что хотите, затем попросите ещё в том же стиле.</p>
+                    <h3 id="role-play">3. Role Playing (ролевая игра)</h3>
+                    <p>Попросите ИИ принять конкретную персону на весь разговор.</p>
+                    <h3 id="constraints">4. Constraints (ограничения)</h3>
+                    <p>Определите, что можно и чего нельзя.</p>
+                </section>
+
+                <section>
+                    <h2 id="template">📝 Структура идеального промпта — шаблон CRAFT</h2>
+                    <p>Используйте этот шаблон, чтобы собрать CRAFT почти для любой темы:</p>
+                    <div class="code-example">
+[Роль] - Ты [эксперт/роль]<br>
+[Контекст] - Я [кто/ситуация]<br>
+[Действие] - Мне нужно, чтобы ты [точно что сделать]<br>
+[Формат] - Представь в виде [список/таблица/абзацы]<br>
+[Тон] - Важно, чтобы [стиль, условия, чего избегать]
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="mistakes">❌ Типичные ошибки, которых стоит избегать</h2>
+                    <div class="example-box"><h4>1. Слишком короткий промпт</h4><p>❌ «Напиши письмо» → ✅ «Напиши деловое письмо с приглашением поставщика на встречу, дружелюбное, но деловое, с 2–3 возможными датами»</p></div>
+                    <div class="example-box"><h4>2. Предполагать, что ИИ знает контекст</h4><p>❌ «Что думаешь о моей идее?» → ✅ «Моя идея — открыть интернет-магазин домашней выпечки. Какие плюсы и минусы?»</p></div>
+                    <div class="example-box"><h4>3. Закрытые вопросы, когда нужен разбор</h4><p>❌ «Python — хороший язык?» → ✅ «Какие плюсы и минусы Python по сравнению с JavaScript для бэкенда?»</p></div>
+                    <div class="example-box"><h4>4. Не просить исправлений</h4><p>✅ «Это не совсем то, что я имел в виду. Мне нужно что-то более [чего не хватает]. Можешь попробовать ещё раз?»</p></div>
+                    <div class="example-box"><h4>5. Спрашивать всё сразу</h4><p>✅ Начните с одной темы и углубляйтесь шаг за шагом.</p></div>
+                </section>
+
+                <section>
+                    <h2 id="examples">💬 Практические примеры по областям</h2>
+                    <div class="example-box"><h4>📧 Письма:</h4><p>«Напиши деловое письмо клиенту, который жалуется на задержку доставки. Тон: сочувственный и извиняющийся, но и успокаивающий, с предложением решения. Длина: 100–150 слов. Включи: извинение, краткое объяснение, предложенное решение и предложение компенсации.»</p></div>
+                    <div class="example-box"><h4>📚 Учёба:</h4><p>«Объясни теорию относительности Эйнштейна так, будто мне 12 лет. Используй аналогии из повседневной жизни. Начни с самой простой идеи и наращивай. Длина: 3 абзаца.»</p></div>
+                    <div class="example-box"><h4>💼 Работа:</h4><p>«Мне нужно представить проект старшим руководителям. Помоги составить структуру 10-минутной презентации о запуске нового продукта. Включи: сильное начало, 3–4 главных пункта, финал с призывом к действию.»</p></div>
+                    <div class="example-box"><h4>💻 Код:</h4><p>«Напиши функцию на Python, которая принимает список чисел и возвращает все чётные. Включи: код с комментариями, пример использования и короткое объяснение логики.»</p></div>
+                </section>
+
+                <section>
+                    <h2 id="conversation">🔄 Разговор — это процесс</h2>
+                    <p>Помните: общение с ИИ — не один вопрос и один ответ. Это <strong>диалог</strong>, который можно уточнять. Оцените ответ, попросите конкретные улучшения («раскрой…», «сократи…», «добавь пример для…») и итерируйте.</p>
+                    <div class="info-card tip"><strong>💡 Если ответ неудачный</strong> — обычно это не «вина ИИ». Попробуйте переформулировать с большим количеством деталей или контекста либо пройдите по CRAFT: дали ли вы Context (C), Role (R), ясное Action (A), Format (F) и Tone (T)?</div>
+                </section>
+
+                <section>
+                    <h2 id="remember">⚠️ Всегда помните</h2>
+                    <div class="info-card warning">
+                        <strong>Важно:</strong>
+                        <ul>
+                            <li><strong>Проверяйте факты:</strong> ИИ может ошибаться или выдумывать сведения. Всегда перепроверяйте важные факты.</li>
+                            <li><strong>Не делитесь чувствительными данными:</strong> пароли, паспортные данные, финансовая информация — никогда.</li>
+                            <li><strong>Пользуйтесь здравым смыслом:</strong> ИИ — инструмент, а не замена вашему мышлению.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="summary-box">
+                    <h2 id="summary">Кратко 📝</h2>
+                    <ul>
+                        <li><strong>CRAFT:</strong> Context (контекст, C), Role (роль, R), Action (действие, A), Format (формат, F), Tone (тон, T)</li>
+                        <li>Планируйте до написания; будьте конкретны; давайте контекст; задавайте формат; приводите примеры, когда можно; итерируйте; проверяйте результат.</li>
+                    </ul>
+                </section>
+
+                <section id="quiz-section" data-model="V1.1" class="quiz-section">
+                    <h2 id="quiz">📝 Проверьте себя</h2>
+                    <p class="quiz-intro">Ответьте на 11 вопросов по промпт-инжинирингу и модели CRAFT.</p>
+                    <form id="quiz-form" data-model="V1.1">
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">1</span> Что такое промпт-инжиниринг?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q1" value="a"><span>Сборка роботов</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="b"><span>Искусство формулировать запросы к ИИ, чтобы получать лучшие результаты</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="c"><span>Программирование компьютеров</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="d"><span>Дизайн сайтов</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">2</span> В чём проблема промпта «Расскажи про питон»?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q2" value="a"><span>Он слишком длинный</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="b"><span>Он на иврите</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="c"><span>Он размытый — непонятно, что именно нужно</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="d"><span>Ничего, это отличный промпт</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">3</span> Что должен включать хороший промпт?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q3" value="a"><span>Контекст, желаемый формат и уровень детализации</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="b"><span>Только вопрос — ИИ и так достаточно умён</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="c"><span>Много эмодзи</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="d"><span>Только английский язык</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">4</span> Что даёт модель CRAFT?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q4" value="a"><span>Название программы ИИ</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="b"><span>Схему из пяти элементов: Context, Role, Action, Format, Tone</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="c"><span>Список инструментов для написания промптов</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="d"><span>Технику креативного мышления</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">5</span> Что такое «Chain of Thought»?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q5" value="a"><span>Цепочка компьютеров</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="b"><span>Список дел</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="c"><span>Тип программы</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="d"><span>Просьба к ИИ объяснить ход мыслей шаг за шагом</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">6</span> Зачем давать примеры в промпте?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q6" value="a"><span>Потому что без примеров ИИ ничего не понимает</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="b"><span>Чтобы ИИ понял точный стиль и формат, который вам нужен</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="c"><span>Это почти не помогает</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="d"><span>Потому что это обязательно в каждом промпте</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">7</span> В чём проблема вопроса «Python — хороший язык?»</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q7" value="a"><span>Вопрос слишком длинный</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="b"><span>Python — не язык</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="c"><span>Закрытый вопрос даёт короткий ответ вместо подробного разбора</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="d"><span>Ничего, это отличный вопрос</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">8</span> Что значит «назначить роль» в промпте?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q8" value="a"><span>Попросить ИИ действовать как конкретный эксперт</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="b"><span>Дать ИИ работу</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="c"><span>Определить свою собственную роль</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="d"><span>Играть в ролевую игру</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">9</span> Что делать, если ответ ИИ неточен?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q9" value="a"><span>Сдаться и искать в другом месте</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="b"><span>Принять ответ как есть</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="c"><span>Злиться на ИИ</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="d"><span>Попросить конкретное исправление или переформулировать запрос</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">10</span> Чем не стоит делиться с ИИ?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q10" value="a"><span>Вопросами о кулинарии</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="b"><span>Паролями, паспортными данными и финансовой информацией</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="c"><span>Творческими идеями</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="d"><span>Учебными вопросами</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">11</span> Какой принцип в промпт-инжиниринге самый важный?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q11" value="a"><span>Писать промпты как можно короче</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="b"><span>Использовать только английский</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="c"><span>Ясность и планирование — знать, чего хотите, до того как писать</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="d"><span>Писать как можно больше текста</span></label>
+                            </div>
+                        </div>
+                    </form>
+                    <button id="quiz-submit">Проверьте ответы</button>
+                    <div id="quiz-results" class="quiz-results">
+                        <h3 id="your-results">Ваши результаты</h3>
+                        <div class="score-display">
+                            <div class="score-item"><span id="quiz-score" class="score-number">0/11</span><span class="score-label">Правильных ответов</span></div>
+                            <div class="score-item"><span id="quiz-percent" class="score-number">0%</span><span class="score-label">Процент успеха</span></div>
+                        </div>
+                        <p id="quiz-message" class="quiz-message"></p>
+                        <button id="quiz-retry">Попробовать снова</button>
+                    </div>
+                </section>
+
+                <div class="article-nav">
+                    <a href="ai-tools-ru.html" class="btn">→ 5. Практические инструменты</a>
+                    <a href="ai-ethics-ru.html" class="btn btn-primary">7. Этика ИИ – Далее ←</a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="site-version" aria-label="version">V1.1 · שחר הפקות AI · Создано для: COMBE</p>
+            <p>© 2026 Обучение ИИ – Sam Shahar</p>
+            <p class="footer-contact">Телефон: <a href="tel:+972522603831">+972522603831</a> | Эл. почта: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
