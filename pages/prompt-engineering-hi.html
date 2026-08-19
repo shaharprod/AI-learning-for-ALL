@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr" data-version="B0.15">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="B0.15">
+    <meta name="application-name" content="שחר הפקות AI B0.15">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रॉम्प्ट इंजीनियरिंग | एआई सीखना · שחר הפקות AI · B0.15 · के लिए निर्मित: COMBE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>body { direction: ltr; font-family: 'Noto Sans Devanagari', sans-serif; }</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index-hi.html">
+                    <img src="../images/colorful%20digital%20media%20sy.png" alt="लोगो" class="logo-icon">
+                    <span class="logo-stack">
+                        <span class="logo-text">एआई सीखना</span>
+                        <span class="logo-byline">שחר הפקות AI · B0.15</span>
+                        <span class="logo-dedication">के लिए निर्मित: COMBE</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index-hi.html">होम</a></li>
+                <li class="dropdown">
+                    <a href="../index-hi.html#topics" class="dropdown-toggle">पाठ ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="intro-to-ai-hi.html">1. एआई का परिचय</a></li>
+                        <li><a href="ai-history-hi.html">2. एआई का इतिहास</a></li>
+                        <li><a href="machine-learning-hi.html">3. मशीन लर्निंग</a></li>
+                        <li><a href="ai-daily-life-hi.html">4. रोज़मर्रा की ज़िंदगी में एआई</a></li>
+                        <li><a href="ai-tools-hi.html">5. व्यावहारिक उपकरण</a></li>
+                        <li><a href="prompt-engineering-hi.html">6. प्रॉम्प्ट इंजीनियरिंग</a></li>
+                        <li><a href="ai-ethics-hi.html">7. एआई नैतिकता</a></li>
+                        <li><a href="ai-future-hi.html">8. एआई का भविष्य</a></li>
+                        <li><a href="glossary-hi.html">9. शब्दावली</a></li>
+                    </ul>
+                </li>
+                <li><a href="glossary-hi.html">शब्दावली</a></li>
+                <li><a href="ai-tools-hi.html">उपकरण</a></li>
+                <li><a href="../index-hi.html#about">परिचय</a></li>
+            </ul>
+            <form class="nav-search" id="site-search" role="search">
+                <input type="search" name="q" placeholder="खोजें..." aria-label="खोजें" />
+                <button type="submit" aria-label="खोजें">🔍</button>
+            </form>
+            <nav class="lang-switcher" aria-label="भाषा चुनें">
+                <a href="prompt-engineering.html" hreflang="he" lang="he">עברית</a>
+                <a href="prompt-engineering-en.html" hreflang="en" lang="en">English</a>
+                <a href="prompt-engineering-ar.html" hreflang="ar" lang="ar">العربية</a>
+                <span class="lang-active" aria-current="page">हिन्दी</span>
+            </nav>
+            <button type="button" class="mobile-menu-btn" aria-label="मेनू"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+    <main class="article">
+        <div class="container">
+            <div class="breadcrumb"><a href="../index-hi.html">होम</a> / <span>प्रॉम्प्ट इंजीनियरिंग</span></div>
+            <article class="article-content">
+                <h1>भाषा मॉडल के लिए प्रॉम्प्ट इंजीनियरिंग</h1>
+                <p class="article-meta">✍️ पढ़ने का समय: 18 मिनट | स्तर: सभी के लिए</p>
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop" alt="प्रॉम्प्ट इंजीनियरिंग - कीबोर्ड और चैट" class="article-header-image">
+
+                <section>
+                    <h2 id="what-is-pe">प्रॉम्प्ट इंजीनियरिंग क्या है?</h2>
+                    <p>प्रॉम्प्ट इंजीनियरिंग एआई उपकरणों को अनुरोध लिखने की कला और विज्ञान है ताकि वे सर्वोत्तम परिणाम दें। यह एआई युग में एक महत्वपूर्ण कौशल है – <strong>आप कैसे पूछते हैं, उत्तर की गुणवत्ता पर सीधा प्रभाव डालता है।</strong></p>
+                    <p>इसे खाना ऑर्डर करने जैसा समझें: "कुछ स्वादिष्ट लाओ" से "मुझे टमाटर सॉस वाला पास्ता चाहिए, बिना प्याज, कद्दूकस किए पनीर के साथ" जैसे परिणाम बहुत अलग होंगे।</p>
+                    <p>इस पाठ में हम <strong>CRAFT मॉडल</strong> का उपयोग करेंगे – प्रभावी प्रॉम्प्ट बनाने के लिए एक सरल पाँच-अक्षर ढाँचा, साथ ही बेहतर परिणामों के सिद्धांत और तकनीकें।</p>
+                    <div class="info-card tip">
+                        <strong>💡 यह क्यों महत्वपूर्ण है:</strong>
+                        <p>एक ही एआई औसत या उत्कृष्ट उत्तर दे सकता है – यह इस पर निर्भर करता है कि आपने कैसे पूछा। प्रॉम्प्ट इंजीनियरिंग सीखना एआई प्रभावी उपयोग के लिए सर्वोत्तम निवेश है।</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="core-principle">🎯 मूल सिद्धांत: स्पष्टता और योजना</h2>
+                    <p>एआई को प्रश्न टाइप करने से पहले रुकें और सोचें। ये प्रश्न <strong>CRAFT</strong> घटकों से मेल खाते हैं – त्वरित जाँच के रूप में उपयोग करें:</p>
+                    <ul class="benefits-list">
+                        <li><strong>मुझे वास्तव में क्या चाहिए?</strong> – छोटा उत्तर? लंबा? सूची? तालिका?</li>
+                        <li><strong>दर्शक कौन हैं?</strong> – विशेषज्ञ? शुरुआती? बच्चे?</li>
+                        <li><strong>कौन सी शैली?</strong> – औपचारिक? मित्रवत? तकनीकी?</li>
+                        <li><strong>संदर्भ क्या है?</strong> – मुझे यह क्यों चाहिए?</li>
+                        <li><strong>मुझे क्या नहीं चाहिए?</strong> – कुछ टालना है?</li>
+                    </ul>
+                    <div class="example-box">
+                        <h4>❌ अस्पष्ट प्रॉम्प्ट</h4>
+                        <p>"Python के बारे में बताओ"</p>
+                        <p><em>समस्या: अस्पष्ट कि प्रोग्रामिंग भाषा या साँप। फिर भी – आप वास्तव में क्या जानना चाहते हैं?</em></p>
+                    </div>
+                    <div class="example-box">
+                        <h4>✅ स्पष्ट प्रॉम्प्ट</h4>
+                        <p>"प्रोग्रामिंग भाषा Python को 5 मुख्य बिंदुओं में समझाओ, पूर्ण शुरुआती स्तर पर। फायदों और सामान्य उपयोगों पर ध्यान दो।"</p>
+                        <p><em>फायदा: स्पष्ट कि क्या, कितना, किसके लिए और किस पर ध्यान।</em></p>
+                    </div>
+                    <h3 id="craft">CRAFT मॉडल – अच्छा प्रॉम्प्ट बनाना</h3>
+                    <p><strong>CRAFT</strong> एक सरल ढाँचा है: पाँच अक्षर जो प्रॉम्प्ट लिखने से पहले क्या सोचना है। हर बार सभी पाँच ज़रूरी नहीं – 3–4 तत्व भी परिणाम बहुत सुधारते हैं।</p>
+                    <ul class="benefits-list">
+                        <li><strong>C – Context (संदर्भ):</strong> पृष्ठभूमि और स्थिति दें। क्यों चाहिए? किस क्षेत्र में? क्या सीमाएँ?</li>
+                        <li><strong>R – Role (भूमिका):</strong> मॉडल को भूमिका या विशेषज्ञता दें। जैसे "आप 15 वर्ष के अनुभव वाले गणित शिक्षक हैं" या "कॉपी एडिटर की तरह काम करें"।</li>
+                        <li><strong>A – Action (कार्य):</strong> स्पष्ट रूप से बताएँ क्या करना है। "मदद करो" नहीं बल्कि "तीन पैराग्राफ लिखो…" या "सूची तैयार करो…"।</li>
+                        <li><strong>F – Format (प्रारूप):</strong> उत्तर कैसा चाहिए: सूची, तालिका, पैराग्राफ, बुलेट, कोड, दो वाक्य सारांश।</li>
+                        <li><strong>T – Tone (स्वर):</strong> शैली और आवाज़ – औपचारिक, मित्रवत, तकनीकी, बच्चों के लिए सरल।</li>
+                    </ul>
+                    <div class="info-card tip">
+                        <strong>💡 संक्षिप्त CRAFT उदाहरण</strong>
+                        <p>"<strong>संदर्भ:</strong> मैं 8वीं कक्षा के लिए व्याख्यान तैयार कर रहा/रही हूँ। <strong>भूमिका:</strong> बच्चों को समझाने वाले विज्ञान शिक्षक की तरह। <strong>अनुरोध:</strong> DNA को तीन सरल वाक्यों में समझाओ। <strong>प्रारूप:</strong> तीन छोटे पैराग्राफ। <strong>स्वर:</strong> मित्रवत और स्पष्ट, भारी शब्दजाल नहीं।"</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="seven-principles">📋 7 स्वर्णिम सिद्धांत</h2>
+                    <p>CRAFT भरने के बाद, ये सिद्धांत प्रॉम्प्ट को तेज़ करते हैं:</p>
+                    <div class="guidelines">
+                        <div class="guideline-item"><span class="guideline-number">1</span><div><h4>विशिष्ट रहें</h4><p>जितना सटीक, उतना प्रासंगिक उत्तर। "ईमेल लिखने में मदद" की जगह "150–200 शब्द, सम्मानजनक लेकिन दृढ़, वेतन वृद्धि माँगने वाला पेशेवर ईमेल"।</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">2</span><div><h4>संदर्भ दें</h4><p>प्रासंगिक पृष्ठभूमि। "मैं 4वीं कक्षा का शिक्षक हूँ" या "5 वर्ष अनुभव वाला डेवलपर" – उत्तर पूरी तरह बदल जाता है।</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">3</span><div><h4>प्रारूप परिभाषित करें</h4><p>क्रमांकित सूची, तालिका, छोटे पैराग्राफ, बुलेट, टिप्पणियों सहित कोड।</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">4</span><div><h4>उदाहरण दें</h4><p>जो चाहते हैं उसका उदाहरण हो – साझा करें। "इस उदाहरण की शैली में लिखो…" एआई को सटीक समझ मिलती है।</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">5</span><div><h4>भूमिका निर्धारित करें</h4><p>एआई से भूमिका निभाने को कहें: "भौतिकी शिक्षक की तरह", "वकील की कल्पना करो", "मार्केटिंग विशेषज्ञ के रूप में उत्तर"।</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">6</span><div><h4>उत्तर सीमित करें</h4><p>लंबाई, बिंदुओं की संख्या या दायरा: "3 वाक्य में", "500 शब्द तक", "केवल 5 विचार"।</p></div></div>
+                        <div class="guideline-item"><span class="guideline-number">7</span><div><h4>पुनरावृत्ति करें</h4><p>पहले उत्तर से संतुष्ट न हों। "दूसरे बिंदु पर विस्तार", "एक और उदाहरण", "सरल शब्दों में" कहें।</p></div></div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="techniques">🔧 उन्नत तकनीकें</h2>
+                    <h3 id="chain-of-thought">1. Chain of Thought</h3>
+                    <p>एआई से कदम दर कदम तर्क समझाने को कहें। जटिल समस्याओं पर सटीकता बढ़ती है।</p>
+                    <div class="example-box"><h4>उदाहरण:</h4><p>"निम्न को कदम दर कदम हल करो और हर चरण पर तर्क समझाओ: यदि Danny के पास 3 सेब हैं और Ronit के पास दोगुने…"</p></div>
+                    <h3 id="few-shot">2. Few-Shot Learning</h3>
+                    <p>2–3 उदाहरण दें जो चाहते हैं, फिर उसी शैली में और माँगें।</p>
+                    <h3 id="role-play">3. Role Playing</h3>
+                    <p>एआई से पूरी बातचीत के लिए विशिष्ट व्यक्तित्व अपनाने को कहें।</p>
+                    <h3 id="constraints">4. Constraints</h3>
+                    <p>परिभाषित करें क्या अनुमत है और क्या नहीं।</p>
+                </section>
+
+                <section>
+                    <h2 id="template">📝 परफ़ेक्ट प्रॉम्प्ट संरचना – CRAFT टेम्पलेट</h2>
+                    <p>लगभग किसी भी विषय के लिए CRAFT व्यवस्थित करने हेतु यह टेम्पलेट:</p>
+                    <div class="code-example">
+[भूमिका] - आप [विशेषज्ञ/भूमिका] हैं<br>
+[संदर्भ] - मैं [कौन/स्थिति] हूँ<br>
+[कार्य] - मुझे चाहिए कि आप [ठीक क्या करें]<br>
+[प्रारूप] - [सूची/तालिका/पैराग्राफ] के रूप में प्रस्तुत करें<br>
+[स्वर] - महत्वपूर्ण [शैली, शर्तें, क्या टालना है]
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="mistakes">❌ टालने योग्य सामान्य गलतियाँ</h2>
+                    <div class="example-box"><h4>1. बहुत छोटा प्रॉम्प्ट</h4><p>❌ "ईमेल लिखो" → ✅ "आपूर्तिकर्ता को मीटिंग के लिए आमंत्रित करने वाला पेशेवर ईमेल, मित्रवत लेकिन व्यावसायिक, 2–3 संभावित तिथियों के साथ"</p></div>
+                    <div class="example-box"><h4>2. एआई को संदर्भ पता है मान लेना</h4><p>❌ "मेरे विचार पर क्या राय?" → ✅ "मेरा विचार है घर का बना कुकी बेचने वाला ऑनलाइन स्टोर खोलना। फायदे और नुकसान क्या?"</p></div>
+                    <div class="example-box"><h4>3. विस्तार चाहते हुए बंद प्रश्न</h4><p>❌ "क्या Python अच्छी भाषा है?" → ✅ "backend के लिए Python बनाम JavaScript के फायदे और नुकसान?"</p></div>
+                    <div class="example-box"><h4>4. सुधार न माँगना</h4><p>✅ "यह बिल्कुल वही नहीं है जो मैं चाहता/चाहती था/थी। मुझे [क्या कम है] और चाहिए। फिर से कोशिश करोगे?"</p></div>
+                    <div class="example-box"><h4>5. एक साथ सब कुछ पूछना</h4><p>✅ एक विषय से शुरू करें और कदम दर कदम गहराई में जाएँ।</p></div>
+                </section>
+
+                <section>
+                    <h2 id="examples">💬 क्षेत्र के अनुसार व्यावहारिक उदाहरण</h2>
+                    <div class="example-box"><h4>📧 ईमेल:</h4><p>"देर से डिलीवरी की शिकायत करने वाले ग्राहक को पेशेवर ईमेल लिखो। स्वर: सहानुभूतिपूर्ण और क्षमाप्रार्थी लेकिन आश्वस्त भी, प्रस्तावित समाधान के साथ। लंबाई: 100–150 शब्द। शामिल: क्षमा, संक्षिप्त व्याख्या, प्रस्तावित समाधान और मुआवज़े का प्रस्ताव।"</p></div>
+                    <div class="example-box"><h4>📚 सीखना:</h4><p>"Einstein की सापेक्षता सिद्धांत को ऐसे समझाओ जैसे मैं 12 साल का/की हूँ। रोज़मर्रा के जीवन से उपमाएँ। सबसे बुनियादी विचार से शुरू करके बढ़ाओ। लंबाई: 3 पैराग्राफ।"</p></div>
+                    <div class="example-box"><h4>💼 काम:</h4><p>"मुझे वरिष्ठ प्रबंधकों को प्रोजेक्ट प्रस्तुत करना है। नए उत्पाद लॉन्च पर 10 मिनट की प्रस्तुति की संरचना बनाने में मदद करो। शामिल: मजबूत शुरुआत, 3–4 मुख्य बिंदु, call to action के साथ समापन।"</p></div>
+                    <div class="example-box"><h4>💻 कोड:</h4><p>"Python फ़ंक्शन लिखो जो संख्याओं की सूची ले और सभी सम संख्याएँ लौटाए। शामिल: दस्तावेज़ीकृत कोड, उपयोग उदाहरण, और तर्क की छोटी व्याख्या।"</p></div>
+                </section>
+
+                <section>
+                    <h2 id="conversation">🔄 बातचीत एक प्रक्रिया है</h2>
+                    <p>याद रखें: एआई के साथ बातचीत एक प्रश्न-एक उत्तर नहीं। यह एक <strong>संवाद</strong> है जिसे आप परिष्कृत कर सकते हैं। उत्तर का मूल्यांकन करें, विशिष्ट सुधार माँगें ("विस्तार…", "छोटा…", "उदाहरण…"), और पुनरावृत्ति करें।</p>
+                    <div class="info-card tip"><strong>💡 यदि उत्तर अच्छा नहीं</strong> – आमतौर पर "एआई की गलती" नहीं। अधिक विवरण या संदर्भ के साथ फिर से लिखें, या CRAFT से गुज़रें: Context (C), Role (R), Action (A), Format (F), Tone (T) दिए?</div>
+                </section>
+
+                <section>
+                    <h2 id="remember">⚠️ हमेशा याद रखें</h2>
+                    <div class="info-card warning">
+                        <strong>महत्वपूर्ण:</strong>
+                        <ul>
+                            <li><strong>तथ्य सत्यापित करें:</strong> एआई गलत हो सकता है या जानकारी गढ़ सकता है। महत्वपूर्ण तथ्य हमेशा दोबारा जाँचें।</li>
+                            <li><strong>संवेदनशील डेटा साझा न करें:</strong> पासवर्ड, ID नंबर, वित्तीय विवरण – कभी नहीं।</li>
+                            <li><strong>विवेक उपयोग करें:</strong> एआई एक उपकरण है, अपनी सोच का विकल्प नहीं।</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="summary-box">
+                    <h2 id="summary">सारांश 📝</h2>
+                    <ul>
+                        <li><strong>CRAFT:</strong> Context (C), Role (R), Action (A), Format (F), Tone (T)</li>
+                        <li>लिखने से पहले योजना; विशिष्ट रहें; संदर्भ दें; प्रारूप परिभाषित करें; जहाँ संभव उदाहरण; पुनरावृत्ति; परिणाम सत्यापित करें।</li>
+                    </ul>
+                </section>
+
+                <section id="quiz-section" data-model="B0.15" class="quiz-section">
+                    <h2 id="quiz">📝 अपनी जाँच करें</h2>
+                    <p class="quiz-intro">प्रॉम्प्ट इंजीनियरिंग और CRAFT मॉडल पर 11 प्रश्नों के उत्तर दें।</p>
+                    <form id="quiz-form" data-model="B0.15">
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">1</span> प्रॉम्प्ट इंजीनियरिंग क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q1" value="a"><span>रोबोट बनाना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="b"><span>बेहतर परिणाम के लिए एआई को अनुरोध लिखने की कला</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="c"><span>कंप्यूटर प्रोग्रामिंग</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="d"><span>वेबसाइट डिज़ाइन</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">2</span> "Python के बारे में बताओ" प्रॉम्प्ट में क्या गलत है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q2" value="a"><span>बहुत लंबा है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="b"><span>हिन्दी में है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="c"><span>अस्पष्ट – अस्पष्ट कि क्या चाहिए</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="d"><span>कुछ नहीं, बढ़िया प्रॉम्प्ट</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">3</span> अच्छे प्रॉम्प्ट में क्या होना चाहिए?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q3" value="a"><span>संदर्भ, वांछित प्रारूप और विस्तार स्तर</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="b"><span>केवल प्रश्न – एआई काफी स्मार्ट</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="c"><span>बहुत emoji</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="d"><span>केवल अंग्रेज़ी</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">4</span> CRAFT मॉडल क्या प्रदान करता है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q4" value="a"><span>एआई प्रोग्राम का नाम</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="b"><span>पाँच तत्वों का ढाँचा: Context, Role, Action, Format, Tone</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="c"><span>प्रॉम्प्ट लेखन उपकरणों की सूची</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="d"><span>रचनात्मक सोच तकनीक</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">5</span> "Chain of Thought" क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q5" value="a"><span>कंप्यूटरों की श्रृंखला</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="b"><span>करने की सूची</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="c"><span>सॉफ़्टवेयर का प्रकार</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="d"><span>एआई से कदम दर कदम तर्क समझाने को कहना</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">6</span> प्रॉम्प्ट में उदाहरण क्यों दें?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q6" value="a"><span>क्योंकि एआई बिना उदाहरण नहीं समझता</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="b"><span>ताकि एआई सटीक शैली और प्रारूप समझे</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="c"><span>वास्तव में मदद नहीं करता</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="d"><span>क्योंकि हर प्रॉम्प्ट में ज़रूरी</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">7</span> "क्या Python अच्छी भाषा है?" पूछने में क्या गलत?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q7" value="a"><span>प्रश्न बहुत लंबा</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="b"><span>Python भाषा नहीं</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="c"><span>बंद प्रश्न जो विस्तृत विश्लेषण की जगह छोटा उत्तर देता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="d"><span>कुछ नहीं, बढ़िया प्रश्न</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">8</span> प्रॉम्प्ट में "भूमिका निर्धारित" का क्या अर्थ?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q8" value="a"><span>एआई से विशिष्ट विशेषज्ञ की तरह काम करने को कहना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="b"><span>एआई को नौकरी देना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="c"><span>अपनी भूमिका परिभाषित करना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="d"><span>रोल-प्लेइंग गेम खेलना</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">9</span> एआई का उत्तर सटीक न हो तो क्या करें?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q9" value="a"><span>हार मानें और कहीं और देखें</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="b"><span>जैसा है स्वीकार करें</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="c"><span>एआई पर गुस्सा करें</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="d"><span>विशिष्ट सुधार माँगें या अनुरोध दोबारा लिखें</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">10</span> एआई के साथ क्या साझा नहीं करना चाहिए?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q10" value="a"><span>खाना पकाने के प्रश्न</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="b"><span>पासवर्ड, ID नंबर और वित्तीय जानकारी</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="c"><span>रचनात्मक विचार</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="d"><span>अध्ययन प्रश्न</span></label>
+                            </div>
+                        </div>
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">11</span> प्रॉम्प्ट इंजीनियरिंग में सबसे महत्वपूर्ण सिद्धांत?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q11" value="a"><span>प्रॉम्प्ट जितना छोटा हो सके</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="b"><span>केवल अंग्रेज़ी उपयोग</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="c"><span>स्पष्टता और योजना – लिखने से पहले जानें क्या चाहिए</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="d"><span>जितना संभव हो टेक्स्ट लिखें</span></label>
+                            </div>
+                        </div>
+                    </form>
+                    <button id="quiz-submit">उत्तर जाँचें</button>
+                    <div id="quiz-results" class="quiz-results">
+                        <h3 id="your-results">आपके परिणाम</h3>
+                        <div class="score-display">
+                            <div class="score-item"><span id="quiz-score" class="score-number">0/11</span><span class="score-label">सही उत्तर</span></div>
+                            <div class="score-item"><span id="quiz-percent" class="score-number">0%</span><span class="score-label">सफलता दर</span></div>
+                        </div>
+                        <p id="quiz-message" class="quiz-message"></p>
+                        <button id="quiz-retry">फिर से कोशिश करें</button>
+                    </div>
+                </section>
+
+                <div class="article-nav">
+                    <a href="ai-tools-hi.html" class="btn">→ 5. व्यावहारिक उपकरण</a>
+                    <a href="ai-ethics-hi.html" class="btn btn-primary">7. एआई नैतिकता – अगला ←</a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="site-version" aria-label="version">B0.15 · שחר הפקות AI · के लिए निर्मित: COMBE</p>
+            <p>© 2026 एआई सीखना – Sam Shahar</p>
+            <p class="footer-contact">फ़ोन: <a href="tel:+972522603831">+972522603831</a> | ईमेल: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

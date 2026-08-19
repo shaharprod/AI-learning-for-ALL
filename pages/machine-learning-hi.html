@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr" data-version="B0.15">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="B0.15">
+    <meta name="application-name" content="שחר הפקות AI B0.15">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मशीन लर्निंग | एआई सीखना · שחר הפקות AI · B0.15 · के लिए निर्मित: COMBE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>body { direction: ltr; font-family: 'Noto Sans Devanagari', sans-serif; }</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index-hi.html">
+                    <img src="../images/colorful%20digital%20media%20sy.png" alt="लोगो" class="logo-icon">
+                    <span class="logo-stack">
+                        <span class="logo-text">एआई सीखना</span>
+                        <span class="logo-byline">שחר הפקות AI · B0.15</span>
+                        <span class="logo-dedication">के लिए निर्मित: COMBE</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index-hi.html">होम</a></li>
+                <li class="dropdown">
+                    <a href="../index-hi.html#topics" class="dropdown-toggle">पाठ ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="intro-to-ai-hi.html">1. एआई का परिचय</a></li>
+                        <li><a href="ai-history-hi.html">2. एआई का इतिहास</a></li>
+                        <li><a href="machine-learning-hi.html">3. मशीन लर्निंग</a></li>
+                        <li><a href="ai-daily-life-hi.html">4. रोज़मर्रा की ज़िंदगी में एआई</a></li>
+                        <li><a href="ai-tools-hi.html">5. व्यावहारिक उपकरण</a></li>
+                        <li><a href="prompt-engineering-hi.html">6. प्रॉम्प्ट इंजीनियरिंग</a></li>
+                        <li><a href="ai-ethics-hi.html">7. एआई नैतिकता</a></li>
+                        <li><a href="ai-future-hi.html">8. एआई का भविष्य</a></li>
+                        <li><a href="glossary-hi.html">9. शब्दावली</a></li>
+                    </ul>
+                </li>
+                <li><a href="glossary-hi.html">शब्दावली</a></li>
+                <li><a href="ai-tools-hi.html">उपकरण</a></li>
+                <li><a href="../index-hi.html#about">परिचय</a></li>
+            </ul>
+            <form class="nav-search" id="site-search" role="search">
+                <input type="search" name="q" placeholder="खोजें..." aria-label="खोजें" />
+                <button type="submit" aria-label="खोजें">🔍</button>
+            </form>
+            <nav class="lang-switcher" aria-label="भाषा चुनें">
+                <a href="machine-learning.html" hreflang="he" lang="he">עברית</a>
+                <a href="machine-learning-en.html" hreflang="en" lang="en">English</a>
+                <a href="machine-learning-ar.html" hreflang="ar" lang="ar">العربية</a>
+                <span class="lang-active" aria-current="page">हिन्दी</span>
+            </nav>
+            <button type="button" class="mobile-menu-btn" aria-label="मेनू"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+    <main class="article">
+        <div class="container">
+            <div class="breadcrumb"><a href="../index-hi.html">होम</a> / <span>मशीन लर्निंग</span></div>
+            <article class="article-content">
+                <h1>मशीन लर्निंग</h1>
+                <p class="article-meta">🔮 पढ़ने का समय: 20 मिनट | स्तर: शुरुआती–मध्यम</p>
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop" alt="मशीन लर्निंग - न्यूरल नेटवर्क" class="article-header-image">
+
+                <section>
+                    <h2 id="what-is-ml">मशीन लर्निंग क्या है?</h2>
+                    <p>
+                        मशीन लर्निंग (ML) आज कृत्रिम बुद्धिमत्ता की केंद्रीय और सबसे महत्वपूर्ण शाखा है।
+                        यह लगभग हर उस चीज़ की तकनीक है जिसे हम एआई के रूप में जानते हैं—ChatGPT से लेकर Netflix की सिफ़ारिशों तक।
+                    </p>
+                    <p>
+                        <strong>औपचारिक परिभाषा:</strong> मशीन लर्निंग वह क्षेत्र है जो कंप्यूटरों को
+                        <strong>डेटा से सीखने और कार्यों में सुधार करने</strong> में सक्षम बनाता है—
+                        हर संभावित स्थिति के लिए स्पष्ट रूप से प्रोग्राम किए बिना।
+                    </p>
+
+                    <div class="info-card tip">
+                        <strong>💡 सामान्य प्रोग्रामिंग से मुख्य अंतर:</strong>
+                        <ul>
+                            <li><strong>सामान्य प्रोग्रामिंग:</strong> आप नियम लिखते हैं → कंप्यूटर निष्पादित करता है</li>
+                            <li><strong>मशीन लर्निंग:</strong> आप उदाहरण देते हैं → कंप्यूटर खुद नियम खोजता है</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        यह सरल लगता है, लेकिन यह एक क्रांति है। प्रोग्रामर को हर संभावित मामले के बारे में सोचकर
+                        नियम लिखने के बजाय—कंप्यूटर उदाहरणों से खुद सीखता है और ऐसे पैटर्न खोजता है जिन्हें मनुष्य भी न पहचान सकें।
+                    </p>
+                </section>
+
+                <section>
+                    <h2 id="how-it-works">यह कैसे काम करता है? पूरी तस्वीर</h2>
+
+                    <h3 id="child-and-dog">बच्चा और कुत्ता</h3>
+                    <p>
+                        मान लीजिए हम एक छोटे बच्चे को "कुत्ता" क्या है, यह सिखाना चाहते हैं:
+                    </p>
+                    <div class="example-box">
+                        <h4>👶 पारंपरिक तरीका (सामान्य प्रोग्रामिंग)</h4>
+                        <p>हम बच्चे को नियम समझाते हैं:</p>
+                        <ul>
+                            <li>"कुत्ता 4 पैरों वाला जानवर है"</li>
+                            <li>"उसके बाल होते हैं"</li>
+                            <li>"उसके कान होते हैं"</li>
+                            <li>"उसकी पूँछ होती है"</li>
+                        </ul>
+                        <p>❌ <strong>समस्याएँ:</strong></p>
+                        <ul>
+                            <li>बिल्लियों के भी 4 पैर, बाल, कान और पूँछ होते हैं</li>
+                            <li>कुछ कुत्तों की पूँछ नहीं होती</li>
+                            <li>कुछ के कान नुकीले, कुछ के लटकते</li>
+                            <li>छोटे और विशाल कुत्ते</li>
+                            <li>सभी नियम लिखे नहीं जा सकते!</li>
+                        </ul>
+                    </div>
+                    <div class="example-box">
+                        <h4>🧒 मशीन लर्निंग का तरीका</h4>
+                        <p>हम बच्चे को हज़ारों चित्र दिखाते हैं:</p>
+                        <ul>
+                            <li>"यह कुत्ता है" (1000 चित्र देखें)</li>
+                            <li>"यह कुत्ता नहीं है" (बिल्लियों, खरगोशों आदि के 1000 चित्र देखें)</li>
+                        </ul>
+                        <p>✅ <strong>क्या होता है:</strong></p>
+                        <ul>
+                            <li>बच्चा खुद पैटर्न सीख लेता है</li>
+                            <li>वह ठीक-ठीक नहीं बता सकता कि उसे कैसे पता—लेकिन उसे पता है</li>
+                            <li>वह नए कुत्तों को पहचान सकता है जिन्हें उसने कभी नहीं देखा</li>
+                        </ul>
+                    </div>
+                    <p>
+                        <strong>बिल्कुल यही मशीन लर्निंग करता है!</strong> कंप्यूटर कई उदाहरण देखता है,
+                        पैटर्न ढूँढता है, और एक आंतरिक "मॉडल" बनाता है जो नए मामलों पर सामान्यीकरण करने देता है।
+                    </p>
+
+                    <h3 id="technical-process">तकनीकी प्रक्रिया (सरलीकृत)</h3>
+                    <div class="example-box">
+                        <h4>📊 चरण 1: डेटा इकट्ठा करें</h4>
+                        <p>कई उदाहरण एकत्र करें। आमतौर पर ज़्यादा बेहतर होता है।</p>
+                        <p><strong>उदाहरण:</strong> 10,000 कुत्ते के चित्र और 10,000 गैर-कुत्ते के चित्र</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>🏷️ चरण 2: लेबलिंग (कभी-कभी)</h4>
+                        <p>डेटा को लेबल करें—प्रत्येक उदाहरण के लिए सही उत्तर क्या है।</p>
+                        <p><strong>उदाहरण:</strong> प्रत्येक चित्र "कुत्ता" या "कुत्ता नहीं" के रूप में लेबल किया गया</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>🏋️ चरण 3: प्रशिक्षण</h4>
+                        <p>कंप्यूटर सभी उदाहरणों से गुज़रता है, उनका विश्लेषण करता है, और पैटर्न ढूँढता है।</p>
+                        <p>यह "परीक्षा की तैयारी" जैसा है—कंप्यूटर बार-बार अभ्यास करता है जब तक सफल न हो जाए।</p>
+                        <p><strong>समय:</strong> जटिलता के अनुसार मिनटों से हफ़्तों तक लग सकता है</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>🎯 चरण 4: मॉडल</h4>
+                        <p>परिणाम एक "मॉडल" है—एक गणितीय संरचना जो दर्शाती है कि कंप्यूटर ने क्या सीखा।</p>
+                        <p>मॉडल सीखने से बने "मस्तिष्क" जैसा है।</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>🔮 चरण 5: अनुमान (Inference)</h4>
+                        <p>अब आप मॉडल को नया इनपुट दे सकते हैं और वह उत्तर "अनुमान" लगाता है।</p>
+                        <p><strong>उदाहरण:</strong> नया चित्र → मॉडल कहता है "93% संभावना कि यह कुत्ता है"</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>📈 चरण 6: मूल्यांकन और सुधार</h4>
+                        <p>जाँचें कि मॉडल कितनी बार सही है। अगर बहुत गलतियाँ—सुधारें और समायोजित करें।</p>
+                        <p>यह निरंतर सुधार की एक पुनरावृत्त प्रक्रिया है।</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="three-types">मशीन लर्निंग के तीन प्रकार</h2>
+                    <p>तीन मुख्य दृष्टिकोण हैं, प्रत्येक अलग-अलग स्थितियों के लिए उपयुक्त:</p>
+
+                    <h3 id="supervised">1. पर्यवेक्षित सीखना (Supervised Learning) 👨‍🏫</h3>
+                    <p>
+                        सबसे आम प्रकार। कंप्यूटर को <strong>सही उत्तरों</strong> (लेबल) वाले
+                        उदाहरण मिलते हैं और वह नए उदाहरणों के लिए उत्तर की भविष्यवाणी करना सीखता है।
+                    </p>
+                    <div class="example-box">
+                        <h4>यह कैसे काम करता है:</h4>
+                        <p>ऐसे शिक्षक से सीखने जैसा जो समाधानों के साथ अभ्यास दे:</p>
+                        <ul>
+                            <li>कंप्यूटर देखता है: इनपुट (X) → उत्तर (Y)</li>
+                            <li>कंप्यूटर सीखता है: X और Y के बीच क्या संबंध है?</li>
+                            <li>अब जब नया X आता है → कंप्यूटर Y का अनुमान लगाता है</li>
+                        </ul>
+                    </div>
+                    <div class="example-box">
+                        <h4>वास्तविक दुनिया के उदाहरण:</h4>
+                        <ul>
+                            <li><strong>स्पैम पहचान:</strong> "स्पैम" / "स्पैम नहीं" लेबल वाले हज़ारों ईमेल → मॉडल उन्हें अलग करना सीखता है</li>
+                            <li><strong>घर की कीमत की भविष्यवाणी:</strong> बेचे गए घरों और कीमतों का डेटा → मॉडल नए घर की कीमत बताता है</li>
+                            <li><strong>चिकित्सा निदान:</strong> "स्वस्थ" / "रोग" लेबल वाले X-रे → मॉडल स्थितियाँ पहचानता है</li>
+                            <li><strong>चेहरा पहचान:</strong> नामों से लेबल किए चित्र → मॉडल पहचानता है कि फ़ोटो में कौन है</li>
+                            <li><strong>अनुवाद:</strong> लाखों अनुवादित वाक्य → मॉडल अनुवाद करना सीखता है</li>
+                        </ul>
+                    </div>
+                    <div class="info-card tip">
+                        <strong>💡 लाभ:</strong> सटीक, विश्वसनीय परिणाम<br>
+                        <strong>⚠️ हानि:</strong> बहुत सारे लेबल किए गए डेटा की ज़रूरत (महँगा और समय लेने वाला)
+                    </div>
+
+                    <h3 id="unsupervised">2. अपर्यवेक्षित सीखना (Unsupervised Learning) 🔍</h3>
+                    <p>
+                        कंप्यूटर को <strong>उत्तरों के बिना</strong> डेटा मिलता है और वह खुद पैटर्न और संरचना ढूँढता है।
+                        बच्चे को खिलौनों का ढेर देकर कहना जैसा—बिना बताए कैसे छाँटना है।
+                    </p>
+                    <div class="example-box">
+                        <h4>यह कैसे काम करता है:</h4>
+                        <ul>
+                            <li>कंप्यूटर को बिना लेबल वाला डेटा मिलता है</li>
+                            <li>डेटा बिंदुओं के बीच समानता ढूँढता है</li>
+                            <li>समूह बनाता है या छिपी संरचना खोजता है</li>
+                        </ul>
+                    </div>
+                    <div class="example-box">
+                        <h4>वास्तविक दुनिया के उदाहरण:</h4>
+                        <ul>
+                            <li><strong>ग्राहक विभाजन:</strong> सिस्टम खरीदारी व्यवहार का विश्लेषण करके समूह बनाता है (VIP, कभी-कभार, निष्क्रिय...)</li>
+                            <li><strong>विसंगति पहचान:</strong> असामान्य क्रेडिट कार्ड लेनदेन ढूँढना</li>
+                            <li><strong>डेटा संपीड़न:</strong> जानकारी का अधिक कुशल प्रतिनिधित्व ढूँढना</li>
+                            <li><strong>सिफ़ारिश इंजन:</strong> समान उत्पाद/उपयोगकर्ताओं को समूहित करना</li>
+                            <li><strong>सोशल नेटवर्क विश्लेषण:</strong> समुदाय ढूँढना</li>
+                        </ul>
+                    </div>
+                    <div class="info-card tip">
+                        <strong>💡 लाभ:</strong> डेटा लेबल करने की ज़रूरत नहीं, छिपे पैटर्न खोजता है<br>
+                        <strong>⚠️ हानि:</strong> परिणाम अच्छे हैं या नहीं, यह जाँचना कठिन
+                    </div>
+
+                    <h3 id="reinforcement">3. प्रबलन सीखना (Reinforcement Learning) 🎮</h3>
+                    <p>
+                        कंप्यूटर <strong>परीक्षण और त्रुटि</strong> से सीखता है—कार्रवाइयाँ करता है, प्रतिक्रिया
+                        (इनाम या दंड) पाता है, और सीखता है कि क्या करना लाभदायक है।
+                    </p>
+                    <div class="example-box">
+                        <h4>यह कैसे काम करता है:</h4>
+                        <p>कुत्ते को प्रशिक्षित करने जैसा:</p>
+                        <ul>
+                            <li><strong>एजेंट:</strong> जो सीखता है (कुत्ता / सॉफ़्टवेयर)</li>
+                            <li><strong>पर्यावरण:</strong> जिस दुनिया में वह काम करता है</li>
+                            <li><strong>कार्रवाइयाँ:</strong> एजेंट क्या कर सकता है</li>
+                            <li><strong>इनाम:</strong> कार्रवाइयों पर प्रतिक्रिया (+1 सफलता, -1 विफलता)</li>
+                        </ul>
+                        <p>एजेंट धीरे-धीरे सीखता है कि कौन-सी कार्रवाइयाँ सबसे अधिक इनाम देती हैं।</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>वास्तविक दुनिया के उदाहरण:</h4>
+                        <ul>
+                            <li><strong>AlphaGo:</strong> विश्व-चैंपियन स्तर पर Go खेलना सीखा</li>
+                            <li><strong>रोबोट:</strong> चलना, वस्तुएँ पकड़ना सीखना</li>
+                            <li><strong>स्वायत्त ड्राइविंग:</strong> ड्राइविंग अनुभव से सीखना</li>
+                            <li><strong>वीडियो गेम:</strong> मानव खिलाड़ियों को हराने वाला AI</li>
+                            <li><strong>अनुकूलन:</strong> डेटा सेंटर में बिजली प्रबंधन</li>
+                        </ul>
+                    </div>
+                    <div class="info-card tip">
+                        <strong>💡 लाभ:</strong> जटिल कार्य सीख सकता है, असीमित सुधार<br>
+                        <strong>⚠️ हानि:</strong> बहुत सारे परीक्षण चाहिए, कभी-कभी अस्थिर
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="deep-learning">डीप लर्निंग</h2>
+                    <p>
+                        डीप लर्निंग मशीन लर्निंग का उप-क्षेत्र है जिसने हाल के वर्षों में क्रांति लाई।
+                        यह ChatGPT, चेहरा पहचान, स्वचालित अनुवाद और बहुत कुछ की तकनीक है।
+                    </p>
+
+                    <h3 id="what-is-neural-net">न्यूरल नेटवर्क क्या है?</h3>
+                    <p>
+                        कृत्रिम न्यूरल नेटवर्क एक गणितीय संरचना है जो (बहुत सरलीकृत तरीके से)
+                        मानव मस्तिष्क कैसे काम करता है, उसकी नकल करती है।
+                    </p>
+                    <div class="example-box">
+                        <h4>यह कैसे काम करता है:</h4>
+                        <ul>
+                            <li><strong>न्यूरॉन:</strong> छोटी कंप्यूटिंग इकाइयाँ जो इनपुट लेती हैं और आउटपुट देती हैं</li>
+                            <li><strong>परतें:</strong> न्यूरॉन परतों में व्यवस्थित होते हैं</li>
+                            <li><strong>कनेक्शन:</strong> प्रत्येक न्यूरॉन अगली परत के न्यूरॉन से जुड़ा होता है</li>
+                            <li><strong>वेट (Weights):</strong> प्रत्येक कनेक्शन का "वेट" होता है जो उसका प्रभाव तय करता है</li>
+                        </ul>
+                        <p>सीखने के दौरान सिस्टम परिणाम सुधारने के लिए वेट समायोजित करता है।</p>
+                    </div>
+
+                    <h3 id="why-deep">"डीप" क्यों?</h3>
+                    <p>
+                        "डीप" परतों की संख्या को दर्शाता है। आधुनिक न्यूरल नेटवर्क में
+                        दर्जनों या सैकड़ों परतें हो सकती हैं—यही जटिल पैटर्न सीखने देता है।
+                    </p>
+                    <div class="example-box">
+                        <h4>उदाहरण—चेहरा पहचान:</h4>
+                        <ul>
+                            <li><strong>शुरुआती परतें:</strong> किनारे और बुनियादी वक्र पहचानती हैं</li>
+                            <li><strong>मध्य परतें:</strong> आकार पहचानती हैं (आँखें, नाक, मुँह)</li>
+                            <li><strong>गहरी परतें:</strong> पूरे चेहरे और पहचान पहचानती हैं</li>
+                        </ul>
+                        <p>प्रत्येक परत अधिक और अधिक अमूर्त प्रतिनिधित्व सीखती है।</p>
+                    </div>
+
+                    <h3 id="network-types">न्यूरल नेटवर्क के प्रकार</h3>
+                    <div class="example-box">
+                        <h4>CNN - Convolutional Neural Networks</h4>
+                        <p>चित्रों और वीडियो में विशेषज्ञ। चेहरा पहचान, वस्तु पहचान, चिकित्सा इमेज विश्लेषण के लिए उपयोग।</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>RNN / LSTM - Recurrent Neural Networks</h4>
+                        <p>अनुक्रमों (पाठ, समय) में विशेषज्ञ। अनुवाद, भावना विश्लेषण, पूर्वानुमान के लिए उपयोग।</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Transformers</h4>
+                        <p>
+                            2017 की क्रांतिकारी वास्तुकला। GPT, BERT और अधिकांश आधुनिक भाषा मॉडल की नींव।
+                            लंबे इनपुट को संसाधित कर सकता है और पाठ में दूर के संबंध समझ सकता है।
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="real-world-examples">विस्तृत वास्तविक दुनिया के उदाहरण</h2>
+
+                    <div class="example-box">
+                        <h4>🏥 चिकित्सा - कैंसर निदान</h4>
+                        <p><strong>समस्या:</strong> डॉक्टर कभी-कभी स्कैन में छोटे ट्यूमर चूक जाते हैं</p>
+                        <p><strong>समाधान:</strong></p>
+                        <ul>
+                            <li>लाखों लेबल किए स्कैन पर प्रशिक्षण</li>
+                            <li>मॉडल ट्यूमर पैटर्न पहचानना सीखता है</li>
+                            <li>डॉक्टर को "संदिग्ध क्षेत्र" दिखाता है</li>
+                        </ul>
+                        <p><strong>परिणाम:</strong> 95%+ पहचान दर, कभी-कभी विशेषज्ञ डॉक्टरों से बेहतर</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🏦 बैंकिंग - धोखाधड़ी पहचान</h4>
+                        <p><strong>समस्या:</strong> प्रति दिन लाखों लेनदेन, मैन्युअल जाँच संभव नहीं</p>
+                        <p><strong>समाधान:</strong></p>
+                        <ul>
+                            <li>मॉडल प्रत्येक ग्राहक के लिए "सामान्य" क्या है, सीखता है</li>
+                            <li>विसंगतियाँ पहचानता है: असामान्य स्थान, राशि, खरीदारी पैटर्न</li>
+                            <li>अलर्ट भेजता है या लेनदेन रोकता है</li>
+                        </ul>
+                        <p><strong>परिणाम:</strong> प्रति वर्ष अरबों डॉलर बचत</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎵 Spotify - संगीत सिफ़ारिशें</h4>
+                        <p><strong>समस्या:</strong> करोड़ों गाने—आपको क्या पसंद आएगा, कैसे ढूँढें?</p>
+                        <p><strong>समाधान (दृष्टिकोणों का संयोजन):</strong></p>
+                        <ul>
+                            <li><strong>Collaborative Filtering:</strong> "जिन्हें X पसंद आया उन्हें Y भी पसंद आया"</li>
+                            <li><strong>Content-Based:</strong> संगीत विश्लेषण (ताल, वाद्य, शैली)</li>
+                            <li><strong>NLP:</strong> गीत और विवरण का विश्लेषण</li>
+                            <li><strong>Audio Analysis:</strong> ध्वनि का विश्लेषण</li>
+                        </ul>
+                        <p><strong>परिणाम:</strong> Discover Weekly—हर हफ़्ते आपको चौंकाने वाली व्यक्तिगत सूची</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🚗 Tesla - स्वायत्त ड्राइविंग</h4>
+                        <p><strong>समस्या:</strong> ड्राइविंग के लिए जटिल परिवेश समझना और वास्तविक समय प्रतिक्रिया चाहिए</p>
+                        <p><strong>समाधान:</strong></p>
+                        <ul>
+                            <li><strong>कैमरे:</strong> कार के चारों ओर 8 कैमरे</li>
+                            <li><strong>Computer Vision:</strong> कार, पैदल यात्री, संकेत, लेन पहचानना</li>
+                            <li><strong>भविष्यवाणी:</strong> अन्य सड़क उपयोगकर्ताओं के व्यवहार की भविष्यवाणी</li>
+                            <li><strong>पथ योजना:</strong> कहाँ चलना है, यह तय करना</li>
+                            <li><strong>Fleet learning:</strong> हर Tesla ड्राइव सिस्टम को सिखाती है</li>
+                        </ul>
+                        <p><strong>परिणाम:</strong> अरबों किलोमीटर ड्राइविंग डेटा</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 ChatGPT - भाषा मॉडल</h4>
+                        <p><strong>समस्या:</strong> कंप्यूटर के साथ प्राकृतिक बातचीत बनाना</p>
+                        <p><strong>समाधान:</strong></p>
+                        <ul>
+                            <li><strong>Pre-training:</strong> इंटरनेट से खरबों शब्दों पर प्रशिक्षण</li>
+                            <li><strong>कार्य:</strong> पाठ में अगला शब्द भविष्यवाणी करना</li>
+                            <li><strong>Fine-tuning:</strong> अच्छी बातचीत के उदाहरणों से समायोजन</li>
+                            <li><strong>RLHF:</strong> मानव प्रतिक्रिया से प्रबलन सीखना</li>
+                        </ul>
+                        <p><strong>परिणाम:</strong> एक मॉडल जो लगभग किसी भी प्रश्न का प्राकृतिक भाषा में उत्तर दे सकता है</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="what-it-takes">काम करने के लिए क्या चाहिए?</h2>
+
+                    <div class="example-box">
+                        <h4>📊 1. डेटा - ईंधन</h4>
+                        <p>डेटा के बिना मशीन लर्निंग नहीं। चाहिए:</p>
+                        <ul>
+                            <li><strong>मात्रा:</strong> आमतौर पर ज़्यादा बेहतर (हज़ारों से अरबों तक)</li>
+                            <li><strong>गुणवत्ता:</strong> साफ़, सटीक डेटा बिना त्रुटियों के</li>
+                            <li><strong>विविधता:</strong> सभी संभावित मामलों का प्रतिनिधित्व करने वाला डेटा</li>
+                            <li><strong>लेबलिंग:</strong> पर्यवेक्षित सीखने में—उत्तर चिह्नित होने चाहिए</li>
+                        </ul>
+                        <div class="info-card warning">
+                            <strong>⚠️ "Garbage in = garbage out"</strong>
+                            <p>अगर डेटा खराब या पक्षपातपूर्ण है—मॉडल भी होगा!</p>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💻 2. कंप्यूट</h4>
+                        <p>मॉडल प्रशिक्षण के लिए भारी प्रसंस्करण चाहिए:</p>
+                        <ul>
+                            <li><strong>GPU:</strong> ग्राफ़िक्स प्रोसेसर जो समानांतर गणना में माहिर</li>
+                            <li><strong>TPU:</strong> Google के ML के लिए विशेष चिप</li>
+                            <li><strong>Cloud:</strong> AWS, Google Cloud, Azure शक्तिशाली हार्डवेयर देते हैं</li>
+                        </ul>
+                        <p><strong>लागत:</strong> GPT-5 पैमाने के मॉडल का प्रशिक्षण अनुमानित दसियों से सैकड़ों मिलियन डॉलर।</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🧮 3. एल्गोरिदम</h4>
+                        <p>गणितीय विधि जिससे कंप्यूटर सीखता है:</p>
+                        <ul>
+                            <li>वास्तुकला चुनना (CNN, Transformer, आदि)</li>
+                            <li>उद्देश्य फ़ंक्शन (मॉडल क्या सुधारने की कोशिश कर रहा है?)</li>
+                            <li>अनुकूलन (वेट कैसे अपडेट करें?)</li>
+                            <li>Hyperparameters (learning rate, batch size, आदि)</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>👨‍💻 4. विशेषज्ञता</h4>
+                        <p>ऐसे लोग चाहिए जो समझें:</p>
+                        <ul>
+                            <li>Data Scientists—डेटा विश्लेषण और मॉडल बनाना</li>
+                            <li>ML Engineers—सिस्टम लागू और तैनात करना</li>
+                            <li>Domain Experts—विशिष्ट क्षेत्र समझना</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>⏰ 5. समय</h4>
+                        <p>प्रशिक्षण में समय लगता है:</p>
+                        <ul>
+                            <li>छोटा मॉडल: मिनटों से घंटों</li>
+                            <li>मध्यम मॉडल: घंटों से दिनों</li>
+                            <li>बड़ा मॉडल (जैसे GPT-5): हफ़्तों से महीनों</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="key-terms">मुख्य अवधारणाएँ</h2>
+
+                    <div class="example-box">
+                        <h4>🎯 ओवरफ़िटिंग (Overfitting)</h4>
+                        <p>जब मॉडल प्रशिक्षण डेटा "याद" कर लेता है बजाय सामान्य पैटर्न सीखने के।</p>
+                        <p><strong>उदाहरण:</strong> छात्र ने अभ्यास परीक्षा के सभी उत्तर याद कर लिए—लेकिन वास्तविक परीक्षा में फेल।</p>
+                        <p><strong>समाधान:</strong> अधिक डेटा, regularization, नए डेटा पर परीक्षण।</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📉 अंडरफ़िटिंग (Underfitting)</h4>
+                        <p>जब मॉडल बहुत सरल है और पैटर्न सीखने में विफल।</p>
+                        <p><strong>समाधान:</strong> अधिक जटिल मॉडल, अधिक features, अधिक प्रशिक्षण।</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🔄 Training / Validation / Test Sets</h4>
+                        <p>डेटा को तीन सेटों में बाँटें:</p>
+                        <ul>
+                            <li><strong>Training (70%):</strong> मॉडल प्रशिक्षण के लिए</li>
+                            <li><strong>Validation (15%):</strong> समायोजन और कैलिब्रेशन के लिए</li>
+                            <li><strong>Test (15%):</strong> अंतिम मूल्यांकन के लिए—अंत तक छुएँ नहीं!</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📊 Accuracy, Precision, Recall</h4>
+                        <p>मॉडल गुणवत्ता मापने के मेट्रिक:</p>
+                        <ul>
+                            <li><strong>Accuracy:</strong> कुल मिलाकर कितनी बार सही थे</li>
+                            <li><strong>Precision:</strong> जब "हाँ" कहा—कितनी बार सही थे?</li>
+                            <li><strong>Recall:</strong> सभी वास्तविक "हाँ" में से कितने मिले?</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>⚖️ पक्षपात (Bias)</h4>
+                        <p>जब मॉडल व्यवस्थित रूप से भेदभाव करता है। असंतुलित डेटा के कारण होता है।</p>
+                        <p><strong>उदाहरण:</strong> मौजूदा कर्मचारियों (ज़्यादातर पुरुष) पर प्रशिक्षित भर्ती मॉडल महिलाओं के खिलाफ भेदभाव करता है।</p>
+                    </div>
+                </section>
+
+                <section class="summary-box">
+                    <h2 id="summary">सारांश 📝</h2>
+                    <ul>
+                        <li><strong>मशीन लर्निंग:</strong> स्पष्ट नियमों के बजाय उदाहरणों से सीखने वाले कंप्यूटर</li>
+                        <li><strong>3 प्रकार:</strong> पर्यवेक्षित (उत्तरों के साथ), अपर्यवेक्षित (बिना), प्रबलन (परीक्षण और त्रुटि)</li>
+                        <li><strong>डीप लर्निंग:</strong> कई परतों वाले न्यूरल नेटवर्क—ChatGPT की तकनीक</li>
+                        <li><strong>क्या चाहिए:</strong> डेटा + कंप्यूट + एल्गोरिदम + विशेषज्ञता + समय</li>
+                        <li><strong>उदाहरण:</strong> सिफ़ारिशें, धोखाधड़ी पहचान, चिकित्सा निदान, स्वायत्त ड्राइविंग</li>
+                        <li><strong>चुनौतियाँ:</strong> ओवरफ़िटिंग, पक्षपात, बहुत सारे डेटा की ज़रूरत</li>
+                    </ul>
+                </section>
+
+                <section id="quiz-section" data-model="B0.15" class="quiz-section">
+                    <h2 id="quiz">📝 स्वयं जाँचें</h2>
+                    <p class="quiz-intro">मशीन लर्निंग की अपनी समझ जाँचने के लिए 10 प्रश्नों के उत्तर दें।</p>
+
+                    <form id="quiz-form" data-model="B0.15">
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">1</span> मशीन लर्निंग क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q1" value="a"><span>हर स्थिति के लिए विस्तृत निर्देशों के साथ कंप्यूटर प्रोग्राम करना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="b"><span>डेटा से सीखने और स्पष्ट प्रोग्रामिंग के बिना सुधार करने वाले कंप्यूटर</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="c"><span>कारखानों में काम करने वाले रोबोट</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="d"><span>लोगों से बात करने वाले कंप्यूटर</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">2</span> सीखने के तीन मुख्य प्रकार क्या हैं?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q2" value="a"><span>पर्यवेक्षित, अपर्यवेक्षित और प्रबलन</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="b"><span>तेज़, धीमा और मध्यम</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="c"><span>आसान, कठिन और असंभव</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="d"><span>प्राथमिक, माध्यमिक और तृतीयक</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">3</span> पर्यवेक्षित सीखने में सिस्टम को क्या मिलता है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q3" value="a"><span>केवल बिना लेबल वाला डेटा</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="b"><span>क्या करना है, इस पर सीधे आदेश</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="c"><span>सही उत्तरों (लेबल) वाले उदाहरण</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="d"><span>केवल इनाम और दंड</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">4</span> गेम खेलने के लिए रोबोट को प्रशिक्षित करने में कौन-सा सीखने का प्रकार उपयोग होता है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q4" value="a"><span>पर्यवेक्षित सीखना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="b"><span>अपर्यवेक्षित सीखना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="c"><span>निष्क्रिय सीखना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="d"><span>प्रबलन सीखना</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">5</span> न्यूरल नेटवर्क क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q5" value="a"><span>इंटरनेट से जुड़े कंप्यूटरों का नेटवर्क</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="b"><span>मस्तिष्क कैसे काम करता है, उसकी नकल करने वाली गणितीय संरचना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="c"><span>जैविक न्यूरॉन को कंप्यूटर से जोड़ना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="d"><span>एक प्रकार का नेटवर्क केबल</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">6</span> ओवरफ़िटिंग में क्या होता है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q6" value="a"><span>मॉडल प्रशिक्षण डेटा याद कर लेता है और नए डेटा पर सामान्यीकरण नहीं करता</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="b"><span>मॉडल बहुत तेज़ चलता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="c"><span>बहुत अधिक डेटा है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="d"><span>कंप्यूटर अधिक गर्म हो जाता है</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">7</span> अपर्यवेक्षित सीखना क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q7" value="a"><span>कंप्यूटर के बिना सीखना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="b"><span>मानव शिक्षक के साथ सीखना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="c"><span>पूर्व लेबल के बिना डेटा में पैटर्न ढूँढना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="d"><span>पर्यवेक्षण के बिना धीमी सीख</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">8</span> डेटा को प्रशिक्षण और परीक्षण सेटों में बाँटना क्यों महत्वपूर्ण है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q8" value="a"><span>मेमोरी बचाने के लिए</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="b"><span>जाँचने के लिए कि मॉडल नए डेटा पर अच्छा सामान्यीकरण करता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="c"><span>ताकि कंप्यूटर तेज़ चले</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="d"><span>कोई विशेष कारण नहीं, बस परंपरा है</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">9</span> न्यूरल नेटवर्क में "वेट" की भूमिका क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q9" value="a"><span>कंप्यूटर कितना भारी है, यह मापना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="b"><span>तापमान संतुलित करना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="c"><span>कितने न्यूरॉन हैं, गिनना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="d"><span>न्यूरॉन के बीच कनेक्शन की ताकत तय करना</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">10</span> मशीन लर्निंग की सफलता के लिए क्या चाहिए?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q10" value="a"><span>गुणवत्ता वाले डेटा की बड़ी मात्रा</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="b"><span>केवल शक्तिशाली कंप्यूटर</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="c"><span>तेज़ इंटरनेट कनेक्शन</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="d"><span>हर समय कंप्यूटर के पास बैठा प्रोग्रामर</span></label>
+                            </div>
+                        </div>
+                    </form>
+
+                    <button id="quiz-submit">उत्तर जाँचें</button>
+
+                    <div id="quiz-results" class="quiz-results">
+                        <h3 id="your-results">आपके परिणाम</h3>
+                        <div class="score-display">
+                            <div class="score-item">
+                                <span id="quiz-score" class="score-number">0/10</span>
+                                <span class="score-label">सही उत्तर</span>
+                            </div>
+                            <div class="score-item">
+                                <span id="quiz-percent" class="score-number">0%</span>
+                                <span class="score-label">सफलता दर</span>
+                            </div>
+                        </div>
+                        <p id="quiz-message" class="quiz-message"></p>
+                        <button id="quiz-retry">फिर से कोशिश करें</button>
+                    </div>
+                </section>
+
+                <div class="article-nav">
+                    <a href="ai-history-hi.html" class="btn">→ 2. एआई का इतिहास</a>
+                    <a href="ai-daily-life-hi.html" class="btn btn-primary">4. रोज़मर्रा की ज़िंदगी में एआई – अगला ←</a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="site-version" aria-label="version">B0.15 · שחר הפקות AI · के लिए निर्मित: COMBE</p>
+            <p>© 2026 एआई सीखना – Sam Shahar</p>
+            <p class="footer-contact">फ़ोन: <a href="tel:+972522603831">+972522603831</a> | ईमेल: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

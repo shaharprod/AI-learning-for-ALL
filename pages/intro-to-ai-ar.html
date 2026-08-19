@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-version="B0.15">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="B0.15">
+    <meta name="application-name" content="שחר הפקות AI B0.15">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/%D7%A6%D7%99%D7%9C%D7%95%D7%9D%20%D7%9E%D7%A1%D7%9A%202026-02-09%20160037.png">
+    <title>مقدمة في الذكاء الاصطناعي | تعلّم الذكاء الاصطناعي · שחר הפקות AI · B0.15 · بُني لـ: COMBE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Noto Sans Arabic', sans-serif; direction: rtl; }</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index-ar.html">
+                    <img src="../images/colorful%20digital%20media%20sy.png" alt="شعار" class="logo-icon">
+                    <span class="logo-stack">
+                        <span class="logo-text">تعلّم الذكاء الاصطناعي</span>
+                        <span class="logo-byline">שחר הפקות AI · B0.15</span>
+                        <span class="logo-dedication">بُني لـ: COMBE</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index-ar.html">الرئيسية</a></li>
+                <li class="dropdown">
+                    <a href="../index-ar.html#topics" class="dropdown-toggle">الدروس ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="intro-to-ai-ar.html">1. مقدمة في الذكاء الاصطناعي</a></li>
+                        <li><a href="ai-history-ar.html">2. تاريخ الذكاء الاصطناعي</a></li>
+                        <li><a href="machine-learning-ar.html">3. تعلّم الآلة</a></li>
+                        <li><a href="ai-daily-life-ar.html">4. الذكاء الاصطناعي في الحياة اليومية</a></li>
+                        <li><a href="ai-tools-ar.html">5. أدوات عملية</a></li>
+                        <li><a href="prompt-engineering-ar.html">6. هندسة الأوامر</a></li>
+                        <li><a href="ai-ethics-ar.html">7. أخلاقيات الذكاء الاصطناعي</a></li>
+                        <li><a href="ai-future-ar.html">8. مستقبل الذكاء الاصطناعي</a></li>
+                        <li><a href="glossary-ar.html">9. قاموس المصطلحات</a></li>
+                    </ul>
+                </li>
+                <li><a href="glossary-ar.html">القاموس</a></li>
+                <li><a href="ai-tools-ar.html">الأدوات</a></li>
+                <li><a href="../index-ar.html#about">عن الموقع</a></li>
+            </ul>
+            <form class="nav-search" id="site-search" role="search">
+                <input type="search" name="q" placeholder="ابحث..." aria-label="بحث" />
+                <button type="submit" aria-label="بحث">🔍</button>
+            </form>
+            <nav class="lang-switcher" aria-label="اختيار اللغة">
+                <a href="intro-to-ai.html" hreflang="he" lang="he">עברית</a>
+                <a href="intro-to-ai-en.html" hreflang="en" lang="en">English</a>
+                <span class="lang-active" aria-current="page">العربية</span>
+                <a href="intro-to-ai-hi.html" hreflang="hi" lang="hi">हिन्दी</a>
+            </nav>
+            <button type="button" class="mobile-menu-btn" aria-label="القائمة"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+    <main class="article">
+        <div class="container">
+            <div class="breadcrumb"><a href="../index-ar.html">الرئيسية</a> / <span>مقدمة في الذكاء الاصطناعي</span></div>
+            <article class="article-content">
+                <h1>مقدمة في الذكاء الاصطناعي</h1>
+                <p class="article-meta">📚 مدة القراءة: 15 دقيقة | المستوى: مبتدئون</p>
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="الذكاء الاصطناعي - دماغ رقمي" class="article-header-image">
+
+                <section>
+                    <h2 id="what-is-ai">ما هو الذكاء الاصطناعي؟</h2>
+                    <p>
+                        الذكاء الاصطناعي (Artificial Intelligence أو AI) فرع من علوم الحاسوب
+                        يركّز على بناء أنظمة حاسوبية قادرة على أداء مهام تتطلب عادةً
+                        ذكاءً بشرياً. لكن ماذا يعني ذلك عملياً؟
+                    </p>
+                    <p>
+                        عندما نقول «ذكاء بشري» نقصد قدرات مثل:
+                    </p>
+                    <ul class="benefits-list">
+                        <li><strong>التعلّم:</strong> القدرة على اكتساب معرفة جديدة من التجربة</li>
+                        <li><strong>الاستدلال:</strong> القدرة على استخلاص استنتاجات من المعلومات</li>
+                        <li><strong>حل المشكلات:</strong> إيجاد حلول في مواقف جديدة</li>
+                        <li><strong>فهم اللغة:</strong> فهم اللغة الطبيعية وإنتاجها</li>
+                        <li><strong>الإدراك:</strong> التعرّف على الصور والأصوات والبيئة وفهمها</li>
+                        <li><strong>التخطيط:</strong> بناء خطط لتحقيق أهداف</li>
+                    </ul>
+                    <p>
+                        يحاول الذكاء الاصطناعي إنشاء أنظمة حاسوبية تستطيع أداء بعض هذه القدرات—
+                        أو حتى جميعها.
+                    </p>
+
+                    <div class="info-card tip">
+                        <strong>💡 الفرق عن البرمجة العادية:</strong>
+                        <p>في البرمجة العادية يكتب المبرمج بالضبط ما يجب أن يفعله الحاسوب في كل حالة.
+                        أما في الذكاء الاصطناعي، فيتعلّم الحاسوب بنفسه ما يفعل بناءً على أمثلة وتجربة.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="how-ai-works">كيف يعمل الذكاء الاصطناعي؟ الفكرة الأساسية</h2>
+                    <p>
+                        في جوهرها، تعمل معظم أنظمة الذكاء الاصطناعي اليوم وفق مبدأ بسيط:
+                        <strong>التعلّم من الأمثلة</strong>.
+                    </p>
+
+                    <div class="example-box">
+                        <h4>مثال: تعليم الحاسوب التعرّف على القطط</h4>
+                        <p>لنفترض أننا نريد تعليم الحاسوب التعرّف على القطط في الصور:</p>
+                        <ol>
+                            <li><strong>الخطوة 1 – البيانات:</strong> نعرض على الحاسوب ملايين الصور، بعضها فيه قطط وبعضها بلا قطط</li>
+                            <li><strong>الخطوة 2 – التدريب:</strong> يحلّل الحاسوب الصور ويبحث عن أنماط مشتركة لصور القطط (آذان مدبّبة، عيون معيّنة، شكل الوجه...)</li>
+                            <li><strong>الخطوة 3 – النموذج:</strong> في نهاية العملية يكون الحاسوب قد «بنى» نموذجاً داخلياً يمثّل «ما هي القطة»</li>
+                            <li><strong>الخطوة 4 – الاستخدام:</strong> عندما نعرض صورة جديدة، يستطيع الحاسوب التحقق مما إذا كانت تطابق نموذجه</li>
+                        </ol>
+                    </div>
+
+                    <p>
+                        هذا مختلف جوهرياً عن البرمجة العادية. لا يستطيع المبرمج كتابة قواعد صريحة للتعرّف على القطط—
+                        فالتباينات كثيرة جداً. لكن الذكاء الاصطناعي يستطيع تعلّم ذلك بنفسه من الأمثلة.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 id="subfields">فروع الذكاء الاصطناعي</h2>
+                    <p>الذكاء الاصطناعي مجال واسع يشمل فروعاً فرعية كثيرة:</p>
+
+                    <div class="example-box">
+                        <h4>🧠 تعلّم الآلة (Machine Learning - ML)</h4>
+                        <p>
+                            الفرع الأكثر شعبية. حواسيب تتعلّم من البيانات وتتحسّن مع الوقت.
+                            تقريباً كل ما نراه اليوم من ذكاء اصطناعي مبني على تعلّم الآلة.
+                        </p>
+                        <p><strong>أمثلة:</strong> توصيات نتفليكس، كشف الرسائل المزعجة، توقّع الطقس</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🔮 التعلّم العميق (Deep Learning - DL)</h4>
+                        <p>
+                            فرع من تعلّم الآلة يستخدم الشبكات العصبية الاصطناعية—
+                            بنى تحاكي (بشكل مبسّط) الدماغ البشري.
+                            هذه هي التقنية وراء معظم التقدّم المذهل في السنوات الأخيرة.
+                        </p>
+                        <p><strong>أمثلة:</strong> ChatGPT، التعرّف على الوجوه، الترجمة الآلية</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 معالجة اللغة الطبيعية (Natural Language Processing - NLP)</h4>
+                        <p>
+                            قدرة الحواسيب على فهم اللغة البشرية وتفسيرها وإنتاجها.
+                            هذا ما يتيح لنا التحدث مع سيري أو الدردشة مع ChatGPT.
+                        </p>
+                        <p><strong>أمثلة:</strong> روبوتات المحادثة، الترجمة، تلخيص النصوص، تحليل المشاعر</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>👁️ الرؤية الحاسوبية (Computer Vision - CV)</h4>
+                        <p>
+                            قدرة الحواسيب على «الرؤية» وفهم الصور والفيديو.
+                            يشمل ذلك كشف الأجسام والوجوه والحركة وغير ذلك.
+                        </p>
+                        <p><strong>أمثلة:</strong> Face ID، السيارات الذاتية القيادة، فلترة الصور</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🤖 الروبوتات</h4>
+                        <p>
+                            دمج الذكاء الاصطناعي مع آلات مادية. يجب أن يدرك الروبوت العالم،
+                            ويتخذ قرارات، وينفّذ أفعالاً جسدية.
+                        </p>
+                        <p><strong>أمثلة:</strong> الروبوتات الصناعية، المكانس الآلية، الطائرات المسيّرة</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎮 الذكاء الاصطناعي التوليدي (Generative AI)</h4>
+                        <p>
+                            النجم الجديد! أنظمة قادرة على إنشاء محتوى جديد—
+                            نصاً وصوراً وموسيقى وفيديو ورمزاً برمجياً.
+                            هذه هي الثورة التي نعيشها الآن.
+                        </p>
+                        <p><strong>أمثلة:</strong> ChatGPT، DALL-E، Midjourney، GitHub Copilot</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="types-by-capability">أنواع الذكاء الاصطناعي حسب القدرة</h2>
+                    <p>يقسّم علماء الذكاء الاصطناعي المجال إلى ثلاثة مستويات:</p>
+
+                    <h3 id="narrow-ai">1. الذكاء الاصطناعي الضيّق (Narrow AI / Weak AI) 🎯</h3>
+                    <p>
+                        نظام يتخصّص في مهمة واحدة محددة ويتفوّق فيها.
+                        <strong>هذا ما لدينا اليوم</strong>—وهو مثير للإعجاب بالفعل!
+                    </p>
+                    <div class="example-box">
+                        <h4>الخصائص:</h4>
+                        <ul>
+                            <li>يتخصّص في مهمة واحدة أو بضع مهام مترابطة</li>
+                            <li>لا يستطيع نقل المعرفة من مهمة إلى أخرى</li>
+                            <li>لا «يفهم» حقاً—بل يتعرّف على أنماط فقط</li>
+                            <li>قد يكون ممتازاً في مهمته—حتى أفضل من الإنسان</li>
+                        </ul>
+                        <p><strong>أمثلة:</strong></p>
+                        <ul>
+                            <li>ChatGPT—رائع في المحادثة، لكنه لا يستطيع قيادة سيارة</li>
+                            <li>AlphaGo—يهزم أبطال العالم في لعبة غو، لكنه لا يلعب الشطرنج</li>
+                            <li>نظام التعرّف على الوجوه—يتعرّف على الوجوه، لكنه لا يفهم المشاعر</li>
+                        </ul>
+                    </div>
+
+                    <h3 id="agi">2. الذكاء الاصطناعي العام (AGI - Artificial General Intelligence) 🧠</h3>
+                    <p>
+                        نظام يستطيع أداء <strong>أي</strong> مهمة فكرية يستطيع الإنسان أداءها،
+                        ونقل المعرفة من مهمة إلى أخرى.
+                    </p>
+                    <div class="example-box">
+                        <h4>خصائص افتراضية:</h4>
+                        <ul>
+                            <li>القدرة على تعلّم أي شيء جديد</li>
+                            <li>نقل المعرفة بين المجالات</li>
+                            <li>فهم حقيقي، وليس مجرّد تعرّف على أنماط</li>
+                            <li>القدرة على التصرّف في العالم المادي</li>
+                            <li>ربما: وعي ذاتي؟</li>
+                        </ul>
+                        <p><strong>الوضع:</strong> غير موجود. هناك جدل كبير حول متى وهل سيحدث—
+                        تتراوح التوقّعات بين 10 سنوات وإلى الأبد.</p>
+                    </div>
+
+                    <h3 id="asi">3. الذكاء الفائق (ASI - Artificial Superintelligence) 🚀</h3>
+                    <p>
+                        نظام أذكى من جميع البشر مجتمعين في كل مجال—
+                        العلم، الإبداع، المهارات الاجتماعية، المشاعر.
+                    </p>
+                    <div class="info-card warning">
+                        <strong>⚠️ نظري بالكامل:</strong>
+                        <p>هذا موضوع تكهّنات وخيال علمي. لا نعرف إن كان ممكناً،
+                        ومتى قد يحدث، أو ماذا سيعني. بعض العلماء قلقون،
+                        وبعضهم متفائلون، ومعظمهم يقولون إنه مبكر للقلق.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="everyday-examples">أمثلة مفصّلة من الحياة اليومية</h2>
+                    <p>الذكاء الاصطناعي موجود حولنا بالفعل. إليكم كيف يعمل:</p>
+
+                    <div class="example-box">
+                        <h4>🎬 نتفليكس ويوتيوب – محرّكات التوصية</h4>
+                        <p><strong>ما يحدث:</strong> نتفليكس يعرف بالضبط ماذا يوصي لكم</p>
+                        <p><strong>كيف يعمل:</strong></p>
+                        <ul>
+                            <li>يجمع النظام بيانات: ماذا شاهدتم، وكم من الوقت، ومتى توقّفتم، وماذا قيّمتم</li>
+                            <li>يقارنكم بملايين المستخدمين الآخرين ذوي الذوق المشابه</li>
+                            <li>يحلّل المحتوى نفسه: الأنواع، الممثلون، الإيقاع، الألوان</li>
+                            <li>يجمع كل ذلك ويحسب: «ما احتمال أن يستمتع هذا المستخدم بهذا الفيلم؟»</li>
+                        </ul>
+                        <p><strong>حقيقة:</strong> 80٪ مما يشاهده الناس على نتفليكس يأتي من توصيات الذكاء الاصطناعي!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📱 Face ID</h4>
+                        <p><strong>ما يحدث:</strong> يتعرّف الآيفون على وجهكم في جزء من الثانية</p>
+                        <p><strong>كيف يعمل:</strong></p>
+                        <ul>
+                            <li>يسقط 30,000 نقطة تحت حمراء على وجهكم</li>
+                            <li>ينشئ خريطة ثلاثية الأبعاد دقيقة</li>
+                            <li>تقارنها شبكة عصبية بالخريطة المخزّنة</li>
+                            <li>يعمل مع النظّارات واللحية والمكياج والقبعة</li>
+                        </ul>
+                        <p><strong>حقيقة:</strong> احتمال أن يفتح شخص آخر هاتفكم: واحد من مليون!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📧 فلترة الرسائل المزعجة – Gmail</h4>
+                        <p><strong>ما يحدث:</strong> أقل من 0.1٪ من الرسائل المزعجة تصل إلى صندوق واردكم</p>
+                        <p><strong>كيف يعمل:</strong></p>
+                        <ul>
+                            <li>يحلّل المحتوى: كلمات مشبوهة، روابط، صور</li>
+                            <li>يفحص المُرسل: السمعة، التاريخ، التوثيق</li>
+                            <li>يتعلّم من سلوككم: ما تعلّمونه كرسائل مزعجة</li>
+                            <li>يتعلّم من الجميع: ما يعلّمه مليارات المستخدمين</li>
+                        </ul>
+                        <p><strong>حقيقة:</strong> يحجب Gmail 10 ملايين رسالة مزعجة في الدقيقة!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🚗 Waze – تنقّل ذكي</h4>
+                        <p><strong>ما يحدث:</strong> يجد دائماً أسرع مسار</p>
+                        <p><strong>كيف يعمل:</strong></p>
+                        <ul>
+                            <li>يجمع موقعاً لحظياً من ملايين السائقين</li>
+                            <li>يكتشف الازدحامات والحوادث والعوائق</li>
+                            <li>يتعلّم أنماط المرور: أي الساعات تشهد ازدحاماً على أي الطرق</li>
+                            <li>يحسب الوقت المتوقّع لكل مسار ممكن</li>
+                            <li>يحدّث في الوقت الفعلي إذا تغيّرت الظروف</li>
+                        </ul>
+                        <p><strong>حقيقة:</strong> يوفّر Waze للسائقين معدّل 5–10 دقائق في كل رحلة!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 ChatGPT – محادثة مع الذكاء الاصطناعي</h4>
+                        <p><strong>ما يحدث:</strong> يمكنكم الدردشة بلغة طبيعية والحصول على إجابات ذكية</p>
+                        <p><strong>كيف يعمل:</strong></p>
+                        <ul>
+                            <li>دُرّب على تريليونات الكلمات من الإنترنت والكتب والمقالات</li>
+                            <li>تعلّم بنية اللغة—القواعد والأسلوب والسياق</li>
+                            <li>تعلّم حقائق عن العالم من النصوص</li>
+                            <li>عندما يتلقّى سؤالاً—«يتنبّأ» بالإجابة الأكثر احتمالاً كلمة بكلمة</li>
+                        </ul>
+                        <p><strong>مهم أن نفهم:</strong> ChatGPT لا «يعرف» ولا «يفهم»—بل يتعرّف على أنماط
+                        إحصائية. أحياناً يخطئ، أو يخترع أشياء، أو «يهلوس».</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="history-link">تاريخ الذكاء الاصطناعي</h2>
+                    <p>قصة الذكاء الاصطناعي قصة أحلام وإحباطات واختراقات—من تشارلز بابيج والآلة التحليلية (1837)، مروراً باختبار تورينغ (1950) ومؤتمر دارتموث (1956)، وصولاً إلى ChatGPT وGPT-5. للاطّلاع على خط زمني مفصّل بأسماء وتواريخ ومطوّرين حتى يناير 2026، انتقلوا إلى الصفحة المخصّصة:</p>
+                    <p><a href="ai-history-ar.html" class="card-link">→ تاريخ الذكاء الاصطناعي – خط زمني مفصّل</a></p>
+                </section>
+
+                <section>
+                    <h2 id="why-it-matters">لماذا يهمّنا: التأثير على العالم</h2>
+                    <p>
+                        يغيّر الذكاء الاصطناعي تقريباً كل مجال في حياتنا.
+                        هذه ليست تقنية المستقبل—إنها تحدث الآن:
+                    </p>
+
+                    <div class="example-box">
+                        <h4>🏥 الطب</h4>
+                        <ul>
+                            <li><strong>التشخيص:</strong> يكتشف الذكاء الاصطناعي السرطان في الصور بدقّة 95٪—أحياناً أفضل من الطبيب</li>
+                            <li><strong>تطوير الأدوية:</strong> ما كان يستغرق 10 سنوات يستغرق الآن سنة مع الذكاء الاصطناعي</li>
+                            <li><strong>الجراحة:</strong> روبوتات تجري عمليات أدق</li>
+                            <li><strong>التنبّؤات:</strong> اكتشاف الأمراض قبل ظهور الأعراض</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎓 التعليم</h4>
+                        <ul>
+                            <li><strong>تعلّم مخصّص:</strong> منهج دراسي مخصّص لكل طالب</li>
+                            <li><strong>معلّم متاح 24/7:</strong> ذكاء اصطناعي يجيب عن الأسئلة في أي وقت</li>
+                            <li><strong>تغذية راجعة فورية:</strong> تصحيح الواجبات وإعطاء ملاحظات في الوقت الفعلي</li>
+                            <li><strong>إتاحة الوصول:</strong> ترجمة، قراءة بصوت عالٍ، تكييف لصعوبات التعلّم</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🚗 النقل</h4>
+                        <ul>
+                            <li><strong>مركبات ذاتية القيادة:</strong> تقود بالفعل في بعض المدن</li>
+                            <li><strong>الصيانة:</strong> التنبّؤ بالأعطال قبل حدوثها</li>
+                            <li><strong>إدارة المرور:</strong> إشارات مرور ذكية تتكيّف</li>
+                            <li><strong>اللوجستيات:</strong> مسارات توصيل مثلى</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💼 العمل والأعمال</h4>
+                        <ul>
+                            <li><strong>الأتمتة:</strong> يؤدّي الذكاء الاصطناعي المهام الروتينية</li>
+                            <li><strong>التحليل:</strong> معالجة كميات هائلة من المعلومات</li>
+                            <li><strong>خدمة العملاء:</strong> روبوتات محادثة على مدار الساعة</li>
+                            <li><strong>الإبداع:</strong> مساعدة في الكتابة والتصميم والبرمجة</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎨 الإبداع والترفيه</h4>
+                        <ul>
+                            <li><strong>الفن:</strong> إنشاء صور وموسيقى وفيديو</li>
+                            <li><strong>الألعاب:</strong> خصوم أذكى، عوالم تتكيّف</li>
+                            <li><strong>السينما:</strong> مؤثرات خاصة، دبلجة، ترجمة</li>
+                            <li><strong>الكتابة:</strong> مساعدة في إنشاء محتوى من كل الأنواع</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card warning">
+                        <strong>⚠️ لكن هناك تحدّيات أيضاً:</strong>
+                        <ul>
+                            <li>وظائف ستختفي أو تتغيّر</li>
+                            <li>أسئلة الخصوصية والمراقبة</li>
+                            <li>التحيّز والتمييز في الخوارزميات</li>
+                            <li>المعلومات المضلّلة والتزييف العميق (Deepfakes)</li>
+                            <li>أسئلة أخلاقية معقّدة</li>
+                        </ul>
+                        <p>سنناقش كل ذلك لاحقاً، في صفحة أخلاقيات الذكاء الاصطناعي.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="key-concepts">مفاهيم أساسية يجب معرفتها</h2>
+
+                    <div class="example-box">
+                        <h4>📊 الخوارزمية</h4>
+                        <p>مجموعة دقيقة من التعليمات لأداء مهمة. مثل وصفة—خطوة بخطوة.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🧠 الشبكة العصبية</h4>
+                        <p>بنية رياضية تحاكي (بشكل مبسّط جداً) الدماغ. طبقات من «عصبونات» تمرّر المعلومات بينها.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📚 البيانات</h4>
+                        <p>وقود الذكاء الاصطناعي. كلّما زادت جودة البيانات، تحسّن تعلّم الذكاء الاصطناعي.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎯 النموذج</h4>
+                        <p>نتيجة عملية التعلّم—«الدماغ» الذي بناه الذكاء الاصطناعي من البيانات.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🏋️ التدريب</h4>
+                        <p>العملية التي يتعلّم فيها الذكاء الاصطناعي من البيانات. قد تستغرق أياماً إلى أشهر.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 الأمر (Prompt)</h4>
+                        <p>التعليمات التي تعطونها للذكاء الاصطناعي. طريقة صياغة الطلب تؤثّر كثيراً على النتيجة.</p>
+                    </div>
+                </section>
+
+                <section class="summary-box">
+                    <h2 id="summary">خلاصة 📝</h2>
+                    <ul>
+                        <li><strong>الذكاء الاصطناعي = حواسيب تتعلّم من الأمثلة</strong> بدلاً من برمجتها لكل حالة</li>
+                        <li><strong>موجود بالفعل:</strong> الرسائل المزعجة، نتفليكس، Waze، Face ID، ChatGPT—كلها ذكاء اصطناعي</li>
+                        <li><strong>الأنواع:</strong> تعلّم الآلة، التعلّم العميق، معالجة اللغة الطبيعية، الرؤية الحاسوبية، الذكاء الاصطناعي التوليدي</li>
+                        <li><strong>المستويات:</strong> لدينا ذكاء اصطناعي ضيّق (متخصّص في مهمة واحدة). الذكاء العام غير موجود بعد</li>
+                        <li><strong>التاريخ:</strong> 70 عاماً من الصعود والهبوط، ونحن الآن في ثورة</li>
+                        <li><strong>التأثير:</strong> يغيّر الطب والتعليم والنقل والعمل—كل شيء</li>
+                        <li><strong>مهم:</strong> هناك تحدّيات أيضاً—الوظائف، الخصوصية، التحيّز، الأخلاقيات</li>
+                    </ul>
+                </section>
+
+                <section id="quiz-section" data-model="B0.15" class="quiz-section">
+                    <h2 id="quiz">📝 اختبر نفسك</h2>
+                    <p class="quiz-intro">أجيبوا عن 10 أسئلة للتحقّق من فهمكم. اختاروا إجابة واحدة لكل سؤال.</p>
+
+                    <form id="quiz-form" data-model="B0.15">
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">1</span> ما الفرق الرئيسي بين البرمجة العادية والذكاء الاصطناعي؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q1" value="a"><span>في البرمجة العادية يكون الحاسوب أسرع</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="b"><span>في الذكاء الاصطناعي يتعلّم الحاسوب من الأمثلة بدلاً من تعليمات صريحة</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="c"><span>الذكاء الاصطناعي يعمل فقط على الحواسيب الجديدة</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="d"><span>لا يوجد فرق جوهري بينهما</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">2</span> ما هو «الذكاء الاصطناعي الضيّق» (Narrow AI)؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q2" value="a"><span>ذكاء اصطناعي يعمل فقط على الشاشات الصغيرة</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="b"><span>ذكاء اصطناعي أذكى من جميع البشر</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="c"><span>ذكاء اصطناعي يتخصّص في مهمة واحدة محددة</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="d"><span>ذكاء اصطناعي يتعلّم ببطء شديد</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">3</span> ما الذي يميّز «التعلّم العميق» (Deep Learning)؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q3" value="a"><span>استخدام الشبكات العصبية الاصطناعية</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="b"><span>التعلّم تحت سطح البحر</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="c"><span>تعلّم مواضيع فلسفية عميقة</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="d"><span>استخدام أجهزة باهظة الثمن بشكل خاص</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">4</span> متى صيغ مصطلح «الذكاء الاصطناعي» لأول مرة؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q4" value="a"><span>1990</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="b"><span>2010</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="c"><span>1970</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="d"><span>1956</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">5</span> ما نسبة المحتوى الذي يُشاهد على نتفليكس ويأتي من توصيات الذكاء الاصطناعي؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q5" value="a"><span>20%</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="b"><span>80%</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="c"><span>50%</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="d"><span>10%</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">6</span> ماذا تفعل معالجة اللغة الطبيعية (NLP)؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q6" value="a"><span>تعالج صور الطبيعة</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="b"><span>تنشئ موسيقى تلقائية</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="c"><span>تمكّن الحواسيب من فهم اللغة البشرية وإنتاجها</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="d"><span>تدير حركة المرور على الطرق</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">7</span> من اقترح «اختبار تورينغ»؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q7" value="a"><span>آلان تورينغ</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="b"><span>ستيف جوبز</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="c"><span>بيل غيتس</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="d"><span>إيلون ماسك</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">8</span> ماذا حدث في عام 2022 وأحدث ثورة في الذكاء الاصطناعي؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q8" value="a"><span>إطلاق أول آيفون</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="b"><span>حاسوب يهزم في الشطرنج</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="c"><span>تطوير الإنترنت</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="d"><span>إطلاق ChatGPT ووصوله إلى 100 مليون مستخدم</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">9</span> ما هو الـ «Prompt»؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q9" value="a"><span>نوع من الحواسيب القوية</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="b"><span>التعليمات التي تعطونها للذكاء الاصطناعي</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="c"><span>عطل في النظام</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="d"><span>لغة برمجة</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">10</span> ما الذي ليس صحيحاً عن ChatGPT؟</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q10" value="a"><span>دُرّب على تريليونات الكلمات</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="b"><span>أحياناً يخطئ أو يخترع معلومات</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="c"><span>هو حقاً «يفهم» و«يعرف» مثل الإنسان</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="d"><span>يتعرّف على أنماط إحصائية</span></label>
+                            </div>
+                        </div>
+                    </form>
+
+                    <button id="quiz-submit">تحقّق من الإجابات</button>
+
+                    <div id="quiz-results" class="quiz-results">
+                        <h3 id="your-results">نتائجكم</h3>
+                        <div class="score-display">
+                            <div class="score-item">
+                                <span id="quiz-score" class="score-number">0/10</span>
+                                <span class="score-label">إجابات صحيحة</span>
+                            </div>
+                            <div class="score-item">
+                                <span id="quiz-percent" class="score-number">0%</span>
+                                <span class="score-label">نسبة النجاح</span>
+                            </div>
+                        </div>
+                        <p id="quiz-message" class="quiz-message"></p>
+                        <button id="quiz-retry">حاوِل مجدداً</button>
+                    </div>
+                </section>
+
+                <div class="article-nav">
+                    <a href="../index-ar.html" class="btn">→ العودة إلى الرئيسية</a>
+                    <a href="ai-history-ar.html" class="btn btn-primary">2. تاريخ الذكاء الاصطناعي – التالي ←</a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="site-version" aria-label="version">B0.15 · שחר הפקות AI · بُني لـ: COMBE</p>
+            <p>© 2026 تعلّم الذكاء الاصطناعي – سام شاحار</p>
+            <p class="footer-contact">هاتف: <a href="tel:+972522603831">+972522603831</a> | بريد إلكتروني: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

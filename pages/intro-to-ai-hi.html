@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr" data-version="B0.15">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="B0.15">
+    <meta name="application-name" content="שחר הפקות AI B0.15">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>एआई का परिचय | एआई सीखना · שחר הפקות AI · B0.15 · के लिए निर्मित: COMBE</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>body { direction: ltr; font-family: 'Noto Sans Devanagari', sans-serif; }</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="../index-hi.html">
+                    <img src="../images/colorful%20digital%20media%20sy.png" alt="लोगो" class="logo-icon">
+                    <span class="logo-stack">
+                        <span class="logo-text">एआई सीखना</span>
+                        <span class="logo-byline">שחר הפקות AI · B0.15</span>
+                        <span class="logo-dedication">के लिए निर्मित: COMBE</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index-hi.html">होम</a></li>
+                <li class="dropdown">
+                    <a href="../index-hi.html#topics" class="dropdown-toggle">पाठ ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="intro-to-ai-hi.html">1. एआई का परिचय</a></li>
+                        <li><a href="ai-history-hi.html">2. एआई का इतिहास</a></li>
+                        <li><a href="machine-learning-hi.html">3. मशीन लर्निंग</a></li>
+                        <li><a href="ai-daily-life-hi.html">4. रोज़मर्रा की ज़िंदगी में एआई</a></li>
+                        <li><a href="ai-tools-hi.html">5. व्यावहारिक उपकरण</a></li>
+                        <li><a href="prompt-engineering-hi.html">6. प्रॉम्प्ट इंजीनियरिंग</a></li>
+                        <li><a href="ai-ethics-hi.html">7. एआई नैतिकता</a></li>
+                        <li><a href="ai-future-hi.html">8. एआई का भविष्य</a></li>
+                        <li><a href="glossary-hi.html">9. शब्दावली</a></li>
+                    </ul>
+                </li>
+                <li><a href="glossary-hi.html">शब्दावली</a></li>
+                <li><a href="ai-tools-hi.html">उपकरण</a></li>
+                <li><a href="../index-hi.html#about">परिचय</a></li>
+            </ul>
+            <form class="nav-search" id="site-search" role="search">
+                <input type="search" name="q" placeholder="खोजें..." aria-label="खोजें" />
+                <button type="submit" aria-label="खोजें">🔍</button>
+            </form>
+            <nav class="lang-switcher" aria-label="भाषा चुनें">
+                <a href="intro-to-ai.html" hreflang="he" lang="he">עברית</a>
+                <a href="intro-to-ai-en.html" hreflang="en" lang="en">English</a>
+                <a href="intro-to-ai-ar.html" hreflang="ar" lang="ar">العربية</a>
+                <span class="lang-active" aria-current="page">हिन्दी</span>
+            </nav>
+            <button type="button" class="mobile-menu-btn" aria-label="मेनू"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+    <main class="article">
+        <div class="container">
+            <div class="breadcrumb"><a href="../index-hi.html">होम</a> / <span>एआई का परिचय</span></div>
+            <article class="article-content">
+                <h1>कृत्रिम बुद्धिमत्ता का परिचय</h1>
+                <p class="article-meta">📚 पढ़ने का समय: 15 मिनट | स्तर: शुरुआती</p>
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="एआई - डिजिटल मस्तिष्क" class="article-header-image">
+
+                <section>
+                    <h2 id="what-is-ai">कृत्रिम बुद्धिमत्ता क्या है?</h2>
+                    <p>
+                        कृत्रिम बुद्धिमत्ता (AI) कंप्यूटर विज्ञान की वह शाखा है
+                        जो ऐसी कंप्यूटर प्रणालियाँ बनाने पर केंद्रित है जो आमतौर पर
+                        मानवीय बुद्धि वाले काम कर सकें। लेकिन इसका वास्तव में क्या मतलब है?
+                    </p>
+                    <p>
+                        जब हम "मानवीय बुद्धि" कहते हैं, तो हम इन क्षमताओं की बात करते हैं:
+                    </p>
+                    <ul class="benefits-list">
+                        <li><strong>सीखना:</strong> अनुभव से नया ज्ञान प्राप्त करने की क्षमता</li>
+                        <li><strong>तर्क:</strong> जानकारी से निष्कर्ष निकालने की क्षमता</li>
+                        <li><strong>समस्या-समाधान:</strong> नई स्थितियों में समाधान खोजना</li>
+                        <li><strong>भाषा समझना:</strong> प्राकृतिक भाषा समझना और उत्पन्न करना</li>
+                        <li><strong>अनुभूति:</strong> चित्र, ध्वनि और परिवेश को पहचानना और समझना</li>
+                        <li><strong>योजना:</strong> लक्ष्यों तक पहुँचने के लिए योजना बनाना</li>
+                    </ul>
+                    <p>
+                        कृत्रिम बुद्धिमत्ता ऐसी कंप्यूटर प्रणालियाँ बनाने की कोशिश करती है जो इनमें से कुछ—
+                        या सभी—क्षमताओं को कर सकें।
+                    </p>
+
+                    <div class="info-card tip">
+                        <strong>💡 सामान्य प्रोग्रामिंग से अंतर:</strong>
+                        <p>सामान्य प्रोग्रामिंग में प्रोग्रामर हर स्थिति में कंप्यूटर को ठीक वही लिखता है जो करना है।
+                        एआई में कंप्यूटर उदाहरणों और अनुभव के आधार पर खुद सीखता है कि क्या करना है।</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="how-ai-works">एआई कैसे काम करता है? मूल विचार</h2>
+                    <p>
+                        मूल रूप से, आज की अधिकांश एआई प्रणालियाँ एक सरल सिद्धांत पर काम करती हैं:
+                        <strong>उदाहरणों से सीखना</strong>।
+                    </p>
+
+                    <div class="example-box">
+                        <h4>उदाहरण: कंप्यूटर को बिल्लियाँ पहचानना सिखाना</h4>
+                        <p>मान लीजिए हम कंप्यूटर को चित्रों में बिल्लियाँ पहचानना सिखाना चाहते हैं:</p>
+                        <ol>
+                            <li><strong>चरण 1 - डेटा:</strong> कंप्यूटर को लाखों चित्र दिखाएँ, कुछ में बिल्ली हो और कुछ में न हो</li>
+                            <li><strong>चरण 2 - प्रशिक्षण:</strong> कंप्यूटर चित्रों का विश्लेषण करता है और बिल्ली वाले चित्रों में समान पैटर्न ढूँढता है (नुकीले कान, खास आँखें, चेहरे का आकार...)</li>
+                            <li><strong>चरण 3 - मॉडल:</strong> प्रक्रिया के अंत में कंप्यूटर ने एक आंतरिक मॉडल "बना लिया" जो दर्शाता है कि "बिल्ली क्या है"</li>
+                            <li><strong>चरण 4 - उपयोग:</strong> अब जब हम नया चित्र दिखाते हैं, तो वह जाँच सकता है कि वह उसके मॉडल से मेल खाता है या नहीं</li>
+                        </ol>
+                    </div>
+
+                    <p>
+                        यह सामान्य प्रोग्रामिंग से मौलिक रूप से अलग है। प्रोग्रामर बिल्लियाँ पहचानने के स्पष्ट नियम नहीं लिख सकता—
+                        विविधताएँ बहुत अधिक हैं। लेकिन एआई उदाहरणों से खुद सीख सकता है।
+                    </p>
+                </section>
+
+                <section>
+                    <h2 id="subfields">कृत्रिम बुद्धिमत्ता के उपक्षेत्र</h2>
+                    <p>एआई एक व्यापक क्षेत्र है जिसमें कई उपक्षेत्र शामिल हैं:</p>
+
+                    <div class="example-box">
+                        <h4>🧠 मशीन लर्निंग (ML)</h4>
+                        <p>
+                            सबसे लोकप्रिय शाखा। कंप्यूटर डेटा से सीखते हैं और समय के साथ बेहतर होते हैं।
+                            आज जो एआई हम देखते हैं, लगभग सब मशीन लर्निंग पर आधारित है।
+                        </p>
+                        <p><strong>उदाहरण:</strong> नेटफ्लिक्स सुझाव, स्पैम पहचान, मौसम पूर्वानुमान</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🔮 डीप लर्निंग (DL)</h4>
+                        <p>
+                            मशीन लर्निंग का उपक्षेत्र जो कृत्रिम न्यूरल नेटवर्क का उपयोग करता है—
+                            ऐसी संरचनाएँ जो (सरलीकृत रूप में) मानव मस्तिष्क की नकल करती हैं।
+                            हाल के वर्षों की प्रभावशाली प्रगति के पीछे यही तकनीक है।
+                        </p>
+                        <p><strong>उदाहरण:</strong> ChatGPT, चेहरा पहचान, स्वचालित अनुवाद</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 प्राकृतिक भाषा प्रसंस्करण (NLP)</h4>
+                        <p>
+                            कंप्यूटर की मानवीय भाषा समझने, व्याख्या करने और उत्पन्न करने की क्षमता।
+                            इसी से हम सिरी से बात करते हैं या ChatGPT से चैट करते हैं।
+                        </p>
+                        <p><strong>उदाहरण:</strong> चैटबॉट, अनुवाद, पाठ सारांश, भावना विश्लेषण</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>👁️ कंप्यूटर विज़न (CV)</h4>
+                        <p>
+                            कंप्यूटर की चित्र और वीडियो को "देखने" और समझने की क्षमता।
+                            इसमें वस्तु, चेहरा, गति पहचान आदि शामिल हैं।
+                        </p>
+                        <p><strong>उदाहरण:</strong> Face ID, स्वचालित वाहन, छवि फ़िल्टर</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🤖 रोबोटिक्स</h4>
+                        <p>
+                            एआई को भौतिक मशीनों से जोड़ना। रोबोट को दुनिया को समझना,
+                            निर्णय लेना और भौतिक क्रियाएँ करनी होती हैं।
+                        </p>
+                        <p><strong>उदाहरण:</strong> औद्योगिक रोबोट, रोबोट वैक्यूम, ड्रोन</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎮 जनरेटिव एआई</h4>
+                        <p>
+                            नई सुपरस्टार! ऐसी प्रणालियाँ जो नई सामग्री बना सकती हैं—
+                            पाठ, चित्र, संगीत, वीडियो और कोड।
+                            यही क्रांति हम अभी अनुभव कर रहे हैं।
+                        </p>
+                        <p><strong>उदाहरण:</strong> ChatGPT, DALL-E, Midjourney, GitHub Copilot</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="types-by-capability">क्षमता के अनुसार एआई के प्रकार</h2>
+                    <p>एआई वैज्ञानिक कृत्रिम बुद्धिमत्ता को तीन स्तरों में बाँटते हैं:</p>
+
+                    <h3 id="narrow-ai">1. संकीर्ण एआई (Weak AI) 🎯</h3>
+                    <p>
+                        एक प्रणाली जो एक विशिष्ट कार्य में विशेषज्ञ होती है और उसमें उत्कृष्ट होती है।
+                        <strong>यही आज हमारे पास है</strong>—और यह पहले से बहुत प्रभावशाली है!
+                    </p>
+                    <div class="example-box">
+                        <h4>विशेषताएँ:</h4>
+                        <ul>
+                            <li>एक कार्य या कुछ संबंधित कार्यों में विशेषज्ञ</li>
+                            <li>एक कार्य से दूसरे में ज्ञान स्थानांतरित नहीं कर सकता</li>
+                            <li>वास्तव में "समझता" नहीं—केवल पैटर्न पहचानता है</li>
+                            <li>अपने कार्य में उत्कृष्ट हो सकता है—कभी-कभी मनुष्य से बेहतर</li>
+                        </ul>
+                        <p><strong>उदाहरण:</strong></p>
+                        <ul>
+                            <li>ChatGPT—बातचीत में महान, लेकिन कार नहीं चला सकता</li>
+                            <li>AlphaGo—गो में विश्व चैंपियन को हराता है, लेकिन शतरंज नहीं खेल सकता</li>
+                            <li>चेहरा पहचान प्रणाली—चेहरे पहचानती है, लेकिन भावनाएँ नहीं समझती</li>
+                        </ul>
+                    </div>
+
+                    <h3 id="agi">2. सामान्य एआई (AGI - Artificial General Intelligence) 🧠</h3>
+                    <p>
+                        एक प्रणाली जो मनुष्य के किसी भी बौद्धिक कार्य को कर सके,
+                        और एक कार्य से दूसरे में ज्ञान स्थानांतरित कर सके।
+                    </p>
+                    <div class="example-box">
+                        <h4>काल्पनिक विशेषताएँ:</h4>
+                        <ul>
+                            <li>कुछ भी नया सीखने की क्षमता</li>
+                            <li>डोमेन के बीच ज्ञान का स्थानांतरण</li>
+                            <li>वास्तविक समझ, केवल पैटर्न पहचान नहीं</li>
+                            <li>भौतिक दुनिया में कार्य करने की क्षमता</li>
+                            <li>शायद: आत्म-जागरूकता?</li>
+                        </ul>
+                        <p><strong>स्थिति:</strong> मौजूद नहीं। कब और होगा या नहीं—इस पर भारी बहस है—
+                        पूर्वानुमान 10 वर्ष से लेकर कभी नहीं तक हैं।</p>
+                    </div>
+
+                    <h3 id="asi">3. सुपरइंटेलिजेंस (ASI) 🚀</h3>
+                    <p>
+                        सभी मनुष्यों से मिलकर हर क्षेत्र में अधिक बुद्धिमान प्रणाली—
+                        विज्ञान, रचनात्मकता, सामाजिक कौशल, भावनाएँ।
+                    </p>
+                    <div class="info-card warning">
+                        <strong>⚠️ पूरी तरह सैद्धांतिक:</strong>
+                        <p>यह अटकलों और विज्ञान कथा का विषय है। हमें नहीं पता कि यह संभव है या नहीं,
+                        कब हो सकता है, या इसका क्या मतलब होगा। कुछ वैज्ञानिक चिंतित हैं,
+                        कुछ आशावादी, और अधिकांश कहते हैं अभी चिंता करना जल्दी है।</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="everyday-examples">रोज़मर्रा की ज़िंदगी के विस्तृत उदाहरण</h2>
+                    <p>कृत्रिम बुद्धिमत्ता पहले से हमारे चारों ओर है। यहाँ बताया गया है कैसे:</p>
+
+                    <div class="example-box">
+                        <h4>🎬 नेटफ्लिक्स और यूट्यूब - सुझाव इंजन</h4>
+                        <p><strong>क्या होता है:</strong> नेटफ्लिक्स ठीक जानता है आपको क्या सुझाना है</p>
+                        <p><strong>कैसे काम करता है:</strong></p>
+                        <ul>
+                            <li>प्रणाली डेटा एकत्र करती है: आपने क्या देखा, कितनी देर, कब रोका, क्या रेटिंग दी</li>
+                            <li>आपकी तुलना समान रुचि वाले लाखों अन्य उपयोगकर्ताओं से करती है</li>
+                            <li>सामग्री का विश्लेषण: शैली, अभिनेता, गति, रंग</li>
+                            <li>सब मिलाकर गणना: "इस उपयोगकर्ता को इस फ़िल्म का आनंद लेने की कितनी संभावना है?"</li>
+                        </ul>
+                        <p><strong>तथ्य:</strong> नेटफ्लिक्स पर लोग जो देखते हैं उसका 80% एआई सुझावों से आता है!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📱 Face ID</h4>
+                        <p><strong>क्या होता है:</strong> आईफ़ोन सेकंड के अंश में आपका चेहरा पहचानता है</p>
+                        <p><strong>कैसे काम करता है:</strong></p>
+                        <ul>
+                            <li>आपके चेहरे पर 30,000 इन्फ्रारेड बिंदु प्रोजेक्ट करता है</li>
+                            <li>सटीक 3D मानचित्र बनाता है</li>
+                            <li>न्यूरल नेटवर्क उसे संग्रहीत मानचित्र से तुलना करता है</li>
+                            <li>चश्मा, दाढ़ी, मेकअप, टोपी के साथ भी काम करता है</li>
+                        </ul>
+                        <p><strong>तथ्य:</strong> किसी और के आपके फ़ोन खोलने की संभावना: दस लाख में एक!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📧 स्पैम फ़िल्टरिंग - जीमेल</h4>
+                        <p><strong>क्या होता है:</strong> 0.1% से कम स्पैम आपके इनबॉक्स तक पहुँचता है</p>
+                        <p><strong>कैसे काम करता है:</strong></p>
+                        <ul>
+                            <li>सामग्री विश्लेषण: संदिग्ध शब्द, लिंक, चित्र</li>
+                            <li>प्रेषक जाँच: प्रतिष्ठा, इतिहास, प्रमाणीकरण</li>
+                            <li>आपके व्यवहार से सीखना: आप क्या स्पैम चिह्नित करते हैं</li>
+                            <li>सबसे सीखना: अरबों उपयोगकर्ता क्या चिह्नित करते हैं</li>
+                        </ul>
+                        <p><strong>तथ्य:</strong> जीमेल प्रति मिनट 10 मिलियन स्पैम संदेश ब्लॉक करता है!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🚗 वेज़ - स्मार्ट नेविगेशन</h4>
+                        <p><strong>क्या होता है:</strong> हमेशा सबसे तेज़ मार्ग ढूँढता है</p>
+                        <p><strong>कैसे काम करता है:</strong></p>
+                        <ul>
+                            <li>लाखों ड्राइवरों से रियल-टाइम स्थान एकत्र करता है</li>
+                            <li>ट्रैफ़िक जाम, दुर्घटनाएँ, बाधाएँ पहचानता है</li>
+                            <li>ट्रैफ़िक पैटर्न सीखता है: किन घंटों में किन सड़कों पर भीड़</li>
+                            <li>हर संभावित मार्ग के लिए अपेक्षित समय गणना करता है</li>
+                            <li>स्थितियाँ बदलने पर रियल टाइम में अपडेट करता है</li>
+                        </ul>
+                        <p><strong>तथ्य:</strong> वेज़ ड्राइवरों को औसतन प्रति यात्रा 5–10 मिनट बचाता है!</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 ChatGPT - एआई से बातचीत</h4>
+                        <p><strong>क्या होता है:</strong> आप प्राकृतिक भाषा में चैट कर सकते हैं और स्मार्ट उत्तर पा सकते हैं</p>
+                        <p><strong>कैसे काम करता है:</strong></p>
+                        <ul>
+                            <li>इंटरनेट, किताबों, लेखों से खरबों शब्दों पर प्रशिक्षित</li>
+                            <li>भाषा की संरचना सीखी—व्याकरण, शैली, संदर्भ</li>
+                            <li>पाठों से दुनिया के बारे में तथ्य सीखे</li>
+                            <li>जब प्रश्न मिलता है—"अनुमान" लगाता है शब्द-दर-शब्द सबसे संभावित उत्तर</li>
+                        </ul>
+                        <p><strong>समझना ज़रूरी:</strong> ChatGPT "जानता" या "समझता" नहीं—वह सांख्यिकीय
+                        पैटर्न पहचानता है। कभी गलतियाँ करता है, चीज़ें गढ़ता है, या "हैलुसिनेट" करता है।</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="history-link">कृत्रिम बुद्धिमत्ता का इतिहास</h2>
+                    <p>एआई की कहानी सपनों, निराशाओं और सफलताओं की है—चार्ल्स बैबेज और एनालिटिकल इंजन (1837) से, ट्यूरिंग टेस्ट (1950) और डार्टमाउथ सम्मेलन (1956) के माध्यम से, ChatGPT और GPT-5 तक। जनवरी 2026 तक की विस्तृत समयरेखा के लिए समर्पित पृष्ठ देखें:</p>
+                    <p><a href="ai-history-hi.html" class="card-link">→ एआई का इतिहास – विस्तृत समयरेखा</a></p>
+                </section>
+
+                <section>
+                    <h2 id="why-it-matters">यह क्यों मायने रखता है: दुनिया पर प्रभाव</h2>
+                    <p>
+                        कृत्रिम बुद्धिमत्ता हमारे जीवन के लगभग हर क्षेत्र को बदल रही है।
+                        यह भविष्य की तकनीक नहीं—यह अभी हो रहा है:
+                    </p>
+
+                    <div class="example-box">
+                        <h4>🏥 चिकित्सा</h4>
+                        <ul>
+                            <li><strong>निदान:</strong> एआई स्कैन में 95% सटीकता से कैंसर पहचानता है—कभी-कभी डॉक्टर से बेहतर</li>
+                            <li><strong>दवा विकास:</strong> जो 10 वर्ष लेता था, अब एआई से एक वर्ष में</li>
+                            <li><strong>सर्जरी:</strong> रोबोट अधिक सटीक ऑपरेशन करते हैं</li>
+                            <li><strong>पूर्वानुमान:</strong> लक्षण आने से पहले रोगों का पता लगाना</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎓 शिक्षा</h4>
+                        <ul>
+                            <li><strong>व्यक्तिगत शिक्षा:</strong> प्रत्येक छात्र के लिए अनुकूल पाठ्यक्रम</li>
+                            <li><strong>24/7 शिक्षक:</strong> कभी भी प्रश्नों के उत्तर देने वाला एआई</li>
+                            <li><strong>तुरंत प्रतिक्रिया:</strong> असाइनमेंट ग्रेडिंग और रियल टाइम फीडबैक</li>
+                            <li><strong>पहुँच:</strong> अनुवाद, जोर से पढ़ना, अधिगम विकलांगता के लिए अनुकूलन</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🚗 परिवहन</h4>
+                        <ul>
+                            <li><strong>स्वचालित वाहन:</strong> पहले से कुछ शहरों में चल रहे हैं</li>
+                            <li><strong>रखरखाव:</strong> खराबी होने से पहले पूर्वानुमान</li>
+                            <li><strong>ट्रैफ़िक प्रबंधन:</strong> अनुकूल स्मार्ट ट्रैफ़िक लाइट</li>
+                            <li><strong>लॉजिस्टिक्स:</strong> इष्टतम डिलीवरी मार्ग</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💼 काम और व्यवसाय</h4>
+                        <ul>
+                            <li><strong>स्वचालन:</strong> एआई नियमित कार्य करता है</li>
+                            <li><strong>विश्लेषण:</strong> विशाल जानकारी का प्रसंस्करण</li>
+                            <li><strong>ग्राहक सेवा:</strong> 24/7 चैटबॉट</li>
+                            <li><strong>रचनात्मकता:</strong> लेखन, डिज़ाइन, कोड में मदद</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎨 रचनात्मकता और मनोरंजन</h4>
+                        <ul>
+                            <li><strong>कला:</strong> चित्र, संगीत, वीडियो बनाना</li>
+                            <li><strong>गेम:</strong> स्मार्ट विरोधी, अनुकूल दुनिया</li>
+                            <li><strong>फ़िल्म:</strong> विशेष प्रभाव, डबिंग, अनुवाद</li>
+                            <li><strong>लेखन:</strong> सभी प्रकार की सामग्री बनाने में मदद</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card warning">
+                        <strong>⚠️ लेकिन चुनौतियाँ भी हैं:</strong>
+                        <ul>
+                            <li>नौकरियाँ जो गायब होंगी या बदलेंगी</li>
+                            <li>गोपनीयता और निगरानी के प्रश्न</li>
+                            <li>एल्गोरिदम में पूर्वाग्रह और भेदभाव</li>
+                            <li>गलत जानकारी और डीपफेक</li>
+                            <li>जटिल नैतिक प्रश्न</li>
+                        </ul>
+                        <p>इन सब पर हम बाद में एआई नैतिकता वाले पृष्ठ पर चर्चा करेंगे।</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="key-concepts">जानने योग्य मुख्य अवधारणाएँ</h2>
+
+                    <div class="example-box">
+                        <h4>📊 एल्गोरिदम</h4>
+                        <p>कार्य करने के लिए निर्देशों का सटीक सेट। जैसे नुस्खा—कदम दर कदम।</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🧠 न्यूरल नेटवर्क</h4>
+                        <p>एक गणितीय संरचना जो (बहुत सरलीकृत रूप में) मस्तिष्क की नकल करती है। "न्यूरॉन्स" की परतें जो जानकारी पास करती हैं।</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📚 डेटा</h4>
+                        <p>एआई का ईंधन। जितना अधिक गुणवत्तापूर्ण डेटा, उतना बेहतर एआई सीखता है।</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🎯 मॉडल</h4>
+                        <p>सीखने की प्रक्रिया का परिणाम—वह "मस्तिष्क" जो एआई ने डेटा से बनाया।</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>🏋️ प्रशिक्षण</h4>
+                        <p>वह प्रक्रिया जिसमें एआई डेटा से सीखता है। दिनों से महीनों तक लग सकता है।</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>💬 प्रॉम्प्ट</h4>
+                        <p>वह निर्देश जो आप एआई को देते हैं। अनुरोध कैसे लिखते हैं, परिणाम पर बहुत प्रभाव पड़ता है।</p>
+                    </div>
+                </section>
+
+                <section class="summary-box">
+                    <h2 id="summary">सारांश 📝</h2>
+                    <ul>
+                        <li><strong>एआई = उदाहरणों से सीखने वाले कंप्यूटर</strong> बजाय हर स्थिति के लिए प्रोग्राम किए जाने के</li>
+                        <li><strong>पहले से यहाँ:</strong> स्पैम, नेटफ्लिक्स, वेज़, Face ID, ChatGPT—सब एआई</li>
+                        <li><strong>प्रकार:</strong> मशीन लर्निंग, डीप लर्निंग, NLP, कंप्यूटर विज़न, जनरेटिव एआई</li>
+                        <li><strong>स्तर:</strong> हमारे पास संकीर्ण एआई है (एक कार्य में विशेषज्ञ)। सामान्य एआई अभी नहीं है</li>
+                        <li><strong>इतिहास:</strong> 70 वर्षों के उतार-चढ़ाव, अब क्रांति में</li>
+                        <li><strong>प्रभाव:</strong> चिकित्सा, शिक्षा, परिवहन, काम—सब कुछ बदल रहा है</li>
+                        <li><strong>महत्वपूर्ण:</strong> चुनौतियाँ भी हैं—नौकरियाँ, गोपनीयता, पूर्वाग्रह, नैतिकता</li>
+                    </ul>
+                </section>
+
+                <section id="quiz-section" data-model="B0.15" class="quiz-section">
+                    <h2 id="quiz">📝 स्वयं जाँचें</h2>
+                    <p class="quiz-intro">अपनी समझ जाँचने के लिए 10 प्रश्नों के उत्तर दें। प्रत्येक प्रश्न पर एक उत्तर चुनें।</p>
+
+                    <form id="quiz-form" data-model="B0.15">
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">1</span> सामान्य प्रोग्रामिंग और कृत्रिम बुद्धिमत्ता में मुख्य अंतर क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q1" value="a"><span>सामान्य प्रोग्रामिंग में कंप्यूटर तेज़ होता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="b"><span>एआई में कंप्यूटर स्पष्ट निर्देशों के बजाय उदाहरणों से सीखता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="c"><span>एआई केवल नए कंप्यूटरों पर काम करता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="d"><span>उनमें कोई महत्वपूर्ण अंतर नहीं है</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">2</span> "संकीर्ण एआई" क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q2" value="a"><span>एआई जो केवल छोटी स्क्रीन पर काम करता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="b"><span>एआई जो सभी मनुष्यों से अधिक बुद्धिमान है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="c"><span>एआई जो एक विशिष्ट कार्य में विशेषज्ञ है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="d"><span>एआई जो बहुत धीरे सीखता है</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">3</span> "डीप लर्निंग" की विशेषता क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q3" value="a"><span>कृत्रिम न्यूरल नेटवर्क का उपयोग</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="b"><span>समुद्र के नीचे सीखना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="c"><span>गहरे दार्शनिक विषयों का सीखना</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="d"><span>विशेष रूप से महंगे हार्डवेयर का उपयोग</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">4</span> "कृत्रिम बुद्धिमत्ता" शब्द पहली बार कब गढ़ा गया?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q4" value="a"><span>1990</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="b"><span>2010</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="c"><span>1970</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="d"><span>1956</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">5</span> नेटफ्लिक्स पर देखी जाने वाली सामग्री का कितना प्रतिशत एआई सुझावों से आता है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q5" value="a"><span>20%</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="b"><span>80%</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="c"><span>50%</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="d"><span>10%</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">6</span> प्राकृतिक भाषा प्रसंस्करण (NLP) क्या करता है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q6" value="a"><span>प्रकृति के चित्र संसाधित करता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="b"><span>स्वचालित संगीत बनाता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="c"><span>कंप्यूटर को मानवीय भाषा समझने और उत्पन्न करने में सक्षम बनाता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="d"><span>सड़क ट्रैफ़िक प्रबंधित करता है</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="a">
+                            <h4><span class="question-number">7</span> "ट्यूरिंग टेस्ट" किसने प्रस्तावित किया?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q7" value="a"><span>एलन ट्यूरिंग</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="b"><span>स्टीव जॉब्स</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="c"><span>बिल गेट्स</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="d"><span>एलन मस्क</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="d">
+                            <h4><span class="question-number">8</span> 2022 में क्या हुआ जिसने एआई में क्रांति ला दी?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q8" value="a"><span>पहला आईफ़ोन लॉन्च हुआ</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="b"><span>कंप्यूटर ने शतरंज में जीत हासिल की</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="c"><span>इंटरनेट विकसित हुआ</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="d"><span>ChatGPT लॉन्च हुआ और 100 मिलियन उपयोगकर्ताओं तक पहुँचा</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="b">
+                            <h4><span class="question-number">9</span> "प्रॉम्प्ट" क्या है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q9" value="a"><span>एक शक्तिशाली कंप्यूटर का प्रकार</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="b"><span>वह निर्देश जो आप एआई को देते हैं</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="c"><span>एक सिस्टम खराबी</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="d"><span>एक प्रोग्रामिंग भाषा</span></label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question" data-correct="c">
+                            <h4><span class="question-number">10</span> ChatGPT के बारे में क्या सही नहीं है?</h4>
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q10" value="a"><span>यह खरबों शब्दों पर प्रशिक्षित था</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="b"><span>यह कभी गलतियाँ करता है या जानकारी गढ़ता है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="c"><span>यह वास्तव में मनुष्य की तरह "समझता" और "जानता" है</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="d"><span>यह सांख्यिकीय पैटर्न पहचानता है</span></label>
+                            </div>
+                        </div>
+                    </form>
+
+                    <button id="quiz-submit">उत्तर जाँचें</button>
+
+                    <div id="quiz-results" class="quiz-results">
+                        <h3 id="your-results">आपके परिणाम</h3>
+                        <div class="score-display">
+                            <div class="score-item">
+                                <span id="quiz-score" class="score-number">0/10</span>
+                                <span class="score-label">सही उत्तर</span>
+                            </div>
+                            <div class="score-item">
+                                <span id="quiz-percent" class="score-number">0%</span>
+                                <span class="score-label">सफलता दर</span>
+                            </div>
+                        </div>
+                        <p id="quiz-message" class="quiz-message"></p>
+                        <button id="quiz-retry">फिर से कोशिश करें</button>
+                    </div>
+                </section>
+
+                <div class="article-nav">
+                    <a href="../index-hi.html" class="btn">→ होम पर वापस</a>
+                    <a href="ai-history-hi.html" class="btn btn-primary">2. एआई का इतिहास – अगला ←</a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="site-version" aria-label="version">B0.15 · שחר הפקות AI · के लिए निर्मित: COMBE</p>
+            <p>© 2026 एआई सीखना – Sam Shahar</p>
+            <p class="footer-contact">फ़ोन: <a href="tel:+972522603831">+972522603831</a> | ईमेल: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
