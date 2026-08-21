@@ -3,7 +3,7 @@
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VER = "V1.1"  # bumped later to V1.2 by apply script
+VER = "V1.1"  # bumped later to V0.1 by apply script
 ICON = "images/%D7%A6%D7%99%D7%9C%D7%95%D7%9D%20%D7%9E%D7%A1%D7%9A%202026-02-09%20160037.png"
 LOGO = "images/colorful%20digital%20media%20sy.png"
 
@@ -11,7 +11,7 @@ LANGS = {
     "he": {
         "html_lang": "he", "dir": "rtl", "suffix": "", "home": "index.html",
         "font": "Heebo:wght@300;400;500;700", "extra_style": "",
-        "logo": "לימוד בינה מלאכותית AI", "ded": "נבנה עבור: COMBE",
+        "logo": "AI-learning-for-ALL", "ded": "נבנה עבור כל מי שרוצה ללמוד",
         "nav": [("index.html", "בית"), ("index.html#intro", "מה זה AI?"),
                 ("pages/glossary.html", "מילון"), ("pages/ai-tools.html", "כלים"),
                 ("index.html#about", "אודות")],
@@ -28,14 +28,14 @@ LANGS = {
             ("pages/ai-future.html", "8. העתיד של AI"),
             ("pages/glossary.html", "9. מילון מושגים"),
         ],
-        "footer": "© 2026 אתר ללימוד בינה מלאכותית AI - כל הזכויות שמורות לשמוליק שחר יועץ לימודי המנגיש לימודי בינה מלאכותית לכל אדם",
+        "footer": "© 2026 AI-learning-for-ALL - כל הזכויות שמורות לשמוליק שחר יועץ לימודי המנגיש לימודי בינה מלאכותית לכל אדם",
         "phone": "טלפון", "email": "אימייל", "updated": "עודכן לאחרונה: 21 באוגוסט 2026",
-        "site_title": "אתר ללימוד בינה מלאכותית AI",
+        "site_title": "AI-learning-for-ALL",
     },
     "en": {
         "html_lang": "en", "dir": "ltr", "suffix": "-en", "home": "index-en.html",
         "font": "Heebo:wght@300;400;500;700", "extra_style": "body { direction: ltr; }",
-        "logo": "AI Learning", "ded": "Built for: COMBE",
+        "logo": "AI-learning-for-ALL", "ded": "Built for anyone who wants to learn",
         "nav": [("index-en.html", "Home"), ("index-en.html#intro", "What is AI?"),
                 ("pages/glossary-en.html", "Glossary"), ("pages/ai-tools-en.html", "Tools"),
                 ("index-en.html#about", "About")],
@@ -59,7 +59,7 @@ LANGS = {
     "ar": {
         "html_lang": "ar", "dir": "rtl", "suffix": "-ar", "home": "index-ar.html",
         "font": "Heebo:wght@300;400;500;700", "extra_style": "",
-        "logo": "تعلّم الذكاء الاصطناعي", "ded": "بُني لـ: COMBE",
+        "logo": "AI-learning-for-ALL", "ded": "بُني لكل من يريد أن يتعلم",
         "nav": [("index-ar.html", "الرئيسية"), ("index-ar.html#intro", "ما هو الذكاء الاصطناعي؟"),
                 ("pages/glossary-ar.html", "المعجم"), ("pages/ai-tools-ar.html", "الأدوات"),
                 ("index-ar.html#about", "عن الموقع")],
@@ -83,7 +83,7 @@ LANGS = {
     "hi": {
         "html_lang": "hi", "dir": "ltr", "suffix": "-hi", "home": "index-hi.html",
         "font": "Heebo:wght@300;400;500;700", "extra_style": "body { direction: ltr; }",
-        "logo": "एआई सीखना", "ded": "के लिए निर्मित: COMBE",
+        "logo": "AI-learning-for-ALL", "ded": "हर किसी के लिए जो सीखना चाहता है",
         "nav": [("index-hi.html", "होम"), ("index-hi.html#intro", "एआई क्या है?"),
                 ("pages/glossary-hi.html", "शब्दावली"), ("pages/ai-tools-hi.html", "उपकरण"),
                 ("index-hi.html#about", "परिचय")],
@@ -107,7 +107,7 @@ LANGS = {
     "ru": {
         "html_lang": "ru", "dir": "ltr", "suffix": "-ru", "home": "index-ru.html",
         "font": "Roboto:wght@300;400;500;700", "extra_style": "body { direction: ltr; }",
-        "logo": "Обучение ИИ", "ded": "Создано для: COMBE",
+        "logo": "AI-learning-for-ALL", "ded": "Создано для всех, кто хочет учиться",
         "nav": [("index-ru.html", "Главная"), ("index-ru.html#intro", "Что такое ИИ?"),
                 ("pages/glossary-ru.html", "Словарь"), ("pages/ai-tools-ru.html", "Инструменты"),
                 ("index-ru.html#about", "О сайте")],
@@ -141,7 +141,7 @@ BODIES = {}
 BODIES["privacy", "he"] = """
 <p class="legal-notice">מסמך זה הוא מידע כללי ואינו ייעוץ משפטי. לשאלות ספציפיות מומלץ לפנות לעורך דין המתמחה בהגנת הפרטיות.</p>
 <h2>1. מי אנחנו</h2>
-<p>האתר «אתר ללימוד בינה מלאכותית AI» מופעל בידי <strong>שחר הפקות / שמואל (שמוליק) שחר</strong>, יועץ לימודי. האתר נבנה עבור COMBE. דגם / גרסה: שחר הפקות AI · {ver}.</p>
+<p>האתר «AI-learning-for-ALL» מופעל בידי <strong>שחר הפקות / שמואל (שמוליק) שחר</strong>, יועץ לימודי. האתר נבנה עבור כל מי שרוצה ללמוד. דגם / גרסה: שחר הפקות AI · {ver}.</p>
 <p>יצירת קשר: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a> | טלפון: <a href="tel:+972522603831">+972522603831</a>.</p>
 <h2>2. איזה מידע נאסף</h2>
 <p>האתר הוא אתר לימודי סטטי. אין בו הרשמה, חשבון משתמש או טופסי איסוף נתונים. אנחנו <strong>לא</strong> מפעילים כלי אנליטיקה שיווקיים ולא מוכרים מידע אישי.</p>
@@ -167,7 +167,7 @@ BODIES["privacy", "he"] = """
 BODIES["privacy", "en"] = """
 <p class="legal-notice">This document is general information and is not legal advice. For specific questions, consult a privacy lawyer.</p>
 <h2>1. Who we are</h2>
-<p>The site «AI Learning» is operated by <strong>Shahar Productions / Shmuel (Sam) Shahar</strong>, an educational consultant. Built for COMBE. Product / model: שחר הפקות AI · {ver}.</p>
+<p>The site «AI-learning-for-ALL» is operated by <strong>Shahar Productions / Shmuel (Sam) Shahar</strong>, an educational consultant. Built for anyone who wants to learn. Product / model: שחר הפקות AI · {ver}.</p>
 <p>Contact: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a> | Phone: <a href="tel:+972522603831">+972522603831</a>.</p>
 <h2>2. What data we collect</h2>
 <p>This is a static educational site. There are no accounts or data-collection forms. We do <strong>not</strong> run marketing analytics and we do not sell personal data.</p>
@@ -193,7 +193,7 @@ BODIES["privacy", "en"] = """
 BODIES["privacy", "ar"] = """
 <p class="legal-notice">هذه معلومات عامة وليست استشارة قانونية.</p>
 <h2>1. من نحن</h2>
-<p>يدير الموقع <strong>شاحار Productions / شموئيل (سام) شاحار</strong>. بُني لـ COMBE. الطراز: שחר הפקות AI · {ver}.</p>
+<p>يدير الموقع <strong>شاحار Productions / شموئيل (سام) شاحار</strong>. بُني لكل من يريد أن يتعلم. الطراز: שחר הפקות AI · {ver}.</p>
 <p>التواصل: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a> | <a href="tel:+972522603831">+972522603831</a>.</p>
 <h2>2. البيانات</h2>
 <p>موقع تعليمي ثابت بلا حسابات. لا نبيع بيانات شخصية ولا نشغّل تحليلات تسويقية. تُحفظ تفضيلات إمكانية الوصول على جهازك فقط. قد تسجّل GitHub وGoogle Fonts وUnsplash معرّفات تقنية (مثل عنوان IP).</p>
@@ -204,7 +204,7 @@ BODIES["privacy", "ar"] = """
 BODIES["privacy", "hi"] = """
 <p class="legal-notice">यह सामान्य जानकारी है, कानूनी सलाह नहीं।</p>
 <h2>1. हम कौन हैं</h2>
-<p>साइट <strong>शाहर प्रोडक्शन्स / शमूएल (सैम) शाहर</strong> द्वारा संचालित है। COMBE के लिए निर्मित। मॉडल: שחר הפקות AI · {ver}।</p>
+<p>साइट <strong>शाहर प्रोडक्शन्स / शमूएल (सैम) शाहर</strong> द्वारा संचालित है। हर किसी के लिए जो सीखना चाहता है। मॉडल: שחר הפקות AI · {ver}।</p>
 <p>संपर्क: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a> | <a href="tel:+972522603831">+972522603831</a>.</p>
 <h2>2. डेटा</h2>
 <p>यह स्थिर शैक्षिक साइट है। कोई खाता नहीं। हम व्यक्तिगत डेटा नहीं बेचते। सुगम्यता सेटिंग्स केवल आपके उपकरण पर सहेजी जाती हैं। GitHub, Google Fonts और Unsplash तकनीकी पहचानकर्ता प्राप्त कर सकते हैं।</p>
@@ -215,7 +215,7 @@ BODIES["privacy", "hi"] = """
 BODIES["privacy", "ru"] = """
 <p class="legal-notice">Это общая информация, а не юридическая консультация.</p>
 <h2>1. Кто мы</h2>
-<p>Сайт ведёт <strong>Шahar Productions / Шмуэль (Сэм) Шахар</strong>. Создано для COMBE. Модель: שחר הפקות AI · {ver}.</p>
+<p>Сайт ведёт <strong>Шahar Productions / Шмуэль (Сэм) Шахар</strong>. Создано для всех, кто хочет учиться. Модель: שחר הפקות AI · {ver}.</p>
 <p>Связь: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a> | <a href="tel:+972522603831">+972522603831</a>.</p>
 <h2>2. Какие данные собираются</h2>
 <p>Это статический учебный сайт без учётных записей. Мы не продаём персональные данные и не ведём маркетинговую аналитику. Настройки доступности хранятся только на вашем устройстве. GitHub Pages, Google Fonts и Unsplash могут получать технические идентификаторы (например IP).</p>
@@ -310,8 +310,8 @@ BODIES["terms", "he"] = """
 <p>התכנים שייכים לשמוליק שחר / שחר הפקות, למעט תמונות או סימנים של צדדים שלישיים (Unsplash, שמות מוצרים כגון ChatGPT). אין להעתיק את האתר בשלמותו לשימוש מסחרי ללא רשות.</p>
 <h2>3. דיוק המידע</h2>
 <p>תחום ה-AI משתנה במהירות. אנו משתדלים לעדכן, אך ייתכנו אי-דיוקים. השימוש במידע על אחריות המשתמש בלבד.</p>
-<h2>4. COMBE</h2>
-<p>האתר נבנה עבור COMBE. שמות וסימנים של COMBE נשארים בבעלותם.</p>
+<h2>4. למי מיועד האתר</h2>
+<p>האתר נבנה עבור כל מי שרוצה ללמוד.</p>
 <h2>5. הגבלת אחריות</h2>
 <p>במידה המרבית שמתיר הדין, לא נהיה אחראים לנזק עקיף הנובע משימוש באתר או מהסתמכות על התכנים.</p>
 <h2>6. דין</h2>
@@ -326,8 +326,8 @@ BODIES["terms", "en"] = """
 <p>Content belongs to Sam Shahar / Shahar Productions, except third-party images or marks (Unsplash, product names such as ChatGPT). Do not copy the site as a whole for commercial use without permission.</p>
 <h2>3. Accuracy</h2>
 <p>AI changes quickly. We try to keep material current, but errors may remain. Use is at your own risk.</p>
-<h2>4. COMBE</h2>
-<p>The site was built for COMBE. COMBE names and marks remain theirs.</p>
+<h2>4. Who this site is for</h2>
+<p>The site was built for anyone who wants to learn.</p>
 <h2>5. Liability</h2>
 <p>To the fullest extent allowed by law, we are not liable for indirect damage from using the site or relying on its content.</p>
 <h2>6. Law</h2>
@@ -340,8 +340,8 @@ BODIES["terms", "ar"] = """
 <p>محتوى تعليمي للمبتدئين في الذكاء الاصطناعي، ولا يُعد استشارة مهنية أو قانونية.</p>
 <h2>2. الملكية</h2>
 <p>المحتوى لشמוئيل شاحار / شاحار للإنتاج، باستثناء مواد الغير. لا يُنسخ الموقع كاملًا للاستخدام التجاري دون إذن.</p>
-<h2>3. COMBE والقانون</h2>
-<p>بُني الموقع لـ COMBE. يسري قانون دولة إسرائيل. الطراز: שחר הפקות AI · {ver}.</p>
+<h2>3. القانون</h2>
+<p>بُني الموقع لكل من يريد أن يتعلم. يسري قانون دولة إسرائيل. الطراز: שחר הפקות AI · {ver}.</p>
 """.format(ver=VER)
 
 BODIES["terms", "hi"] = """
@@ -350,8 +350,8 @@ BODIES["terms", "hi"] = """
 <p>यह शुरुआती लोगों के लिए शैक्षिक सामग्री है, पेशेवर या कानूनी सलाह नहीं।</p>
 <h2>2. स्वामित्व</h2>
 <p>सामग्री शमूएल शाहर की है, तृतीय-पक्ष चित्रों को छोड़कर। बिना अनुमति व्यावसायिक पूर्ण प्रतिलिपि न करें।</p>
-<h2>3. COMBE</h2>
-<p>साइट COMBE के लिए बनी है। इज़राइल का कानून लागू। मॉडल: שחר הפקות AI · {ver}.</p>
+<h2>3. यह साइट किसके लिए है</h2>
+<p>साइट हर किसी के लिए बनी है जो सीखना चाहता है। इज़राइल का कानून लागू। मॉडल: שחר הפקות AI · {ver}.</p>
 """.format(ver=VER)
 
 BODIES["terms", "ru"] = """
@@ -360,8 +360,8 @@ BODIES["terms", "ru"] = """
 <p>Учебные материалы об ИИ для начинающих. Это общие сведения и <strong>не заменяет</strong> профессиональную, юридическую или бухгалтерскую консультацию.</p>
 <h2>2. Права</h2>
 <p>Контент принадлежит Шмулику Шахару / Shahar Productions, кроме материалов третьих лиц. Не копируйте сайт целиком в коммерческих целях без разрешения.</p>
-<h2>3. COMBE и право</h2>
-<p>Сайт создан для COMBE. Применяется право Государства Израиль. Модель: שחר הפקות AI · {ver}.</p>
+<h2>3. Право</h2>
+<p>Сайт создан для всех, кто хочет учиться. Применяется право Государства Израиль. Модель: שחר הפקות AI · {ver}.</p>
 """.format(ver=VER)
 
 

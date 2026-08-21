@@ -31,7 +31,7 @@ NAV_HI = """            <ul class="nav-links">
                 <button type="submit" aria-label="खोजें">🔍</button>
             </form>"""
 
-FOOTER_HI = """            <p class="site-version" aria-label="version">B0.14 · שחר הפקות AI · के लिए निर्मित: COMBE</p>
+FOOTER_HI = """            <p class="site-version" aria-label="version">B0.14 · שחר הפקות AI · हर किसी के लिए जो सीखना चाहता है</p>
             <p>© 2026 एआई सीखना – Sam Shahar</p>
             <p class="footer-contact">फ़ोन: <a href="tel:+972522603831">+972522603831</a> | ईमेल: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>"""
 
@@ -43,11 +43,11 @@ def apply_chrome(html: str, slug: str, title_hi: str, breadcrumb_hi: str) -> str
     html = re.sub(r'<link href="https://fonts\.googleapis\.com/css2\?family=Heebo[^"]*" rel="stylesheet">\s*<style>body \{ direction: ltr; \}</style>',
                   HEAD_STYLE, html, count=1)
     html = html.replace('AI Learning', 'एआई सीखना')
-    html = html.replace('Built for: COMBE', 'के लिए निर्मित: COMBE')
+    html = html.replace('Built for anyone who wants to learn', 'हर किसी के लिए जो सीखना चाहता है')
     html = html.replace('../index-en.html', '../index-hi.html')
     html = html.replace(f'{slug}-en.html', f'{slug}-hi.html')
     html = re.sub(r'<span class="logo-text">.*?</span>\s*<span class="logo-byline">.*?</span>',
-                  '<span class="logo-text">एआई सीखना</span>\n                        <span class="logo-byline">שחר הפקות AI · B0.14</span>',
+                  '<span class="logo-text">AI-learning-for-ALL</span>\n                        <span class="logo-byline">שחר הפקות AI · B0.14</span>',
                   html, count=1, flags=re.S)
     html = re.sub(r'<ul class="nav-links">.*?</form>', NAV_HI, html, count=1, flags=re.S)
     # lang switcher
@@ -64,7 +64,7 @@ def apply_chrome(html: str, slug: str, title_hi: str, breadcrumb_hi: str) -> str
     html = html.replace('alt="Logo"', 'alt="लोगो"')
     html = re.sub(r'<p class="site-version"[^>]*>.*?</p>\s*<p>©.*?</p>\s*<p class="footer-contact">.*?</p>',
                   FOOTER_HI, html, count=1, flags=re.S)
-    html = re.sub(r'<title>.*?</title>', f'<title>{title_hi} | एआई सीखना · שחר הפקות AI · B0.14 · के लिए निर्मित: COMBE</title>', html, count=1)
+    html = re.sub(r'<title>.*?</title>', f'<title>{title_hi} | AI-learning-for-ALL · שחר הפקות AI · B0.14 · हर किसी के लिए जो सीखना चाहता है</title>', html, count=1)
     html = re.sub(r'<div class="breadcrumb"><a href="../index-hi.html">Home</a> / <span>.*?</span></div>',
                   f'<div class="breadcrumb"><a href="../index-hi.html">होम</a> / <span>{breadcrumb_hi}</span></div>', html, count=1)
     return html

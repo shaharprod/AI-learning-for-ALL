@@ -1,14 +1,16 @@
-# אתר ללימוד בינה מלאכותית AI — בינה מלאכותית למתחילים
+# AI-learning-for-ALL — בינה מלאכותית למתחילים
 
-**דגם / גרסה: V1.2** · שחר הפקות AI
+**דגם / גרסה: V0.1** · שחר הפקות AI
 
 אתר סטטי ללימוד בינה מלאכותית בעברית (וגם EN / AR / HI / RU), בהנגשה פשוטה וברורה.
 
-**ריפו:** [github.com/shaharprod/AI-learning-for-COMBE](https://github.com/shaharprod/AI-learning-for-COMBE)
+**ריפו:** [github.com/shaharprod/AI-learning-for-ALL](https://github.com/shaharprod/AI-learning-for-ALL)
 
-**🌐 אתר חי (V1.2):** [https://shaharprod.github.io/AI-learning-for-COMBE/](https://shaharprod.github.io/AI-learning-for-COMBE/)
+**🌐 אתר חי (V0.1):** [https://shaharprod.github.io/AI-learning-for-ALL/](https://shaharprod.github.io/AI-learning-for-ALL/)
 
-**הקדשה:** נבנה עבור: COMBE (ובשאר השפות – בהתאם)
+**הקדשה:** נבנה עבור כל מי שרוצה ללמוד (ובשאר השפות – בהתאם)
+
+עותק זה נפרד מ-[AI-learning-for-COMBE](https://github.com/shaharprod/AI-learning-for-COMBE). ריפו COMBE נשאר כפי שהוא.
 
 ---
 
@@ -90,4 +92,4 @@ npx serve
 
 ---
 
-© 2026 אתר ללימוד בינה מלאכותית AI — כל הזכויות שמורות.
+© 2026 AI-learning-for-ALL — כל הזכויות שמורות.
