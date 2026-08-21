@@ -29,7 +29,10 @@ jobs:
           mkdir -p _site _site/en _site/ar _site/hi _site/ru
           cp index.html index-en.html index-ar.html index-hi.html index-ru.html _site/
           cp search.html search-en.html search-ar.html search-hi.html search-ru.html _site/
-          cp style.css script.js _site/
+          cp privacy.html privacy-en.html privacy-ar.html privacy-hi.html privacy-ru.html _site/
+          cp accessibility.html accessibility-en.html accessibility-ar.html accessibility-hi.html accessibility-ru.html _site/
+          cp terms.html terms-en.html terms-ar.html terms-hi.html terms-ru.html _site/
+          cp style.css script.js a11y.js _site/
           cp -r pages _site/
           cp -r images _site/
           cp en/index.html _site/en/

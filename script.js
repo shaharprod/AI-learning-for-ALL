@@ -149,9 +149,9 @@ document.querySelectorAll('.card').forEach(card => {
     observer.observe(card);
 });
 
-console.log('AI Learning Website · שחר הפקות AI · V1.1 Loaded Successfully! 🤖');
+console.log('AI Learning Website · שחר הפקות AI · V1.2 Loaded Successfully! 🤖');
 
-var SITE_MODEL_NAME = 'שחר הפקות AI · V1.1';
+var SITE_MODEL_NAME = 'שחר הפקות AI · V1.2';
 
 // Quiz Functionality
 function initQuiz() {
@@ -316,3 +316,12 @@ function initQuiz() {
 
 // Initialize quiz when DOM is ready
 document.addEventListener('DOMContentLoaded', initQuiz);
+
+// תפריט נגישות ומסמכים משפטיים – נטען בכל הדפים
+(function loadA11y() {
+    var script = document.createElement('script');
+    var inPages = window.location.href.indexOf('/pages/') !== -1;
+    script.src = (inPages ? '../' : '') + 'a11y.js';
+    script.defer = true;
+    document.head.appendChild(script);
+})();
