@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" data-version="V0.1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="V0.1">
+    <meta name="application-name" content="שחר הפקות AI V0.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/%D7%A6%D7%99%D7%9C%D7%95%D7%9D%20%D7%9E%D7%A1%D7%9A%202026-02-09%20160037.png">
+    <title>101 כלי AI · AI-learning-for-ALL</title>
+    <meta name="description" content="101 כלי בינה מלאכותית מסודרים לפי תחום, עם קישור ישיר לכל כלי">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/colorful%20digital%20media%20sy.png" alt="לוגו" class="logo-icon">
+                    <span class="logo-stack">
+                        <span class="logo-text">AI-learning-for-ALL</span>
+                        <span class="logo-byline">שחר הפקות AI · V0.1</span>
+                        <span class="logo-dedication">נבנה עבור כל מי שרוצה ללמוד</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">בית</a></li>
+                <li><a href="#intro">מה זה AI?</a></li>
+                <li class="dropdown">
+                    <a href="#topics" class="dropdown-toggle">שיעורים ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/intro-to-ai.html">1. מבוא ל-AI</a></li>
+                        <li><a href="pages/ai-history.html">2. ההיסטוריה של AI</a></li>
+                        <li><a href="pages/machine-learning.html">3. למידת מכונה</a></li>
+                        <li><a href="pages/ai-daily-life.html">4. AI בחיי היומיום</a></li>
+                        <li><a href="pages/ai-tools.html">5. כלים מעשיים</a></li>
+                        <li><a href="pages/prompt-engineering.html">6. הנדסת הנחייה</a></li>
+                        <li><a href="pages/ai-ethics.html">7. אתיקה ב-AI</a></li>
+                        <li><a href="pages/ai-future.html">8. העתיד של AI</a></li>
+                        <li><a href="pages/glossary.html">9. מילון מושגים</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/glossary.html">מילון</a></li>
+                <li><a href="pages/ai-tools.html">כלים</a></li>
+                <li><a href="#about">אודות</a></li>
+            </ul>
+            <form class="nav-search" id="site-search" role="search">
+                <input type="search" name="q" placeholder="חיפוש מילים ומושגים..." aria-label="חיפוש באתר" />
+                <button type="submit" aria-label="חפש">🔍</button>
+            </form>
+            <nav class="lang-switcher" aria-label="בחירת שפה">
+                <span class="lang-active" aria-current="page">עברית</span>
+                <a href="index-en.html" hreflang="en" lang="en">English</a>
+                <a href="index-ar.html" hreflang="ar" lang="ar">العربية</a>
+                <a href="index-hi.html" hreflang="hi" lang="hi">हिन्दी</a>
+                <a href="index-ru.html" hreflang="ru" lang="ru">Русский</a>
+            </nav>
+            <button type="button" class="mobile-menu-btn" aria-label="תפריט">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+<style>
+.gp{--g-ink:#14171e;--g-ink2:#4d5461;--g-line:#dce0e8;--g-bg:#ffffff;--g-card:#f7f9fb;
+  --g-accent:#0f5f8a;--g-warn:#8a3a1f;--g-warnbg:#fdf0ea;--g-ok:#1a6b53;--g-okbg:#e9f5f0;
+  font-family:"Heebo",Arial,sans-serif;direction:rtl;text-align:right;color:var(--g-ink);
+  background:var(--g-bg);padding:clamp(30px,5vw,60px) 20px;}
+.gp-in{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+.gp h1{margin:0;font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.22;text-wrap:balance}
+.gp .gp-lead{margin:0;font-size:18.5px;color:var(--g-ink2);line-height:1.7;max-width:62ch}
+.gp h2{margin:26px 0 0;font-size:clamp(22px,3.4vw,29px);font-weight:700;line-height:1.3}
+.gp h3{margin:16px 0 0;font-size:19px;font-weight:700}
+.gp p{margin:0;line-height:1.75;font-size:16.5px}
+.gp-card{background:var(--g-card);border:1px solid var(--g-line);border-radius:12px;padding:22px 24px;
+  display:flex;flex-direction:column;gap:10px}
+.gp-note{border-radius:10px;padding:16px 18px;font-size:16px;line-height:1.7;border:1px solid}
+.gp-note.warn{background:var(--g-warnbg);border-color:var(--g-warn);color:var(--g-ink)}
+.gp-note.warn b{color:var(--g-warn)}
+.gp-note.ok{background:var(--g-okbg);border-color:var(--g-ok);color:var(--g-ink)}
+.gp-note.ok b{color:var(--g-ok)}
+.gp-note.todo{background:#fff7e0;border-color:#a07000;color:var(--g-ink)}
+.gp-note.todo b{color:#a07000}
+.gp ul{margin:0;padding-inline-start:22px;line-height:1.8;font-size:16.5px}
+.gp ul.plain{list-style:none;padding:0}
+.gp ul.plain li{position:relative;padding-inline-start:24px;margin-bottom:9px}
+.gp ul.plain li::before{content:"";position:absolute;inset-inline-start:6px;top:12px;width:7px;height:7px;
+  border-radius:50%;background:var(--g-accent)}
+.gp .yes::before{background:var(--g-ok)}
+.gp .no::before{background:var(--g-warn)}
+.gp pre{margin:0;background:#0f1218;color:#e8eaf0;border-radius:10px;padding:18px 20px;
+  overflow-x:auto;direction:ltr;text-align:left;font-size:14.5px;line-height:1.7;white-space:pre-wrap}
+.gp pre[dir="rtl"]{direction:rtl;text-align:right}
+.gp .gp-back{display:inline-block;margin-top:8px;color:var(--g-accent);font-weight:600;text-decoration:none}
+.gp .gp-back:hover{text-decoration:underline}
+.gp table{border-collapse:collapse;width:100%;font-size:16px}
+.gp th,.gp td{border:1px solid var(--g-line);padding:10px 13px;text-align:right;vertical-align:top}
+.gp th{background:var(--g-card);font-weight:700}
+.gp-tw{overflow-x:auto}
+@media (prefers-color-scheme:dark){
+ .gp{--g-ink:#eaecf2;--g-ink2:#aeb5c3;--g-line:#2b303b;--g-bg:#0f1218;--g-card:#171b23;
+   --g-accent:#4aa8d8;--g-warn:#e0836a;--g-warnbg:#2a1a15;--g-ok:#63b79b;--g-okbg:#13251f}
+ .gp-note.todo{background:#2a2312;border-color:#c9a227}
+ .gp-note.todo b{color:#e0bb45}
+}
+</style>
+<style>
+.t100-grid{display:grid;gap:10px}
+@media(min-width:640px){.t100-grid{grid-template-columns:1fr 1fr}}
+.t100{display:block;background:var(--g-card);border:1px solid var(--g-line);border-radius:10px;
+ padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .15s,transform .12s}
+.t100:hover{border-color:var(--g-accent);transform:translateY(-2px)}
+.t100 .n{font-weight:700;font-size:16.5px;color:var(--g-ink);display:block}
+.t100 .d{font-size:14.5px;color:var(--g-ink2);line-height:1.5;display:block;margin-top:3px}
+.t100 .p{font-size:12.5px;color:var(--g-accent);display:inline-block;margin-top:6px;font-weight:600}
+.t100.nolink{cursor:default}
+.t100.nolink:hover{border-color:var(--g-line);transform:none}
+.cat-head{margin-top:30px}
+.cat-head .c{font-size:14.5px;color:var(--g-ink2);margin-top:2px}
+.t100-toc{display:flex;flex-wrap:wrap;gap:8px}
+.t100-toc a{font-size:14px;background:var(--g-card);border:1px solid var(--g-line);border-radius:20px;
+ padding:5px 13px;text-decoration:none;color:var(--g-ink2)}
+.t100-toc a:hover{border-color:var(--g-accent);color:var(--g-accent)}
+</style>
+<main class="gp"><div class="gp-in">
+<h1>101 כלי בינה מלאכותית</h1>
+<p class="gp-lead">מסודרים לפי <b>מה שכל כלי עושה</b>, לא לפי שם. כל שם הוא קישור ישיר לכלי.</p>
+<div class="gp-note warn"><b>על העדכניות — בכנות:</b> הרשימה נבנתה באוקטובר 2025.
+בעולם ה-AI זו תקופה ארוכה, וייתכן שתיאורים ומחירים השתנו מאז.
+מה שכן נבדק: <b>כל 96 הקישורים נבדקו ב-28 באוגוסט 2026</b> — שלושה היו שבורים ותוקנו, וכל השאר חיים.
+תיאורי הכלים לא נבדקו מחדש.</div>
+<div class="t100-toc">
+<a href="#c0">מודלי שפה מובילים · 15</a>
+<a href="#c1">כלי פיתוח וקוד · 15</a>
+<a href="#c2">יצירת תמונות ועיצוב · 12</a>
+<a href="#c3">וידאו ואנימציה · 10</a>
+<a href="#c4">מוזיקה ואודיו · 10</a>
+<a href="#c5">כתיבה ועריכה · 8</a>
+<a href="#c6">כלי פרודוקטיביות · 12</a>
+<a href="#c7">עיבוד מסמכים וחתימות · 6</a>
+<a href="#c8">אוטומציה וצ&#x27;אטבוטים · 7</a>
+<a href="#c9">שיווק ובינת עסקים · 4</a>
+<a href="#c10">תרגום ומחקר מהיר · 2</a>
+</div>
+<div class="cat-head"><h2 id="c0">מודלי שפה מובילים</h2><p class="c">המודלים החכמים והמתקדמים ביותר של 2025</p></div>
+<div class="t100-grid">
+<a class="t100" href="https://chat.openai.com" target="_blank" rel="noopener"><span class="n">ChatGPT</span><span class="d">המודל הפופולארי ביותר של OpenAI</span></a>
+<a class="t100" href="https://claude.ai" target="_blank" rel="noopener"><span class="n">Claude</span><span class="d">מתקדם לניתוח ומחקר מעמיק</span></a>
+<a class="t100" href="https://x.com/i/grok" target="_blank" rel="noopener"><span class="n">Grok 🔥</span><span class="d">המודל המתקדם של xAI/אילון מאסק</span></a>
+<a class="t100" href="https://gemini.google.com" target="_blank" rel="noopener"><span class="n">Gemini</span><span class="d">המודל החדש והחזק של Google</span></a>
+<a class="t100" href="https://perplexity.ai" target="_blank" rel="noopener"><span class="n">Perplexity AI</span><span class="d">חיפוש ומחקר מדויק עם מקורות</span></a>
+<a class="t100" href="https://notebooklm.google.com" target="_blank" rel="noopener"><span class="n">NotebookLM 🔥</span><span class="d">מחקר מסמכים ויצירת פודקאסטים</span></a>
+<a class="t100" href="https://you.com" target="_blank" rel="noopener"><span class="n">You.com</span><span class="d">חיפוש חכם עם מקורות מרובים</span></a>
+<a class="t100" href="https://poe.com" target="_blank" rel="noopener"><span class="n">Poe</span><span class="d">גישה למספר מודלי שפה במקום אחד</span></a>
+<a class="t100" href="https://meta.ai" target="_blank" rel="noopener"><span class="n">Meta AI</span><span class="d">המודל החדש של פייסבוק</span></a>
+<a class="t100" href="https://pi.ai" target="_blank" rel="noopener"><span class="n">Pi</span><span class="d">עוזר אישי ידידותי של Inflection</span></a>
+<a class="t100" href="https://character.ai" target="_blank" rel="noopener"><span class="n">Character.AI</span><span class="d">שיחות עם דמויות AI מגוונות</span></a>
+<a class="t100" href="https://copilot.microsoft.com" target="_blank" rel="noopener"><span class="n">Microsoft Copilot</span><span class="d">משולב במערכות Microsoft</span></a>
+<a class="t100" href="https://openai.com/o1" target="_blank" rel="noopener"><span class="n">OpenAI o1</span><span class="d">מודל חשיבה מתקדמת למתמטיקה</span></a>
+<a class="t100" href="https://teachablemachine.withgoogle.com/" target="_blank" rel="noopener"><span class="n">Teachable Machine 🔥</span><span class="d">כלי אינטואיטיבי של Google ליצירת מודלים בלמידת מכונה</span></a>
+<a class="t100" href="https://openrouter.ai/" target="_blank" rel="noopener"><span class="n">OpenRouter</span><span class="d">גישה למגוון מודלים מובילים דרך נקודת API אחת</span></a>
+</div>
+<div class="cat-head"><h2 id="c1">כלי פיתוח וקוד</h2><p class="c">הכלים המתקדמים ביותר לפיתוח תוכנה</p></div>
+<div class="t100-grid">
+<a class="t100" href="https://cursor.sh" target="_blank" rel="noopener"><span class="n">Cursor 🔥</span><span class="d">עורך הקוד הטוב ביותר עם AI</span></a>
+<a class="t100" href="https://lovable.dev" target="_blank" rel="noopener"><span class="n">Lovable 🔥</span><span class="d">פלטפורמה מלאה לפיתוח עם AI</span></a>
+<a class="t100" href="https://bolt.new" target="_blank" rel="noopener"><span class="n">Bolt.new 🔥</span><span class="d">פיתוח אפליקציות מלא ומהיר</span></a>
+<a class="t100" href="https://v0.dev" target="_blank" rel="noopener"><span class="n">V0.dev</span><span class="d">יצירת קוד React מתיאור טקסט</span></a>
+<a class="t100" href="https://github.com/features/copilot" target="_blank" rel="noopener"><span class="n">GitHub Copilot</span><span class="d">עזרה בכתיבת קוד ישירות בעורך</span></a>
+<a class="t100" href="https://tabnine.com" target="_blank" rel="noopener"><span class="n">Tabnine</span><span class="d">השלמת קוד חכמה ומהירה</span></a>
+<a class="t100" href="https://replit.com/ai" target="_blank" rel="noopener"><span class="n">Replit Ghostwriter</span><span class="d">עזרה בקידוד בענן</span></a>
+<a class="t100" href="https://aws.amazon.com/codewhisperer" target="_blank" rel="noopener"><span class="n">Amazon CodeWhisperer</span><span class="d">הצעות קוד מבוססות מחשוב ענן</span></a>
+<a class="t100" href="https://codeium.com" target="_blank" rel="noopener"><span class="n">Codeium</span><span class="d">עוזר קוד חינמי ומתקדם</span></a>
+<a class="t100" href="https://github.com/salesforce/CodeT5" target="_blank" rel="noopener"><span class="n">CodeT5</span><span class="d">יצירת קוד מתיאור טבעי</span></a>
+<a class="t100" href="https://mintlify.com" target="_blank" rel="noopener"><span class="n">Mintlify</span><span class="d">תיעוד קוד אוטומטי ומסודר</span></a>
+<a class="t100" href="https://blackbox.ai" target="_blank" rel="noopener"><span class="n">Blackbox AI</span><span class="d">עזרה מתקדמת בתכנות</span></a>
+<a class="t100" href="https://huggingface.co/" target="_blank" rel="noopener"><span class="n">Hugging Face</span><span class="d">קהילת מודלים וקוד פתוח לאחסון והרצה של מודלים</span></a>
+<a class="t100" href="https://replicate.com/" target="_blank" rel="noopener"><span class="n">Replicate</span><span class="d">הרצת מודלי AI בענן דרך API פשוט</span></a>
+<a class="t100" href="https://www.kaggle.com/" target="_blank" rel="noopener"><span class="n">Kaggle</span><span class="d">דאטהסטים, נוטבוקים ותחרויות ML</span></a>
+</div>
+<div class="cat-head"><h2 id="c2">יצירת תמונות ועיצוב</h2><p class="c">כלים מתקדמים ליצירת תמונות ועיצוב גרפי</p></div>
+<div class="t100-grid">
+<a class="t100" href="https://openai.com/dall-e-3" target="_blank" rel="noopener"><span class="n">DALL-E 3</span><span class="d">הטוב ביותר מ-OpenAI ליצירת תמונות</span></a>
+<a class="t100" href="https://midjourney.com" target="_blank" rel="noopener"><span class="n">Midjourney</span><span class="d">איכות פוטו-ריאליסטית מרשימה</span></a>
+<a class="t100" href="https://stability.ai/stable-diffusion" target="_blank" rel="noopener"><span class="n">Stable Diffusion</span><span class="d">קוד פתוח וחזק מאוד</span></a>
+<a class="t100" href="https://firefly.adobe.com" target="_blank" rel="noopener"><span class="n">Adobe Firefly</span><span class="d">משולב בחבילת Adobe Creative</span></a>
+<a class="t100" href="https://leonardo.ai" target="_blank" rel="noopener"><span class="n">Leonardo.ai</span><span class="d">יצירת תמונות מתקדמת וגמישה</span></a>
+<a class="t100" href="https://canva.com/ai-image-generator" target="_blank" rel="noopener"><span class="n">Canva AI</span><span class="d">עיצוב פשוט וחכם לכולם</span></a>
+<a class="t100" href="https://remove.bg" target="_blank" rel="noopener"><span class="n">Remove.bg</span><span class="d">הסרת רקע מושלמת ומיידית</span></a>
+<a class="t100" href="https://upscayl.org" target="_blank" rel="noopener"><span class="n">Upscayl</span><span class="d">שיפור איכות תמונות דרמטי</span></a>
+<a class="t100" href="https://clipdrop.co" target="_blank" rel="noopener"><span class="n">ClipDrop</span><span class="d">כלים ויזואליים מגוונים</span></a>
+<a class="t100" href="https://playgroundai.com" target="_blank" rel="noopener"><span class="n">Playground AI</span><span class="d">יצירה קלה וידידותית</span></a>
+<a class="t100" href="https://nightcafe.studio" target="_blank" rel="noopener"><span class="n">NightCafe</span><span class="d">אמנות AI יצירתית</span></a>
+<a class="t100" href="https://artbreeder.com" target="_blank" rel="noopener"><span class="n">Artbreeder</span><span class="d">עירוב תמונות יצירתי</span></a>
+</div>
+<div class="cat-head"><h2 id="c3">וידאו ואנימציה</h2><p class="c">כלים מתקדמים ליצירת וידאו ותוכן חזותי</p></div>
+<div class="t100-grid">
+<a class="t100" href="https://openai.com/sora" target="_blank" rel="noopener"><span class="n">Sora</span><span class="d">מובילת יצירת וידאו של OpenAI</span></a>
+<a class="t100" href="https://runwayml.com/" target="_blank" rel="noopener"><span class="n">RunwayML</span><span class="d">כלים יצירתיים מגוונים לוידאו</span></a>
+<a class="t100" href="https://pika.art/" target="_blank" rel="noopener"><span class="n">Pika Labs</span><span class="d">וידאו קצר איכותי ומהיר</span></a>
+<a class="t100" href="https://www.synthesia.io/" target="_blank" rel="noopener"><span class="n">Synthesia</span><span class="d">דמויות דיגיטליות מדברות</span></a>
+<a class="t100" href="https://www.heygen.com/" target="_blank" rel="noopener"><span class="n">HeyGen</span><span class="d">אווטארים מדברים מרשימים</span></a>
+<a class="t100" href="https://www.capcut.com/" target="_blank" rel="noopener"><span class="n">CapCut</span><span class="d">עריכת וידאו עם AI מתקדמת</span></a>
+<a class="t100" href="https://lumalabs.ai/" target="_blank" rel="noopener"><span class="n">Luma AI</span><span class="d">וידאו 3D מתמונות רגילות</span></a>
+<a class="t100" href="https://www.steve.ai/" target="_blank" rel="noopener"><span class="n">Steve.ai</span><span class="d">וידאו אוטומטי מטקסט</span></a>
+<a class="t100" href="https://invideo.io/" target="_blank" rel="noopener"><span class="n">InVideo</span><span class="d">יצירת וידאו מטקסט פשוט</span></a>
+<a class="t100" href="https://pictory.ai/" target="_blank" rel="noopener"><span class="n">Pictory</span><span class="d">סרטונים קצרים מתוכן ארוך</span></a>
+</div>
+<div class="cat-head"><h2 id="c4">מוזיקה ואודיו</h2><p class="c">יצירת מוזיקה, קול ותוכן שמע מתקדם</p></div>
+<div class="t100-grid">
+<div class="t100 nolink"><span class="n">Suno AI 🔥</span><span class="d">הטוב ביותר ליצירת שירים מלאים</span></div>
+<a class="t100" href="https://www.udio.com/" target="_blank" rel="noopener"><span class="n">Udio</span><span class="d">איכות מוזיקלית גבוהה מאוד</span></a>
+<a class="t100" href="https://podcast.adobe.com/" target="_blank" rel="noopener"><span class="n">Adobe Podcast 🔥</span><span class="d">עריכת שמע מתקדמת וחכמה</span></a>
+<a class="t100" href="https://www.descript.com/" target="_blank" rel="noopener"><span class="n">Descript</span><span class="d">עריכת שמע וטקסט משולבת</span></a>
+<a class="t100" href="https://elevenlabs.io/" target="_blank" rel="noopener"><span class="n">ElevenLabs</span><span class="d">שיבוט קול מדויק ומרשים</span></a>
+<a class="t100" href="https://murf.ai/" target="_blank" rel="noopener"><span class="n">Murf</span><span class="d">דיבור מטקסט איכותי</span></a>
+<a class="t100" href="https://speechify.com/" target="_blank" rel="noopener"><span class="n">Speechify</span><span class="d">הקראת טקסט טבעית</span></a>
+<a class="t100" href="https://otter.ai/" target="_blank" rel="noopener"><span class="n">Otter.ai</span><span class="d">תמלול בזמן אמת מדויק</span></a>
+<a class="t100" href="https://krisp.ai/" target="_blank" rel="noopener"><span class="n">Krisp</span><span class="d">ביטול רעש מושלם לשיחות</span></a>
+<a class="t100" href="https://aiva.ai/" target="_blank" rel="noopener"><span class="n">AIVA</span><span class="d">מלחין AI למוזיקה קלאסית</span></a>
+</div>
+<div class="cat-head"><h2 id="c5">כתיבה ועריכה</h2><p class="c">כלים לשיפור כתיבה וצירת תוכן איכותי</p></div>
+<div class="t100-grid">
+<a class="t100" href="https://grammarly.com/" target="_blank" rel="noopener"><span class="n">Grammarly</span><span class="d">בדיקת דקדוק ושיפור כתיבה</span></a>
+<a class="t100" href="https://quillbot.com/" target="_blank" rel="noopener"><span class="n">QuillBot</span><span class="d">כתיבה מחדש וסיכום טקסטים</span></a>
+<a class="t100" href="https://www.copy.ai/" target="_blank" rel="noopener"><span class="n">Copy.ai</span><span class="d">יצירת תוכן שיווקי מהיר</span></a>
+<a class="t100" href="https://www.jasper.ai/" target="_blank" rel="noopener"><span class="n">Jasper</span><span class="d">כתיבת תוכן מקצועית לעסקים</span></a>
+<a class="t100" href="https://www.notion.so/product/ai" target="_blank" rel="noopener"><span class="n">Notion AI</span><span class="d">כתיבה חכמה בתוך Notion</span></a>
+<a class="t100" href="https://www.wordtune.com/" target="_blank" rel="noopener"><span class="n">Wordtune</span><span class="d">שיפור וניסוח מחדש של טקסטים</span></a>
+<a class="t100" href="https://www.deepl.com/write" target="_blank" rel="noopener"><span class="n">DeepL Write</span><span class="d">שיפור כתיבה באנגלית</span></a>
+<a class="t100" href="https://hemingwayapp.com/" target="_blank" rel="noopener"><span class="n">Hemingway Editor</span><span class="d">שיפור בהירות הכתיבה</span></a>
+</div>
+<div class="cat-head"><h2 id="c6">כלי פרודוקטיביות</h2><p class="c">כלים לחיסכון זמן וניהול עבודה חכם</p></div>
+<div class="t100-grid">
+<a class="t100" href="https://www.usemotion.com" target="_blank" rel="noopener"><span class="n">Motion 🔥</span><span class="d">תכנון יומי אוטומטי חוסך שעות</span></a>
+<a class="t100" href="https://reclaim.ai" target="_blank" rel="noopener"><span class="n">Reclaim.ai</span><span class="d">אופטימיזציה של לוח הזמנים</span></a>
+<a class="t100" href="https://calendly.com" target="_blank" rel="noopener"><span class="n">Calendly 🔥</span><span class="d">תזמון פגישות אוטומטי</span></a>
+<a class="t100" href="https://linear.app" target="_blank" rel="noopener"><span class="n">Linear 🔥</span><span class="d">ניהול פרויקטים לצוותי פיתוח</span></a>
+<a class="t100" href="https://clickup.com/ai" target="_blank" rel="noopener"><span class="n">ClickUp AI</span><span class="d">ניהול פרויקטים עם בינה מלאכותית</span></a>
+<a class="t100" href="https://asana.com/ai" target="_blank" rel="noopener"><span class="n">Asana AI</span><span class="d">משימות וזרימות עבודה חכמות</span></a>
+<a class="t100" href="https://superhuman.com" target="_blank" rel="noopener"><span class="n">Superhuman</span><span class="d">אימייל חכם וממוקד</span></a>
+<a class="t100" href="https://sanebox.com" target="_blank" rel="noopener"><span class="n">SaneBox</span><span class="d">סינון אימיילים אוטומטי</span></a>
+<a class="t100" href="https://www.boomerangapp.com" target="_blank" rel="noopener"><span class="n">Boomerang AI</span><span class="d">תזמון אימיילים מושלם</span></a>
+<a class="t100" href="https://loom.com" target="_blank" rel="noopener"><span class="n">Loom</span><span class="d">צילום מסך וידאו מהיר</span></a>
+<a class="t100" href="https://www.zight.com" target="_blank" rel="noopener"><span class="n">Zight (CloudApp)</span><span class="d">שיתוף מהיר של קבצים</span></a>
+<a class="t100" href="https://fireflies.ai" target="_blank" rel="noopener"><span class="n">Fireflies.ai 🔥</span><span class="d">תמלול פגישות אוטומטי</span></a>
+</div>
+<div class="cat-head"><h2 id="c7">עיבוד מסמכים וחתימות</h2><p class="c">כלים לחיסכון זמן בעבודה עם מסמכים</p></div>
+<div class="t100-grid">
+<div class="t100 nolink"><span class="n">DocuSign AI 🔥</span><span class="d">חתימה דיגיטלית חכמה Personal ~$10/חודש:</span></div>
+<a class="t100" href="https://www.pandadoc.com/" target="_blank" rel="noopener"><span class="n">PandaDoc</span><span class="d">מסמכים וחוזים אוטומטיים Free eSign:</span></a>
+<a class="t100" href="https://www.adobe.com/acrobat/ai.html" target="_blank" rel="noopener"><span class="n">Adobe Acrobat AI</span><span class="d">עריכת PDF חכמה ומתקדמת</span></a>
+<a class="t100" href="https://smallpdf.com/" target="_blank" rel="noopener"><span class="n">Smallpdf AI</span><span class="d">כלי PDF מקוונים חכמים</span></a>
+<a class="t100" href="https://www.typeform.com/ai/" target="_blank" rel="noopener"><span class="n">Typeform AI</span><span class="d">טפסים וסקרים חכמים</span></a>
+<a class="t100" href="https://www.jotform.com/ai/" target="_blank" rel="noopener"><span class="n">Jotform AI</span><span class="d">יצירת טפסים מתקדמת חינם (Starter):</span></a>
+</div>
+<div class="cat-head"><h2 id="c8">אוטומציה וצ&#x27;אטבוטים</h2><p class="c">אוטומציה שחוסכת שעות עבודה יומיות</p></div>
+<div class="t100-grid">
+<a class="t100" href="https://zapier.com" target="_blank" rel="noopener"><span class="n">Zapier 🔥</span><span class="d">אוטומציה בין אפליקציות - חיוני!</span></a>
+<a class="t100" href="https://make.com" target="_blank" rel="noopener"><span class="n">Make (Integromat) 🔥</span><span class="d">אוטומציה מתקדמת וגרפית</span></a>
+<a class="t100" href="https://powerautomate.microsoft.com" target="_blank" rel="noopener"><span class="n">Microsoft Power Automate</span><span class="d">אוטומציה מושלמת ל-Microsoft</span></a>
+<a class="t100" href="https://n8n.io" target="_blank" rel="noopener"><span class="n">n8n</span><span class="d">אוטומציה קוד פתוח חזקה</span></a>
+<a class="t100" href="https://manychat.com" target="_blank" rel="noopener"><span class="n">ManyChat</span><span class="d">אוטומציה לרשתות חברתיות</span></a>
+<a class="t100" href="https://landbot.io" target="_blank" rel="noopener"><span class="n">Landbot</span><span class="d">יצירת צ&#x27;אטבוטים ללא קוד</span></a>
+<a class="t100" href="https://botpress.com/" target="_blank" rel="noopener"><span class="n">Botpress</span><span class="d">פלטפורמה מתקדמת לבניית צ׳אטבוטים חכמים</span></a>
+</div>
+<div class="cat-head"><h2 id="c9">שיווק ובינת עסקים</h2><p class="c">כלים לניתוח נתונים ושיפור עסקים</p></div>
+<div class="t100-grid">
+<div class="t100 nolink"><span class="n">HubSpot AI 🔥</span><span class="d">CRM עם בינה מלאכותית מתקדמת</span></div>
+<a class="t100" href="https://www.tableau.com/ai" target="_blank" rel="noopener"><span class="n">Tableau AI</span><span class="d">דשבורדים וויזואליזציה חכמה Viewer $15/משתמש/חודש | Explorer $42 | Creator $70:</span></a>
+<a class="t100" href="https://powerbi.microsoft.com/" target="_blank" rel="noopener"><span class="n">PowerBI AI</span><span class="d">אנליטיקה עסקית של Microsoft</span></a>
+<a class="t100" href="https://mixpanel.com/" target="_blank" rel="noopener"><span class="n">Mixpanel</span><span class="d">אנליטיקת מוצר חכמה ומתקדמת</span></a>
+</div>
+<div class="cat-head"><h2 id="c10">תרגום ומחקר מהיר</h2><p class="c">כלים לחיסכון זמן במחקר ותרגום</p></div>
+<div class="t100-grid">
+<div class="t100 nolink"><span class="n">DeepL 🔥</span><span class="d">התרגום הטוב והמדויק ביותר</span></div>
+<div class="t100 nolink"><span class="n">Elicit 🔥</span><span class="d">עוזר מחקר אקדמי מהיר ומדויק</span></div>
+</div>
+<p><a class="gp-back" href="index.html#unlock">← חזרה למרכז הפתיחה</a></p>
+</div></main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="site-version" aria-label="version">V0.1 · שחר הפקות AI · נבנה עבור כל מי שרוצה ללמוד</p>
+            <p>© 2026 AI-learning-for-ALL - כל הזכויות שמורות לשמוליק שחר יועץ לימודי המנגיש לימודי בינה מלאכותית לכל אדם</p>
+            <p class="footer-contact">טלפון: <a href="tel:+972522603831">+972522603831</a> | אימייל: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+            <p class="footer-legal"><a href="privacy.html">מדיניות פרטיות</a> · <a href="terms.html">תנאי שימוש</a> · <a href="accessibility.html">הצהרת נגישות</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
