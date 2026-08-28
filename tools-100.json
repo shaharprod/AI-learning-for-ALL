@@ -1,0 +1,860 @@
+[
+ {
+  "title": "מודלי שפה מובילים",
+  "desc": "המודלים החכמים והמתקדמים ביותר של 2025",
+  "items": [
+   {
+    "name": "ChatGPT",
+    "desc": "המודל הפופולארי ביותר של OpenAI",
+    "price": "",
+    "url": "https://chatgpt.com"
+   },
+   {
+    "name": "Claude",
+    "desc": "מתקדם לניתוח ומחקר מעמיק",
+    "price": "",
+    "url": "https://claude.ai"
+   },
+   {
+    "name": "Grok 🔥",
+    "desc": "המודל המתקדם של xAI/אילון מאסק",
+    "price": "",
+    "url": "https://x.com/i/grok"
+   },
+   {
+    "name": "Gemini",
+    "desc": "המודל החדש והחזק של Google",
+    "price": "",
+    "url": "https://gemini.google.com"
+   },
+   {
+    "name": "Perplexity AI",
+    "desc": "חיפוש ומחקר מדויק עם מקורות",
+    "price": "",
+    "url": "https://perplexity.ai"
+   },
+   {
+    "name": "NotebookLM 🔥",
+    "desc": "מחקר מסמכים ויצירת פודקאסטים",
+    "price": "",
+    "url": "https://notebooklm.google.com"
+   },
+   {
+    "name": "You.com",
+    "desc": "חיפוש חכם עם מקורות מרובים",
+    "price": "",
+    "url": "https://you.com"
+   },
+   {
+    "name": "Poe",
+    "desc": "גישה למספר מודלי שפה במקום אחד",
+    "price": "",
+    "url": "https://poe.com"
+   },
+   {
+    "name": "Meta AI",
+    "desc": "המודל החדש של פייסבוק",
+    "price": "",
+    "url": "https://meta.ai"
+   },
+   {
+    "name": "Pi",
+    "desc": "עוזר אישי ידידותי של Inflection",
+    "price": "",
+    "url": "https://pi.ai"
+   },
+   {
+    "name": "Character.AI",
+    "desc": "שיחות עם דמויות AI מגוונות",
+    "price": "",
+    "url": "https://character.ai"
+   },
+   {
+    "name": "Microsoft Copilot",
+    "desc": "משולב במערכות Microsoft",
+    "price": "",
+    "url": "https://copilot.microsoft.com"
+   },
+   {
+    "name": "Teachable Machine 🔥",
+    "desc": "כלי אינטואיטיבי של Google ליצירת מודלים בלמידת מכונה",
+    "price": "",
+    "url": "https://teachablemachine.withgoogle.com/"
+   },
+   {
+    "name": "OpenRouter",
+    "desc": "גישה למגוון מודלים מובילים דרך נקודת API אחת",
+    "price": "",
+    "url": "https://openrouter.ai/"
+   },
+   {
+    "name": "DeepSeek",
+    "desc": "מודל סיני בקוד פתוח, חזק בקוד ובמתמטיקה",
+    "price": "",
+    "url": "https://www.deepseek.com"
+   },
+   {
+    "name": "Mistral Le Chat",
+    "desc": "המודל של מיסטרל הצרפתית, שרתים באירופה",
+    "price": "",
+    "url": "https://chat.mistral.ai"
+   },
+   {
+    "name": "Qwen",
+    "desc": "המודל של עליבאבא, גרסאות פתוחות",
+    "price": "",
+    "url": "https://chat.qwen.ai"
+   },
+   {
+    "name": "HuggingChat",
+    "desc": "צ׳אט עם מודלים בקוד פתוח, בחינם",
+    "price": "",
+    "url": "https://huggingface.co/chat"
+   }
+  ]
+ },
+ {
+  "title": "כלי פיתוח וקוד",
+  "desc": "הכלים המתקדמים ביותר לפיתוח תוכנה",
+  "items": [
+   {
+    "name": "Cursor 🔥",
+    "desc": "עורך הקוד הטוב ביותר עם AI",
+    "price": "",
+    "url": "https://cursor.com"
+   },
+   {
+    "name": "Lovable 🔥",
+    "desc": "פלטפורמה מלאה לפיתוח עם AI",
+    "price": "",
+    "url": "https://lovable.dev"
+   },
+   {
+    "name": "Bolt.new 🔥",
+    "desc": "פיתוח אפליקציות מלא ומהיר",
+    "price": "",
+    "url": "https://bolt.new"
+   },
+   {
+    "name": "V0.dev",
+    "desc": "יצירת קוד React מתיאור טקסט",
+    "price": "",
+    "url": "https://v0.dev"
+   },
+   {
+    "name": "GitHub Copilot",
+    "desc": "עזרה בכתיבת קוד ישירות בעורך",
+    "price": "",
+    "url": "https://github.com/features/copilot"
+   },
+   {
+    "name": "Tabnine",
+    "desc": "השלמת קוד חכמה ומהירה",
+    "price": "",
+    "url": "https://tabnine.com"
+   },
+   {
+    "name": "Replit Ghostwriter",
+    "desc": "עזרה בקידוד בענן",
+    "price": "",
+    "url": "https://replit.com/ai"
+   },
+   {
+    "name": "Amazon Q Developer",
+    "desc": "עוזר הקוד של AWS. שינה שם מ-CodeWhisperer",
+    "price": "",
+    "url": "https://aws.amazon.com/q/developer/"
+   },
+   {
+    "name": "Windsurf",
+    "desc": "עורך קוד עם סוכן AI. שינה שם מ-Codeium ועבר לבעלות Cognition",
+    "price": "",
+    "url": "https://devin.ai/desktop"
+   },
+   {
+    "name": "Mintlify",
+    "desc": "תיעוד קוד אוטומטי ומסודר",
+    "price": "",
+    "url": "https://mintlify.com"
+   },
+   {
+    "name": "Blackbox AI",
+    "desc": "עזרה מתקדמת בתכנות",
+    "price": "",
+    "url": "https://blackbox.ai"
+   },
+   {
+    "name": "Hugging Face",
+    "desc": "קהילת מודלים וקוד פתוח לאחסון והרצה של מודלים",
+    "price": "",
+    "url": "https://huggingface.co/"
+   },
+   {
+    "name": "Replicate",
+    "desc": "הרצת מודלי AI בענן דרך API פשוט",
+    "price": "",
+    "url": "https://replicate.com/"
+   },
+   {
+    "name": "Kaggle",
+    "desc": "דאטהסטים, נוטבוקים ותחרויות ML",
+    "price": "",
+    "url": "https://www.kaggle.com/"
+   },
+   {
+    "name": "Claude Code",
+    "desc": "סוכן קוד בטרמינל של Anthropic",
+    "price": "",
+    "url": "https://claude.com/product/claude-code"
+   },
+   {
+    "name": "Google Antigravity",
+    "desc": "סביבת פיתוח מבוססת סוכנים של גוגל",
+    "price": "",
+    "url": "https://antigravity.google"
+   },
+   {
+    "name": "Devin",
+    "desc": "מהנדס תוכנה אוטונומי",
+    "price": "",
+    "url": "https://devin.ai"
+   }
+  ]
+ },
+ {
+  "title": "יצירת תמונות ועיצוב",
+  "desc": "כלים מתקדמים ליצירת תמונות ועיצוב גרפי",
+  "items": [
+   {
+    "name": "DALL-E 3",
+    "desc": "הטוב ביותר מ-OpenAI ליצירת תמונות",
+    "price": "",
+    "url": "https://openai.com/dall-e-3"
+   },
+   {
+    "name": "Midjourney",
+    "desc": "איכות פוטו-ריאליסטית מרשימה",
+    "price": "",
+    "url": "https://midjourney.com"
+   },
+   {
+    "name": "Stable Diffusion",
+    "desc": "קוד פתוח וחזק מאוד",
+    "price": "",
+    "url": "https://stability.ai/stable-diffusion"
+   },
+   {
+    "name": "Adobe Firefly",
+    "desc": "משולב בחבילת Adobe Creative",
+    "price": "",
+    "url": "https://firefly.adobe.com"
+   },
+   {
+    "name": "Leonardo.ai",
+    "desc": "יצירת תמונות מתקדמת וגמישה",
+    "price": "",
+    "url": "https://leonardo.ai"
+   },
+   {
+    "name": "Canva AI",
+    "desc": "עיצוב פשוט וחכם לכולם",
+    "price": "",
+    "url": "https://canva.com/ai-image-generator"
+   },
+   {
+    "name": "Remove.bg",
+    "desc": "הסרת רקע מושלמת ומיידית",
+    "price": "",
+    "url": "https://remove.bg"
+   },
+   {
+    "name": "Upscayl",
+    "desc": "שיפור איכות תמונות דרמטי",
+    "price": "",
+    "url": "https://upscayl.org"
+   },
+   {
+    "name": "ClipDrop",
+    "desc": "כלים ויזואליים מגוונים",
+    "price": "",
+    "url": "https://clipdrop.co"
+   },
+   {
+    "name": "Playground AI",
+    "desc": "יצירה קלה וידידותית",
+    "price": "",
+    "url": "https://playgroundai.com"
+   },
+   {
+    "name": "NightCafe",
+    "desc": "אמנות AI יצירתית",
+    "price": "",
+    "url": "https://nightcafe.studio"
+   },
+   {
+    "name": "Artbreeder",
+    "desc": "עירוב תמונות יצירתי",
+    "price": "",
+    "url": "https://artbreeder.com"
+   },
+   {
+    "name": "Ideogram",
+    "desc": "חזק במיוחד בטקסט בתוך התמונה",
+    "price": "",
+    "url": "https://ideogram.ai"
+   },
+   {
+    "name": "Recraft",
+    "desc": "וקטורים ואיורים עקביים למותג",
+    "price": "",
+    "url": "https://www.recraft.ai"
+   },
+   {
+    "name": "Krea",
+    "desc": "יצירה ועריכה בזמן אמת",
+    "price": "",
+    "url": "https://www.krea.ai"
+   },
+   {
+    "name": "Flux · Black Forest Labs",
+    "desc": "מודלי תמונה בקוד פתוח",
+    "price": "",
+    "url": "https://bfl.ai"
+   },
+   {
+    "name": "Freepik AI",
+    "desc": "חבילת יצירה ועריכה על מאגר תמונות",
+    "price": "",
+    "url": "https://www.freepik.com/ai"
+   },
+   {
+    "name": "Topaz Labs",
+    "desc": "שיפור רזולוציה לתמונה ולווידאו",
+    "price": "",
+    "url": "https://www.topazlabs.com"
+   }
+  ]
+ },
+ {
+  "title": "וידאו ואנימציה",
+  "desc": "כלים מתקדמים ליצירת וידאו ותוכן חזותי",
+  "items": [
+   {
+    "name": "Sora",
+    "desc": "מובילת יצירת וידאו של OpenAI",
+    "price": "",
+    "url": "https://openai.com/sora"
+   },
+   {
+    "name": "RunwayML",
+    "desc": "כלים יצירתיים מגוונים לוידאו",
+    "price": "",
+    "url": "https://runwayml.com/"
+   },
+   {
+    "name": "Pika Labs",
+    "desc": "וידאו קצר איכותי ומהיר",
+    "price": "",
+    "url": "https://pika.art/"
+   },
+   {
+    "name": "Synthesia",
+    "desc": "דמויות דיגיטליות מדברות",
+    "price": "",
+    "url": "https://www.synthesia.io/"
+   },
+   {
+    "name": "HeyGen",
+    "desc": "אווטארים מדברים מרשימים",
+    "price": "",
+    "url": "https://www.heygen.com/"
+   },
+   {
+    "name": "CapCut",
+    "desc": "עריכת וידאו עם AI מתקדמת",
+    "price": "",
+    "url": "https://www.capcut.com/"
+   },
+   {
+    "name": "Luma AI",
+    "desc": "וידאו 3D מתמונות רגילות",
+    "price": "",
+    "url": "https://lumalabs.ai/"
+   },
+   {
+    "name": "Steve.ai",
+    "desc": "וידאו אוטומטי מטקסט",
+    "price": "",
+    "url": "https://www.steve.ai/"
+   },
+   {
+    "name": "InVideo",
+    "desc": "יצירת וידאו מטקסט פשוט",
+    "price": "",
+    "url": "https://invideo.io/"
+   },
+   {
+    "name": "Pictory",
+    "desc": "סרטונים קצרים מתוכן ארוך",
+    "price": "",
+    "url": "https://pictory.ai/"
+   },
+   {
+    "name": "Kling",
+    "desc": "וידאו מטקסט ומתמונה",
+    "price": "",
+    "url": "https://kling.ai"
+   },
+   {
+    "name": "Hailuo · MiniMax",
+    "desc": "וידאו קצר מתמונה",
+    "price": "",
+    "url": "https://hailuoai.video"
+   },
+   {
+    "name": "Higgsfield",
+    "desc": "וידאו עם שליטה בתנועת מצלמה",
+    "price": "",
+    "url": "https://higgsfield.ai"
+   },
+   {
+    "name": "Google Flow",
+    "desc": "סביבת יצירת וידאו של גוגל",
+    "price": "",
+    "url": "https://labs.google/fx/tools/flow"
+   },
+   {
+    "name": "Veo",
+    "desc": "מודל הווידאו של DeepMind",
+    "price": "",
+    "url": "https://deepmind.google/models/veo/"
+   }
+  ]
+ },
+ {
+  "title": "מוזיקה ואודיו",
+  "desc": "יצירת מוזיקה, קול ותוכן שמע מתקדם",
+  "items": [
+   {
+    "name": "Suno AI 🔥",
+    "desc": "הטוב ביותר ליצירת שירים מלאים",
+    "price": "",
+    "url": ""
+   },
+   {
+    "name": "Udio",
+    "desc": "איכות מוזיקלית גבוהה מאוד",
+    "price": "",
+    "url": "https://www.udio.com/"
+   },
+   {
+    "name": "Adobe Podcast 🔥",
+    "desc": "עריכת שמע מתקדמת וחכמה",
+    "price": "",
+    "url": "https://podcast.adobe.com/"
+   },
+   {
+    "name": "Descript",
+    "desc": "עריכת שמע וטקסט משולבת",
+    "price": "",
+    "url": "https://www.descript.com/"
+   },
+   {
+    "name": "ElevenLabs",
+    "desc": "שיבוט קול מדויק ומרשים",
+    "price": "",
+    "url": "https://elevenlabs.io/"
+   },
+   {
+    "name": "Murf",
+    "desc": "דיבור מטקסט איכותי",
+    "price": "",
+    "url": "https://murf.ai/"
+   },
+   {
+    "name": "Speechify",
+    "desc": "הקראת טקסט טבעית",
+    "price": "",
+    "url": "https://speechify.com/"
+   },
+   {
+    "name": "Otter.ai",
+    "desc": "תמלול בזמן אמת מדויק",
+    "price": "",
+    "url": "https://otter.ai/"
+   },
+   {
+    "name": "Krisp",
+    "desc": "ביטול רעש מושלם לשיחות",
+    "price": "",
+    "url": "https://krisp.ai/"
+   },
+   {
+    "name": "AIVA",
+    "desc": "מלחין AI למוזיקה קלאסית",
+    "price": "",
+    "url": "https://aiva.ai/"
+   }
+  ]
+ },
+ {
+  "title": "כתיבה ועריכה",
+  "desc": "כלים לשיפור כתיבה וצירת תוכן איכותי",
+  "items": [
+   {
+    "name": "Grammarly",
+    "desc": "בדיקת דקדוק ושיפור כתיבה",
+    "price": "",
+    "url": "https://grammarly.com/"
+   },
+   {
+    "name": "QuillBot",
+    "desc": "כתיבה מחדש וסיכום טקסטים",
+    "price": "",
+    "url": "https://quillbot.com/"
+   },
+   {
+    "name": "Copy.ai",
+    "desc": "יצירת תוכן שיווקי מהיר",
+    "price": "",
+    "url": "https://www.copy.ai/"
+   },
+   {
+    "name": "Jasper",
+    "desc": "כתיבת תוכן מקצועית לעסקים",
+    "price": "",
+    "url": "https://www.jasper.ai/"
+   },
+   {
+    "name": "Notion AI",
+    "desc": "כתיבה חכמה בתוך Notion",
+    "price": "",
+    "url": "https://www.notion.so/product/ai"
+   },
+   {
+    "name": "Wordtune",
+    "desc": "שיפור וניסוח מחדש של טקסטים",
+    "price": "",
+    "url": "https://www.wordtune.com/"
+   },
+   {
+    "name": "DeepL Write",
+    "desc": "שיפור כתיבה באנגלית",
+    "price": "",
+    "url": "https://www.deepl.com/write"
+   },
+   {
+    "name": "Hemingway Editor",
+    "desc": "שיפור בהירות הכתיבה",
+    "price": "",
+    "url": "https://hemingwayapp.com/"
+   },
+   {
+    "name": "LanguageTool",
+    "desc": "בדיקת דקדוק וניסוח, תומך עברית",
+    "price": "",
+    "url": "https://languagetool.org"
+   }
+  ]
+ },
+ {
+  "title": "כלי פרודוקטיביות",
+  "desc": "כלים לחיסכון זמן וניהול עבודה חכם",
+  "items": [
+   {
+    "name": "Motion 🔥",
+    "desc": "תכנון יומי אוטומטי חוסך שעות",
+    "price": "",
+    "url": "https://www.usemotion.com"
+   },
+   {
+    "name": "Reclaim.ai",
+    "desc": "אופטימיזציה של לוח הזמנים",
+    "price": "",
+    "url": "https://reclaim.ai"
+   },
+   {
+    "name": "Calendly 🔥",
+    "desc": "תזמון פגישות אוטומטי",
+    "price": "",
+    "url": "https://calendly.com"
+   },
+   {
+    "name": "Linear 🔥",
+    "desc": "ניהול פרויקטים לצוותי פיתוח",
+    "price": "",
+    "url": "https://linear.app"
+   },
+   {
+    "name": "ClickUp AI",
+    "desc": "ניהול פרויקטים עם בינה מלאכותית",
+    "price": "",
+    "url": "https://clickup.com/ai"
+   },
+   {
+    "name": "Asana AI",
+    "desc": "משימות וזרימות עבודה חכמות",
+    "price": "",
+    "url": "https://asana.com/ai"
+   },
+   {
+    "name": "Superhuman",
+    "desc": "אימייל חכם וממוקד",
+    "price": "",
+    "url": "https://superhuman.com"
+   },
+   {
+    "name": "SaneBox",
+    "desc": "סינון אימיילים אוטומטי",
+    "price": "",
+    "url": "https://sanebox.com"
+   },
+   {
+    "name": "Boomerang AI",
+    "desc": "תזמון אימיילים מושלם",
+    "price": "",
+    "url": "https://www.boomerangapp.com"
+   },
+   {
+    "name": "Loom",
+    "desc": "צילום מסך וידאו מהיר",
+    "price": "",
+    "url": "https://loom.com"
+   },
+   {
+    "name": "Zight (CloudApp)",
+    "desc": "שיתוף מהיר של קבצים",
+    "price": "",
+    "url": "https://www.zight.com"
+   },
+   {
+    "name": "Fireflies.ai 🔥",
+    "desc": "תמלול פגישות אוטומטי",
+    "price": "",
+    "url": "https://fireflies.ai"
+   },
+   {
+    "name": "Gamma",
+    "desc": "מצגות ואתרים מטקסט",
+    "price": "",
+    "url": "https://gamma.app"
+   },
+   {
+    "name": "Napkin",
+    "desc": "הופך טקסט לתרשימים",
+    "price": "",
+    "url": "https://www.napkin.ai"
+   },
+   {
+    "name": "Granola",
+    "desc": "סיכומי פגישות שרצים ברקע",
+    "price": "",
+    "url": "https://www.granola.ai"
+   },
+   {
+    "name": "tl;dv",
+    "desc": "הקלטה וסיכום של פגישות",
+    "price": "",
+    "url": "https://tldv.io"
+   }
+  ]
+ },
+ {
+  "title": "עיבוד מסמכים וחתימות",
+  "desc": "כלים לחיסכון זמן בעבודה עם מסמכים",
+  "items": [
+   {
+    "name": "DocuSign AI 🔥",
+    "desc": "חתימה דיגיטלית חכמה Personal ~$10/חודש:",
+    "price": "",
+    "url": ""
+   },
+   {
+    "name": "PandaDoc",
+    "desc": "מסמכים וחוזים אוטומטיים Free eSign:",
+    "price": "",
+    "url": "https://www.pandadoc.com/"
+   },
+   {
+    "name": "Adobe Acrobat AI",
+    "desc": "עריכת PDF חכמה ומתקדמת",
+    "price": "",
+    "url": "https://acrobat.adobe.com/"
+   },
+   {
+    "name": "Smallpdf AI",
+    "desc": "כלי PDF מקוונים חכמים",
+    "price": "",
+    "url": "https://smallpdf.com/"
+   },
+   {
+    "name": "Typeform AI",
+    "desc": "טפסים וסקרים חכמים",
+    "price": "",
+    "url": "https://www.typeform.com/ai/"
+   },
+   {
+    "name": "Jotform AI",
+    "desc": "יצירת טפסים מתקדמת חינם (Starter):",
+    "price": "",
+    "url": "https://www.jotform.com/ai/"
+   },
+   {
+    "name": "ChatPDF",
+    "desc": "לשאול שאלות על קובץ PDF",
+    "price": "",
+    "url": "https://www.chatpdf.com"
+   },
+   {
+    "name": "Humata",
+    "desc": "ניתוח מסמכים ארוכים עם מקורות",
+    "price": "",
+    "url": "https://www.humata.ai"
+   }
+  ]
+ },
+ {
+  "title": "אוטומציה וצ'אטבוטים",
+  "desc": "אוטומציה שחוסכת שעות עבודה יומיות",
+  "items": [
+   {
+    "name": "Zapier 🔥",
+    "desc": "אוטומציה בין אפליקציות - חיוני!",
+    "price": "",
+    "url": "https://zapier.com"
+   },
+   {
+    "name": "Make (Integromat) 🔥",
+    "desc": "אוטומציה מתקדמת וגרפית",
+    "price": "",
+    "url": "https://make.com"
+   },
+   {
+    "name": "Microsoft Power Automate",
+    "desc": "אוטומציה מושלמת ל-Microsoft",
+    "price": "",
+    "url": "https://powerautomate.microsoft.com"
+   },
+   {
+    "name": "n8n",
+    "desc": "אוטומציה קוד פתוח חזקה",
+    "price": "",
+    "url": "https://n8n.io"
+   },
+   {
+    "name": "ManyChat",
+    "desc": "אוטומציה לרשתות חברתיות",
+    "price": "",
+    "url": "https://manychat.com"
+   },
+   {
+    "name": "Landbot",
+    "desc": "יצירת צ'אטבוטים ללא קוד",
+    "price": "",
+    "url": "https://landbot.io"
+   },
+   {
+    "name": "Botpress",
+    "desc": "פלטפורמה מתקדמת לבניית צ׳אטבוטים חכמים",
+    "price": "",
+    "url": "https://botpress.com/"
+   },
+   {
+    "name": "Lindy",
+    "desc": "בניית עוזרי AI למשימות חוזרות",
+    "price": "",
+    "url": "https://www.lindy.ai"
+   },
+   {
+    "name": "Gumloop",
+    "desc": "אוטומציות ויזואליות מבוססות AI",
+    "price": "",
+    "url": "https://www.gumloop.com"
+   }
+  ]
+ },
+ {
+  "title": "שיווק ובינת עסקים",
+  "desc": "כלים לניתוח נתונים ושיפור עסקים",
+  "items": [
+   {
+    "name": "HubSpot AI 🔥",
+    "desc": "CRM עם בינה מלאכותית מתקדמת",
+    "price": "",
+    "url": ""
+   },
+   {
+    "name": "Tableau AI",
+    "desc": "דשבורדים וויזואליזציה חכמה Viewer $15/משתמש/חודש | Explorer $42 | Creator $70:",
+    "price": "",
+    "url": "https://www.tableau.com/ai"
+   },
+   {
+    "name": "PowerBI AI",
+    "desc": "אנליטיקה עסקית של Microsoft",
+    "price": "",
+    "url": "https://powerbi.microsoft.com/"
+   },
+   {
+    "name": "Mixpanel",
+    "desc": "אנליטיקת מוצר חכמה ומתקדמת",
+    "price": "",
+    "url": "https://mixpanel.com/"
+   }
+  ]
+ },
+ {
+  "title": "תרגום ומחקר מהיר",
+  "desc": "כלים לחיסכון זמן במחקר ותרגום",
+  "items": [
+   {
+    "name": "DeepL 🔥",
+    "desc": "התרגום הטוב והמדויק ביותר",
+    "price": "",
+    "url": ""
+   },
+   {
+    "name": "Elicit 🔥",
+    "desc": "עוזר מחקר אקדמי מהיר ומדויק",
+    "price": "",
+    "url": ""
+   }
+  ]
+ },
+ {
+  "title": "סוכנים אוטונומיים",
+  "desc": "כלים שמקבלים משימה ומבצעים אותה עד הסוף, בלי שתנחה כל צעד.",
+  "items": [
+   {
+    "name": "Manus",
+    "desc": "סוכן שמבצע משימות מרובות שלבים לבד",
+    "price": "",
+    "url": "https://manus.im"
+   },
+   {
+    "name": "Perplexity Comet",
+    "desc": "דפדפן עם סוכן מובנה",
+    "price": "",
+    "url": "https://www.perplexity.ai/comet"
+   }
+  ]
+ },
+ {
+  "title": "מודלים מקומיים במחשב שלך",
+  "desc": "רצים על המחשב שלך. שום מידע לא יוצא החוצה — הפתרון למי שעובד עם מידע רגיש.",
+  "items": [
+   {
+    "name": "Ollama",
+    "desc": "הרצת מודלים על המחשב, בלי ענן",
+    "price": "",
+    "url": "https://ollama.com"
+   },
+   {
+    "name": "LM Studio",
+    "desc": "ממשק גרפי להרצת מודלים מקומית",
+    "price": "",
+    "url": "https://lmstudio.ai"
+   }
+  ]
+ }
+]
