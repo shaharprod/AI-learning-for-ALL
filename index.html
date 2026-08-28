@@ -238,40 +238,27 @@
     </ul>
 
     <div class="lc-card">
-      <!-- ⬅ להחליף: את ה-action בכתובת ה-action של הטופס שלך מרב מסר.
-           ברב מסר: תפריט "טפסים" ← "צור טופס חדש" ← לחבר לרשימה
-           "לידים – קורס מבוא חינם 14 יום" ← לקחת משם את כתובת ה-action
-           ואת שמות השדות, ולהתאים גם את ה-name של השדות למטה אם צריך. -->
-      <form class="lc-form" method="POST" action="REPLACE_WITH_RAVMESSER_FORM_ACTION">
+      <!-- טופס רב מסר. הקוד למטה הוא ההטמעה החכמה: שורה אחת שמתעדכנת לבד
+           בכל שמירה של הטופס במערכת. לעדכון השדות — עורכים ברב מסר, לא כאן.
+           הרשימה המקבלת: aidigitalmedia news letter -->
 
-        <div class="lc-row">
-          <label class="lc-field">
-            <span class="lc-label">שם פרטי</span>
-            <input type="text" name="first_name" required autocomplete="given-name" placeholder="איך לפנות אליך">
-          </label>
+      <p class="lc-consent-note">
+        בשליחת הטופס אני מאשר/ת קבלת תוכן, עדכונים והצעות במייל משמוליק שחר ·
+        SHAHAR AI PRODUCTIONS. אפשר להסיר את עצמי בכל עת — בקישור שבתחתית כל מייל
+        או בהודעה חוזרת. קראתי את <a href="privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a>.
+      </p>
 
-          <label class="lc-field">
-            <span class="lc-label">אימייל</span>
-            <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" dir="ltr">
-          </label>
-        </div>
+      <div class="lc-embed">
+        <script type='text/javascript' src='//form.ravpage.co.il/199da4b239c59ef4915d05ca85d61f1665CEA402' charset='UTF-8'></script>
+        <noscript>
+          <p class="lc-fine">הטופס דורש JavaScript. אפשר גם לשלוח לי מייל ואוסיף אותך ידנית.</p>
+        </noscript>
+      </div>
 
-        <!-- שדה מקור הגעה — נסתר, מתמלא לבד. בלעדיו לא תדע איזה ערוץ מביא לקוחות -->
-        <input type="hidden" name="source" id="lc-source" value="site">
-
-        <!-- הסכמה מפורשת — נדרש לפי חוק התקשורת (תיקון 40). אל תמחק ואל תסמן מראש -->
-        <label class="lc-consent">
-          <input type="checkbox" name="consent" value="1" required>
-          <span>אני מאשר/ת קבלת תוכן, עדכונים והצעות במייל משמוליק שחר · SHAHAR AI PRODUCTIONS. אפשר להסיר את עצמי בכל עת — בקישור שבתחתית כל מייל או בהודעה חוזרת. קראתי את <a href="privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a>.</span>
-        </label>
-
-        <button type="submit" class="lc-btn">קבלו גישה עכשיו</button>
-
-        <p class="lc-fine">
-          בלי כרטיס אשראי. בלי התחייבות. בלי שיחת מכירה.<br>
-          <a href="terms.html">תנאי שימוש</a> · <a href="privacy.html">מדיניות פרטיות</a>
-        </p>
-      </form>
+      <p class="lc-fine">
+        בלי כרטיס אשראי. בלי התחייבות. בלי שיחת מכירה.<br>
+        <a href="terms.html">תנאי שימוש</a> · <a href="privacy.html">מדיניות פרטיות</a>
+      </p>
     </div>
 
     <p class="lc-proof">
@@ -366,6 +353,15 @@
 #signup .lc-btn:active{transform:translateY(1px)}
 #signup .lc-btn:focus-visible{outline:3px solid var(--lc-accent);outline-offset:3px}
 #signup .lc-fine{margin:0;text-align:center;font-size:14px;color:var(--lc-ink-2)}
+#signup .lc-consent-note{
+  margin:0 0 18px;font-size:14.5px;line-height:1.7;color:var(--lc-ink-2);
+  background:rgba(20,23,30,.035);border:1px solid var(--lc-line);
+  border-radius:10px;padding:13px 15px;
+}
+#signup .lc-consent-note a{color:inherit;text-decoration:underline}
+#signup .lc-embed{margin:0 0 18px;min-height:180px}
+#signup .lc-embed iframe,#signup .lc-embed form{max-width:100%}
+#signup .lc-embed *{max-width:100%;box-sizing:border-box}
 #signup .lc-proof{margin:0;font-size:14px;color:var(--lc-ink-2);line-height:1.75}
 
 /* מצב כהה — לפי העדפת המערכת */
