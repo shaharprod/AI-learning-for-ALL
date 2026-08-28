@@ -197,12 +197,511 @@
         </div>
     </section>
 
+
+<!-- BEGIN funnel-blocks -->
+<!-- ═══════════════════════════════════════════════════════════════════
+     בלוק איסוף לידים · AI-learning-for-ALL
+     נבנה 28.8.2026 · שמוליק שחר
+
+     מיקום מדויק: בקובץ index.html שבמאגר AI-learning-for-ALL,
+     להדביק את כל תוכן הקובץ הזה מיד לפני שורת ההערה של הפוטר
+     (השורה שכתוב בה Footer בין סימני הערה),
+     כלומר מיד אחרי סגירת התגית section של סקציית About.
+
+     יש להחליף מקום אחד בלבד — מסומן ב-  ⬅ להחליף
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<section id="signup" class="lead-capture">
+  <div class="lc-inner">
+
+    <p class="lc-eyebrow">מה שלא נמצא באתר החינמי</p>
+
+    <h2 class="lc-title">אתה כבר קורא בחינם.<br>תירשם כדי לקבל את זה מסודר.</h2>
+
+    <p class="lc-sub">
+      כל מה שכאן פתוח וימשיך להיות פתוח. ההרשמה נותנת לך שלושה דברים שאין בדף:
+    </p>
+
+    <ul class="lc-list">
+      <li>
+        <strong>הקורס כמסלול מסודר</strong>
+        <span>אותם 9 השיעורים, אבל בסדר נכון, עם מעקב התקדמות — יודע איפה עצרת ומה נשאר</span>
+      </li>
+      <li>
+        <strong>מילון 100+ המונחים כ-PDF</strong>
+        <span>להורדה, להדפסה, ולפתוח כשצריך בלי לחפש באתר</span>
+      </li>
+      <li>
+        <strong>מייל אחד בשבוע</strong>
+        <span>כלי אחד או טיפ אחד שאפשר ליישם באותו יום. אחד. לא חמישה</span>
+      </li>
+    </ul>
+
+    <div class="lc-card">
+      <!-- ⬅ להחליף: את ה-action בכתובת ה-action של הטופס שלך מרב מסר.
+           ברב מסר: תפריט "טפסים" ← "צור טופס חדש" ← לחבר לרשימה
+           "לידים – קורס מבוא חינם 14 יום" ← לקחת משם את כתובת ה-action
+           ואת שמות השדות, ולהתאים גם את ה-name של השדות למטה אם צריך. -->
+      <form class="lc-form" method="POST" action="REPLACE_WITH_RAVMESSER_FORM_ACTION">
+
+        <div class="lc-row">
+          <label class="lc-field">
+            <span class="lc-label">שם פרטי</span>
+            <input type="text" name="first_name" required autocomplete="given-name" placeholder="איך לפנות אליך">
+          </label>
+
+          <label class="lc-field">
+            <span class="lc-label">אימייל</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" dir="ltr">
+          </label>
+        </div>
+
+        <!-- שדה מקור הגעה — נסתר, מתמלא לבד. בלעדיו לא תדע איזה ערוץ מביא לקוחות -->
+        <input type="hidden" name="source" id="lc-source" value="site">
+
+        <!-- הסכמה מפורשת — נדרש לפי חוק התקשורת (תיקון 40). אל תמחק ואל תסמן מראש -->
+        <label class="lc-consent">
+          <input type="checkbox" name="consent" value="1" required>
+          <span>אני מאשר/ת קבלת תוכן ועדכונים במייל משמוליק שחר · SHAHAR AI PRODUCTIONS, ומבין/ה שאפשר להסיר את עצמי בקליק אחד בתחתית כל מייל.</span>
+        </label>
+
+        <button type="submit" class="lc-btn">קבלו גישה עכשיו</button>
+
+        <p class="lc-fine">
+          בלי כרטיס אשראי. בלי התחייבות. בלי שיחת מכירה.
+        </p>
+      </form>
+    </div>
+
+    <p class="lc-proof">
+      שמוליק שחר · Google Gemini Certified Educator · חבר NVIDIA Developer Group ·
+      מלמד דיגיטל למעלה מעשר שנים, ובינה מלאכותית בשלוש האחרונות
+    </p>
+
+  </div>
+</section>
+
+<!-- פס תחתון דביק — מופיע רק אחרי גלילה, ונעלם כשמגיעים לטופס -->
+<div class="lc-bar" id="lcBar" hidden>
+  <span class="lc-bar-txt">רוצה את זה מסודר כקורס + המילון כ-PDF?</span>
+  <a href="#signup" class="lc-bar-btn">להרשמה חינם</a>
+  <button class="lc-bar-x" id="lcBarX" aria-label="סגירה">×</button>
+</div>
+
+<style>
+/* ───── בלוק איסוף לידים — עצמאי לחלוטין, לא נשען על style.css ───── */
+#signup.lead-capture{
+  --lc-ink:#14171e;
+  --lc-ink-2:#4d5461;
+  --lc-line:#dce0e8;
+  --lc-bg:#f4f6f9;
+  --lc-card:#ffffff;
+  --lc-accent:#0f5f8a;
+  --lc-accent-ink:#ffffff;
+  --lc-soft:#e6f0f6;
+  background:var(--lc-bg);
+  color:var(--lc-ink);
+  padding:clamp(48px,7vw,86px) 20px;
+  font-family:"Heebo",-apple-system,"Segoe UI",Arial,sans-serif;
+  direction:rtl;
+  text-align:right;
+  border-top:1px solid var(--lc-line);
+}
+#signup .lc-inner{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+#signup .lc-eyebrow{
+  margin:0;font-size:13px;font-weight:700;letter-spacing:.14em;
+  color:var(--lc-accent);text-transform:none;
+}
+#signup .lc-title{
+  margin:0;font-size:clamp(26px,4.4vw,40px);font-weight:800;line-height:1.25;
+  letter-spacing:-.01em;color:var(--lc-ink);text-wrap:balance;
+}
+#signup .lc-sub{margin:0;font-size:18px;color:var(--lc-ink-2);max-width:52ch;line-height:1.7}
+#signup .lc-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px}
+#signup .lc-list li{
+  position:relative;padding-right:30px;line-height:1.6;
+}
+#signup .lc-list li::before{
+  content:"";position:absolute;right:6px;top:11px;width:9px;height:9px;
+  border-radius:50%;background:var(--lc-accent);
+}
+#signup .lc-list strong{display:block;font-size:17px;font-weight:700;color:var(--lc-ink)}
+#signup .lc-list span{display:block;font-size:15.5px;color:var(--lc-ink-2);margin-top:2px}
+
+#signup .lc-card{
+  background:var(--lc-card);border:1px solid var(--lc-line);border-radius:14px;
+  padding:clamp(22px,3.5vw,32px);
+  box-shadow:0 1px 2px rgba(20,23,30,.05),0 14px 34px -22px rgba(20,23,30,.3);
+}
+#signup .lc-form{display:flex;flex-direction:column;gap:18px}
+#signup .lc-row{display:flex;flex-direction:column;gap:16px}
+@media(min-width:620px){#signup .lc-row{flex-direction:row}#signup .lc-field{flex:1}}
+#signup .lc-field{display:flex;flex-direction:column;gap:7px}
+#signup .lc-label{font-size:14.5px;font-weight:600;color:var(--lc-ink)}
+#signup .lc-form input[type=text],
+#signup .lc-form input[type=email]{
+  font-family:inherit;font-size:16.5px;color:var(--lc-ink);background:#fff;
+  border:1.5px solid var(--lc-line);border-radius:9px;padding:13px 15px;width:100%;
+  transition:border-color .15s,box-shadow .15s;
+}
+#signup .lc-form input::placeholder{color:#9aa2b1}
+#signup .lc-form input:focus{
+  outline:none;border-color:var(--lc-accent);box-shadow:0 0 0 3px var(--lc-soft);
+}
+#signup .lc-consent{
+  display:flex;gap:11px;align-items:flex-start;
+  font-size:14.5px;line-height:1.6;color:var(--lc-ink-2);cursor:pointer;
+}
+#signup .lc-consent input{
+  margin:3px 0 0;width:18px;height:18px;flex-shrink:0;accent-color:var(--lc-accent);cursor:pointer;
+}
+#signup .lc-btn{
+  font-family:inherit;font-size:18px;font-weight:700;
+  background:var(--lc-accent);color:var(--lc-accent-ink);
+  border:0;border-radius:9px;padding:16px 20px;cursor:pointer;width:100%;
+  transition:filter .15s,transform .05s;
+}
+#signup .lc-btn:hover{filter:brightness(1.1)}
+#signup .lc-btn:active{transform:translateY(1px)}
+#signup .lc-btn:focus-visible{outline:3px solid var(--lc-accent);outline-offset:3px}
+#signup .lc-fine{margin:0;text-align:center;font-size:14px;color:var(--lc-ink-2)}
+#signup .lc-proof{margin:0;font-size:14px;color:var(--lc-ink-2);line-height:1.75}
+
+/* מצב כהה — לפי העדפת המערכת */
+@media (prefers-color-scheme: dark){
+  #signup.lead-capture{
+    --lc-ink:#eaecf2;--lc-ink-2:#aeb5c3;--lc-line:#2b303b;
+    --lc-bg:#12151c;--lc-card:#191d26;--lc-accent:#4aa8d8;
+    --lc-accent-ink:#0b1016;--lc-soft:#16303d;
+  }
+  #signup .lc-form input[type=text],
+  #signup .lc-form input[type=email]{background:#12151c;color:var(--lc-ink)}
+}
+
+/* ───── פס תחתון דביק ───── */
+.lc-bar{
+  position:fixed;inset-inline:0;bottom:0;z-index:900;
+  display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap;
+  background:#14171e;color:#fff;padding:13px 46px 13px 18px;
+  font-family:"Heebo",-apple-system,"Segoe UI",Arial,sans-serif;font-size:15.5px;
+  direction:rtl;box-shadow:0 -6px 24px -12px rgba(0,0,0,.6);
+}
+.lc-bar[hidden]{display:none}
+.lc-bar-txt{font-weight:500}
+.lc-bar-btn{
+  background:#4aa8d8;color:#0b1016;text-decoration:none;font-weight:700;font-size:15px;
+  padding:9px 18px;border-radius:7px;white-space:nowrap;
+}
+.lc-bar-btn:hover{filter:brightness(1.1)}
+.lc-bar-x{
+  position:absolute;inset-inline-start:12px;top:50%;transform:translateY(-50%);
+  background:none;border:0;color:#8b93a3;font-size:26px;line-height:1;cursor:pointer;padding:2px 8px;
+}
+.lc-bar-x:hover{color:#fff}
+@media(max-width:520px){.lc-bar{font-size:14px;padding-block:11px}.lc-bar-txt{flex-basis:100%;text-align:center}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+html{scroll-behavior:smooth}
+</style>
+
+<script>
+(function () {
+  /* 1 · מקור ההגעה — נשמר מה-URL כדי לדעת איזה ערוץ באמת עובד.
+        דוגמה לשימוש בסרטון:  ...AI-learning-for-ALL/?src=youtube  */
+  try {
+    var src = new URLSearchParams(location.search).get('src');
+    if (src) {
+      var f = document.getElementById('lc-source');
+      if (f) f.value = src.slice(0, 40);
+    }
+  } catch (e) {}
+
+  /* 2 · הפס התחתון — מופיע אחרי גלילה של מסך אחד, נעלם כשהטופס על המסך */
+  var bar = document.getElementById('lcBar');
+  var form = document.getElementById('signup');
+  var closed = false;
+  var x = document.getElementById('lcBarX');
+  if (x) x.addEventListener('click', function () { closed = true; if (bar) bar.hidden = true; });
+
+  function update() {
+    if (!bar || !form || closed) return;
+    var passedFold = window.scrollY > window.innerHeight * 0.6;
+    var box = form.getBoundingClientRect();
+    var formVisible = box.top < window.innerHeight && box.bottom > 0;
+    bar.hidden = !(passedFold && !formVisible);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     מרכז הפתיחה · מנגנון נעילה הדרגתית
+     AI-learning-for-ALL · שמוליק שחר · 28.8.2026
+
+     מיקום: בקובץ index.html שבמאגר AI-learning-for-ALL,
+     להדביק את כל תוכן הקובץ הזה מיד אחרי בלוק איסוף הלידים
+     (section שה-id שלו signup), ולפני שורת ההערה של הפוטר.
+
+     איך זה עובד:
+     כל מייל ברצף מכיל לינק חזרה לאתר עם מפתח בכתובת. לדוגמה:
+        מייל 2  ...AI-learning-for-ALL/?k=tools
+        מייל 3  ...AI-learning-for-ALL/?k=glossary
+        מייל 4  ...AI-learning-for-ALL/?k=kit
+        מייל 5  ...AI-learning-for-ALL/?k=course
+     המפתח נשמר בדפדפן של הגולש, והמנעול נשאר פתוח גם בכניסה הבאה.
+     המפתחות מצטברים: מי שלוחץ על k=kit מקבל גם את שני הקודמים.
+
+     שתי נקודות שחייבים להבין:
+     1. זו טקס, לא אבטחה. אפשר לעקוף את זה בכלי מפתחים.
+        זה בסדר גמור למטרה הזו — המנגנון בנוי ליצור מחויבות והרגל,
+        לא להגן על סודות. אל תשים כאן שום דבר שאסור שיזלוג.
+     2. מי שמנקה את הדפדפן מאבד את ההתקדמות. לכן בכל מייל
+        הלינק מופיע שוב — לחיצה חוזרת מחזירה את המצב.
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<section id="unlock" class="uc">
+  <div class="uc-in">
+
+    <p class="uc-eyebrow">מרכז הפתיחה</p>
+    <h2 class="uc-title">ארבעה דברים נפתחים בהדרגה</h2>
+    <p class="uc-sub">
+      תשעת השיעורים והמילון פתוחים לכולם, תמיד. ארבעת אלה נפתחים אחד אחד,
+      לפי הקצב של המיילים — כדי שתספיק להשתמש בכל אחד לפני שמגיע הבא.
+    </p>
+
+    <div class="uc-progress" role="status" aria-live="polite">
+      <div class="uc-bar"><i id="ucFill" style="width:0%"></i></div>
+      <span id="ucCount" class="uc-count">0 מתוך 4 נפתחו</span>
+    </div>
+
+    <div class="uc-grid">
+
+      <article class="uc-item" data-level="1">
+        <div class="uc-icon" aria-hidden="true">🧰</div>
+        <h3>ארגז הכלים</h3>
+        <p>מחולל הפרומפטים, מפת 100 כלי ה-AI ל-2026, ונוהל מידע רגיש להדפסה.</p>
+        <a class="uc-go" href="tools.html">כניסה לארגז הכלים ←</a>
+        <div class="uc-lock">
+          <span class="uc-lock-i" aria-hidden="true">🔒</span>
+          <b>נפתח במייל השני</b>
+          <span class="uc-lock-t">מגיע מחר. יש בו כפתור אחד — לאשר שאתה רוצה להמשיך לקבל.</span>
+        </div>
+      </article>
+
+      <article class="uc-item" data-level="2">
+        <div class="uc-icon" aria-hidden="true">📕</div>
+        <h3>המילון כ-PDF</h3>
+        <p>אותם 100+ מונחים שבאתר, בקובץ אחד להורדה, להדפסה ולפתיחה בלי אינטרנט.</p>
+        <a class="uc-go" href="downloads/glossary.pdf" download>הורדת ה-PDF ←</a>
+        <div class="uc-lock">
+          <span class="uc-lock-i" aria-hidden="true">🔒</span>
+          <b>נפתח במייל השלישי</b>
+          <span class="uc-lock-t">גרסת האתר פתוחה כבר עכשיו — <a href="pages/glossary.html">אפשר לקרוא כאן</a>.</span>
+        </div>
+      </article>
+
+      <article class="uc-item" data-level="3">
+        <div class="uc-icon" aria-hidden="true">🎯</div>
+        <h3>ערכת הפרומפטים</h3>
+        <p>חבילות פרומפטים מוכנים לפי מקצוע, ומדריך שיטת CRAFT.</p>
+        <a class="uc-go" href="kit.html">פתיחת הערכה ←</a>
+        <div class="uc-lock">
+          <span class="uc-lock-i" aria-hidden="true">🔒</span>
+          <b>נפתח במייל הרביעי</b>
+          <span class="uc-lock-t">אחרי שתספיק לנסות את הכלים — הערכה שווה הרבה יותר.</span>
+        </div>
+      </article>
+
+      <article class="uc-item" data-level="4">
+        <div class="uc-icon" aria-hidden="true">🎓</div>
+        <h3>הקורס המלא</h3>
+        <p>18 שיעורים, שיטת CRAFT מלאה, גישה ללא הגבלת זמן.</p>
+        <a class="uc-go" href="#" id="ucCourse">לקבלת הגישה ←</a>
+        <div class="uc-lock">
+          <span class="uc-lock-i" aria-hidden="true">🔒</span>
+          <b>נפתח במייל החמישי</b>
+          <span class="uc-lock-t">ההפתעה שבסוף הרצף.</span>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="uc-help" id="ucHelp">
+      עוד לא נרשמת? <a href="#signup">ההרשמה כאן</a> — והמייל הראשון מגיע מיד.
+    </p>
+
+  </div>
+</section>
+
+<style>
+/* ───── מרכז הפתיחה — עצמאי, לא נשען על style.css ───── */
+#unlock.uc{
+  --u-ink:#14171e; --u-ink2:#4d5461; --u-line:#dce0e8;
+  --u-bg:#ffffff; --u-card:#f7f9fb; --u-accent:#0f5f8a; --u-soft:#e6f0f6;
+  --u-lockbg:#eef1f5; --u-lockink:#6b7280;
+  background:var(--u-bg); color:var(--u-ink);
+  padding:clamp(46px,6.5vw,80px) 20px;
+  font-family:"Heebo",-apple-system,"Segoe UI",Arial,sans-serif;
+  direction:rtl; text-align:right; border-top:1px solid var(--u-line);
+}
+#unlock .uc-in{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+#unlock .uc-eyebrow{margin:0;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--u-accent)}
+#unlock .uc-title{margin:0;font-size:clamp(25px,4vw,36px);font-weight:800;line-height:1.25;text-wrap:balance}
+#unlock .uc-sub{margin:0;font-size:17.5px;color:var(--u-ink2);max-width:60ch;line-height:1.7}
+
+#unlock .uc-progress{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+#unlock .uc-bar{flex:1;min-width:180px;height:9px;background:var(--u-lockbg);border-radius:99px;overflow:hidden}
+#unlock .uc-bar i{display:block;height:100%;background:var(--u-accent);border-radius:99px;width:0;transition:width .5s ease}
+#unlock .uc-count{font-size:14.5px;font-weight:600;color:var(--u-ink2);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+#unlock .uc-grid{display:grid;gap:16px}
+@media(min-width:700px){#unlock .uc-grid{grid-template-columns:1fr 1fr}}
+
+#unlock .uc-item{
+  position:relative;background:var(--u-card);border:1px solid var(--u-line);
+  border-radius:13px;padding:22px 24px;display:flex;flex-direction:column;gap:9px;
+  transition:border-color .2s,box-shadow .2s;
+}
+#unlock .uc-item.is-open{
+  background:var(--u-bg);border-color:var(--u-accent);
+  box-shadow:0 1px 2px rgba(20,23,30,.04),0 10px 28px -20px rgba(15,95,138,.5);
+}
+#unlock .uc-icon{font-size:26px;line-height:1}
+#unlock .uc-item h3{margin:0;font-size:19.5px;font-weight:700;color:var(--u-ink)}
+#unlock .uc-item p{margin:0;font-size:15.5px;color:var(--u-ink2);line-height:1.6}
+
+#unlock .uc-go{
+  display:none;margin-top:4px;align-self:flex-start;
+  font-size:16px;font-weight:700;color:var(--u-accent);text-decoration:none;
+  border-bottom:2px solid transparent;transition:border-color .15s;
+}
+#unlock .uc-go:hover{border-bottom-color:var(--u-accent)}
+#unlock .uc-item.is-open .uc-go{display:inline-block}
+
+#unlock .uc-lock{
+  margin-top:4px;background:var(--u-lockbg);border-radius:9px;padding:12px 14px;
+  display:flex;flex-direction:column;gap:3px;font-size:14.5px;color:var(--u-lockink);line-height:1.55;
+}
+#unlock .uc-lock b{color:var(--u-ink);font-size:15px}
+#unlock .uc-lock-i{font-size:17px}
+#unlock .uc-lock a{color:var(--u-accent)}
+#unlock .uc-item.is-open .uc-lock{display:none}
+
+#unlock .uc-help{margin:0;font-size:15px;color:var(--u-ink2)}
+#unlock .uc-help a{color:var(--u-accent);font-weight:600}
+#unlock .uc-help[hidden]{display:none}
+
+/* הודעת פתיחה שמופיעה רגע אחרי שנפתח מנעול חדש */
+#unlock .uc-toast{
+  position:fixed;inset-inline:0;top:0;z-index:950;
+  background:#0f5f8a;color:#fff;text-align:center;
+  padding:13px 18px;font-size:16px;font-weight:600;
+  font-family:"Heebo",Arial,sans-serif;direction:rtl;
+}
+#unlock .uc-toast[hidden]{display:none}
+
+@media (prefers-color-scheme: dark){
+  #unlock.uc{
+    --u-ink:#eaecf2; --u-ink2:#aeb5c3; --u-line:#2b303b;
+    --u-bg:#0f1218; --u-card:#171b23; --u-accent:#4aa8d8; --u-soft:#16303d;
+    --u-lockbg:#1e232d; --u-lockink:#8f97a6;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  #unlock .uc-bar i{transition:none}
+}
+</style>
+
+<script>
+(function () {
+  'use strict';
+
+  var KEY   = 'alfl_unlock_level';
+  var TOTAL = 4;
+  var MAP   = { tools: 1, glossary: 2, kit: 3, course: 4, '1': 1, '2': 2, '3': 3, '4': 4 };
+
+  /* ⬅ להחליף: כתובת ההרשמה לקורס בסקולר, מהמייל החמישי */
+  var COURSE_URL = 'https://my.schooler.biz/s/119813/1787674789915';
+
+  function read() {
+    try {
+      var v = parseInt(localStorage.getItem(KEY), 10);
+      return isNaN(v) ? 0 : Math.min(Math.max(v, 0), TOTAL);
+    } catch (e) { return 0; }        /* מצב פרטי / חסימת אחסון */
+  }
+
+  function write(v) {
+    try { localStorage.setItem(KEY, String(v)); } catch (e) {}
+  }
+
+  function fromUrl() {
+    try {
+      var k = new URLSearchParams(location.search).get('k');
+      if (!k) return 0;
+      return MAP[k.toLowerCase().trim()] || 0;
+    } catch (e) { return 0; }
+  }
+
+  function render(level, justUnlocked) {
+    var items = document.querySelectorAll('#unlock .uc-item');
+    for (var i = 0; i < items.length; i++) {
+      var need = parseInt(items[i].getAttribute('data-level'), 10);
+      if (level >= need) items[i].classList.add('is-open');
+      else items[i].classList.remove('is-open');
+    }
+
+    var fill  = document.getElementById('ucFill');
+    var count = document.getElementById('ucCount');
+    if (fill)  fill.style.width = (level / TOTAL * 100) + '%';
+    if (count) count.textContent = level + ' מתוך ' + TOTAL + ' נפתחו';
+
+    var help = document.getElementById('ucHelp');
+    if (help) help.hidden = level > 0;
+
+    var course = document.getElementById('ucCourse');
+    if (course) course.setAttribute('href', COURSE_URL);
+
+    if (justUnlocked) {
+      var t = document.createElement('div');
+      t.className = 'uc-toast';
+      t.textContent = 'נפתח! ' + level + ' מתוך ' + TOTAL + ' זמינים לך עכשיו.';
+      var sec = document.getElementById('unlock');
+      if (sec) {
+        sec.appendChild(t);
+        setTimeout(function () { t.remove(); }, 4500);
+      }
+    }
+  }
+
+  var saved  = read();
+  var linked = fromUrl();
+  var level  = Math.max(saved, linked);        /* מצטבר — אף פעם לא יורד */
+  if (level !== saved) write(level);
+
+  render(level, linked > saved && linked > 0);
+
+  /* אם הגיע עם מפתח — לגלול למרכז הפתיחה כדי שיראה מה נפתח */
+  if (linked > 0) {
+    var target = document.getElementById('unlock');
+    if (target) {
+      setTimeout(function () {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 250);
+    }
+  }
+})();
+</script>
+
+<!-- END funnel-blocks -->
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p class="site-version" aria-label="version">V0.1 · שחר הפקות AI · נבנה עבור כל מי שרוצה ללמוד</p>
             <p>© 2026 AI-learning-for-ALL - כל הזכויות שמורות לשמוליק שחר יועץ לימודי המנגיש לימודי בינה מלאכותית לכל אדם</p>
             <p class="footer-contact">טלפון: <a href="tel:+972522603831">+972522603831</a> | אימייל: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+            <p class="footer-legal"><a href="privacy.html">מדיניות פרטיות</a> · <a href="terms.html">תנאי שימוש</a> · <a href="accessibility.html">הצהרת נגישות</a></p>
         </div>
     </footer>
 

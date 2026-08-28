@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" data-version="V0.1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content="V0.1">
+    <meta name="application-name" content="שחר הפקות AI V0.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/%D7%A6%D7%99%D7%9C%D7%95%D7%9D%20%D7%9E%D7%A1%D7%9A%202026-02-09%20160037.png">
+    <title>ערכת הפרומפטים · AI-learning-for-ALL</title>
+    <meta name="description" content="24 פרומפטים מוכנים לפי מקצוע, בנויים לפי שיטת CRAFT">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/colorful%20digital%20media%20sy.png" alt="לוגו" class="logo-icon">
+                    <span class="logo-stack">
+                        <span class="logo-text">AI-learning-for-ALL</span>
+                        <span class="logo-byline">שחר הפקות AI · V0.1</span>
+                        <span class="logo-dedication">נבנה עבור כל מי שרוצה ללמוד</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">בית</a></li>
+                <li><a href="#intro">מה זה AI?</a></li>
+                <li class="dropdown">
+                    <a href="#topics" class="dropdown-toggle">שיעורים ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/intro-to-ai.html">1. מבוא ל-AI</a></li>
+                        <li><a href="pages/ai-history.html">2. ההיסטוריה של AI</a></li>
+                        <li><a href="pages/machine-learning.html">3. למידת מכונה</a></li>
+                        <li><a href="pages/ai-daily-life.html">4. AI בחיי היומיום</a></li>
+                        <li><a href="pages/ai-tools.html">5. כלים מעשיים</a></li>
+                        <li><a href="pages/prompt-engineering.html">6. הנדסת הנחייה</a></li>
+                        <li><a href="pages/ai-ethics.html">7. אתיקה ב-AI</a></li>
+                        <li><a href="pages/ai-future.html">8. העתיד של AI</a></li>
+                        <li><a href="pages/glossary.html">9. מילון מושגים</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/glossary.html">מילון</a></li>
+                <li><a href="pages/ai-tools.html">כלים</a></li>
+                <li><a href="#about">אודות</a></li>
+            </ul>
+            <form class="nav-search" id="site-search" role="search">
+                <input type="search" name="q" placeholder="חיפוש מילים ומושגים..." aria-label="חיפוש באתר" />
+                <button type="submit" aria-label="חפש">🔍</button>
+            </form>
+            <nav class="lang-switcher" aria-label="בחירת שפה">
+                <span class="lang-active" aria-current="page">עברית</span>
+                <a href="index-en.html" hreflang="en" lang="en">English</a>
+                <a href="index-ar.html" hreflang="ar" lang="ar">العربية</a>
+                <a href="index-hi.html" hreflang="hi" lang="hi">हिन्दी</a>
+                <a href="index-ru.html" hreflang="ru" lang="ru">Русский</a>
+            </nav>
+            <button type="button" class="mobile-menu-btn" aria-label="תפריט">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+<style>
+.gp{--g-ink:#14171e;--g-ink2:#4d5461;--g-line:#dce0e8;--g-bg:#ffffff;--g-card:#f7f9fb;
+  --g-accent:#0f5f8a;--g-warn:#8a3a1f;--g-warnbg:#fdf0ea;--g-ok:#1a6b53;--g-okbg:#e9f5f0;
+  font-family:"Heebo",Arial,sans-serif;direction:rtl;text-align:right;color:var(--g-ink);
+  background:var(--g-bg);padding:clamp(30px,5vw,60px) 20px;}
+.gp-in{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+.gp h1{margin:0;font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.22;text-wrap:balance}
+.gp .gp-lead{margin:0;font-size:18.5px;color:var(--g-ink2);line-height:1.7;max-width:62ch}
+.gp h2{margin:26px 0 0;font-size:clamp(22px,3.4vw,29px);font-weight:700;line-height:1.3}
+.gp h3{margin:16px 0 0;font-size:19px;font-weight:700}
+.gp p{margin:0;line-height:1.75;font-size:16.5px}
+.gp-card{background:var(--g-card);border:1px solid var(--g-line);border-radius:12px;padding:22px 24px;
+  display:flex;flex-direction:column;gap:10px}
+.gp-note{border-radius:10px;padding:16px 18px;font-size:16px;line-height:1.7;border:1px solid}
+.gp-note.warn{background:var(--g-warnbg);border-color:var(--g-warn);color:var(--g-ink)}
+.gp-note.warn b{color:var(--g-warn)}
+.gp-note.ok{background:var(--g-okbg);border-color:var(--g-ok);color:var(--g-ink)}
+.gp-note.ok b{color:var(--g-ok)}
+.gp-note.todo{background:#fff7e0;border-color:#a07000;color:var(--g-ink)}
+.gp-note.todo b{color:#a07000}
+.gp ul{margin:0;padding-inline-start:22px;line-height:1.8;font-size:16.5px}
+.gp ul.plain{list-style:none;padding:0}
+.gp ul.plain li{position:relative;padding-inline-start:24px;margin-bottom:9px}
+.gp ul.plain li::before{content:"";position:absolute;inset-inline-start:6px;top:12px;width:7px;height:7px;
+  border-radius:50%;background:var(--g-accent)}
+.gp .yes::before{background:var(--g-ok)}
+.gp .no::before{background:var(--g-warn)}
+.gp pre{margin:0;background:#0f1218;color:#e8eaf0;border-radius:10px;padding:18px 20px;
+  overflow-x:auto;direction:ltr;text-align:left;font-size:14.5px;line-height:1.7;white-space:pre-wrap}
+.gp pre[dir="rtl"]{direction:rtl;text-align:right}
+.gp .gp-back{display:inline-block;margin-top:8px;color:var(--g-accent);font-weight:600;text-decoration:none}
+.gp .gp-back:hover{text-decoration:underline}
+.gp table{border-collapse:collapse;width:100%;font-size:16px}
+.gp th,.gp td{border:1px solid var(--g-line);padding:10px 13px;text-align:right;vertical-align:top}
+.gp th{background:var(--g-card);font-weight:700}
+.gp-tw{overflow-x:auto}
+@media (prefers-color-scheme:dark){
+ .gp{--g-ink:#eaecf2;--g-ink2:#aeb5c3;--g-line:#2b303b;--g-bg:#0f1218;--g-card:#171b23;
+   --g-accent:#4aa8d8;--g-warn:#e0836a;--g-warnbg:#2a1a15;--g-ok:#63b79b;--g-okbg:#13251f}
+ .gp-note.todo{background:#2a2312;border-color:#c9a227}
+ .gp-note.todo b{color:#e0bb45}
+}
+</style>
+<main class="gp"><div class="gp-in">
+<h1>ערכת הפרומפטים</h1>
+<p class="gp-lead">שמונה חבילות לפי מקצוע. כל פרומפט בנוי לפי שיטת <b>CRAFT</b> — הקשר, תפקיד, פעולה, פורמט, טון — כדי שתוכל לשנות אותו ולהבין למה הוא עובד.</p>
+<div class="gp-note ok"><b>איך להשתמש בזה נכון:</b> תבחר <b>פרומפט אחד</b> שרלוונטי למשהו שאתה באמת צריך לעשות השבוע. תריץ אותו על משימה אמיתית, לא על תרגיל. מי שמעתיק את כל הערכה ולא מריץ כלום — לא מרוויח ממנה כלום.</div>
+<div class="gp-note warn"><b>לפני שאתה מדביק משהו:</b> אף פרומפט כאן לא דורש פרטים מזהים של לקוחות. אם אתה מתפתה להדביק מסמך אמיתי — קרא קודם את <a href="tools.html">נוהל המידע הרגיש</a>.</div>
+
+<h2>🧭 יועצים ומאמנים</h2>
+<div class="gp-card"><h3>הצעת מחיר ללקוח חדש</h3><pre dir="rtl">אתה מנסח הצעות מחיר עבור יועץ עסקי עצמאי בישראל.
+לפני שאתה כותב, שאל אותי 4 שאלות: מי הלקוח ומה ביקש, מה כלול ומה לא, לוח זמנים, טווח מחיר.
+אחרי שאענה — כתוב הצעה בעברית, עד עמוד אחד, בטון ענייני וחם, בלי סופרלטיבים.
+סיים בסעיף "מה לא כלול" ובשורת תוקף להצעה.</pre></div>
+<div class="gp-card"><h3>סיכום פגישת אבחון</h3><pre dir="rtl">אתה עוזר אישי של יועץ. אני אדביק הערות גולמיות מפגישה.
+הפק סיכום בעברית במבנה: מה הלקוח אמר · מה זיהיתי · 3 המלצות לפי סדר עדיפות · מה הצעד הבא ומי אחראי.
+כתוב ענייני, בלי מילים מנופחות. אם חסר לך מידע — כתוב "חסר" במקום להמציא.</pre></div>
+<div class="gp-card"><h3>מייל מעקב אחרי שבועיים</h3><pre dir="rtl">כתוב מייל מעקב ללקוח פוטנציאלי שקיבל ממני הצעה לפני שבועיים ולא ענה.
+הטון: חבר שמזכיר, לא מוכר שלוחץ. עד 90 מילה.
+בלי "רק רציתי לבדוק". סיים בשאלה אחת קונקרטית שקל לענות עליה במשפט.</pre></div>
+
+<h2>🎨 מעצבים ויוצרים</h2>
+<div class="gp-card"><h3>פענוח בריף מלקוח</h3><pre dir="rtl">אתה מנהל פרויקטים בסטודיו עיצוב. אדביק לך בריף שקיבלתי מלקוח.
+הפק: מה הלקוח באמת מבקש · מה לא ברור ודורש שאלה · הנחות סמויות שכדאי לאמת · 5 שאלות הבהרה לשלוח לו.
+בעברית, בטבלה.</pre></div>
+<div class="gp-card"><h3>תיאור פרויקט לתיק עבודות</h3><pre dir="rtl">כתוב תיאור פרויקט לתיק העבודות שלי כמעצב.
+מבנה: האתגר · הפתרון · התוצאה. עד 120 מילה.
+טון מקצועי ולא מתנשא, בגוף ראשון. בלי "פתרון חדשני ופורץ דרך".
+אשלח לך את פרטי הפרויקט בהודעה הבאה.</pre></div>
+<div class="gp-card"><h3>תמחור פרויקט עיצוב</h3><pre dir="rtl">אתה יועץ תמחור למעצבים עצמאיים בישראל.
+שאל אותי: היקף העבודה, מספר סבבי תיקונים, לוח זמנים, זכויות שימוש.
+אחר כך הצג טווח מחיר עם נימוק לכל רכיב, והצע 3 חבילות: בסיסית, מומלצת, מורחבת.</pre></div>
+
+<h2>🩺 מטפלים וקליניקות</h2>
+<div class="gp-card"><h3>מכתב תיאום ציפיות</h3><pre dir="rtl">כתוב מכתב תיאום ציפיות למטופל חדש בקליניקה.
+כולל: מה קורה בפגישה הראשונה · משך וזמינות · מדיניות ביטולים · אופן התשלום.
+טון: רגוע ומכבד, בעברית פשוטה. עד 250 מילה.
+אל תכלול שום תוכן רפואי או אבחנתי.</pre></div>
+<div class="gp-card"><h3>תוכן חינוכי למטופלים</h3><pre dir="rtl">כתוב פוסט קצר לעמוד של הקליניקה בנושא שאתן לך.
+מבנה: שאלה שאנשים שואלים · הסבר בשפה יומיומית · מה כדאי לעשות · מתי לפנות לאיש מקצוע.
+עד 150 מילה. בלי הבטחות תוצאה ובלי ייעוץ רפואי אישי.</pre></div>
+<div class="gp-card"><h3>מענה לביקורת שלילית</h3><pre dir="rtl">קיבלתי ביקורת שלילית פומבית. אדביק אותה.
+כתוב תגובה: מכירה בתחושה · לא מתווכחת בפומבי · לא חושפת שום פרט על המטופל · מציעה להמשיך בערוץ פרטי.
+עד 60 מילה, בטון שקט.</pre></div>
+
+<h2>🛍️ מסחר וחנויות</h2>
+<div class="gp-card"><h3>תיאור מוצר שמוכר</h3><pre dir="rtl">אתה קופירייטר למסחר אלקטרוני בישראל.
+אדביק מפרט מוצר יבש. הפק תיאור בעברית: משפט פתיחה שתופס · 3 בולטים של תועלת (לא תכונה) · פסקת סיכום · שורת קריאה לפעולה.
+עד 120 מילה. בלי "המוצר המהפכני".</pre></div>
+<div class="gp-card"><h3>מענה לשאלות חוזרות</h3><pre dir="rtl">אדביק 10 שאלות שלקוחות שואלים אותי שוב ושוב.
+הפק לכל אחת תשובה קצרה ואחידה בטון של החנות שלי — ידידותי, ענייני, בלי התלהבות מוגזמת.
+סדר לפי תדירות, ותסמן איפה כדאי להוסיף מידע לדף המוצר כדי שהשאלה תיעלם.</pre></div>
+<div class="gp-card"><h3>מייל נטישת עגלה</h3><pre dir="rtl">כתוב מייל ללקוח שהשאיר מוצרים בעגלה ולא סיים.
+מייל אחד בלבד, לא סדרה. עד 80 מילה.
+להזכיר מה נשאר, לענות על ההתנגדות הסבירה ביותר (משלוח או החזרות), וקריאה לפעולה אחת.
+בלי לחץ ובלי ספירה לאחור.</pre></div>
+
+<h2>📊 הנהלת חשבונות ורו״ח</h2>
+<div class="gp-card"><h3>סיכום מסמכים ללקוח</h3><pre dir="rtl">אני מנהל חשבונות. אדביק נתונים מסוכמים של לקוח (בלי פרטים מזהים).
+כתוב סיכום חודשי בעברית פשוטה שלקוח לא-פיננסי יבין: מה נכנס · מה יצא · מה חריג לעומת חודש קודם · מה דורש תשומת לב.
+בלי ז׳רגון חשבונאי. סעיפים קצרים.</pre></div>
+<div class="gp-card"><h3>מכתב תזכורת על חוב</h3><pre dir="rtl">כתוב תזכורת ללקוח שלא שילם חשבונית שמועדה עבר.
+אני אגיד לך אם זה לקוח טוב שאיחר פעם ראשונה או לקוח שמאחר דרך קבע — התאם את הטון בהתאם.
+עד 90 מילה, מכבד, עם בקשת פעולה ברורה ותאריך.</pre></div>
+<div class="gp-card"><h3>הסבר נוהל בשפה פשוטה</h3><pre dir="rtl">אדביק נוהל או דרישה רגולטורית מנוסחת בשפה משפטית.
+תרגם אותה לעברית פשוטה שבעל עסק קטן יבין: מה נדרש · עד מתי · מה קורה אם לא · מה לעשות בפועל, שלב אחר שלב.
+ציין במפורש אם משהו לא ברור לך במקור.</pre></div>
+
+<h2>🏘️ נדל״ן וביטוח</h2>
+<div class="gp-card"><h3>תיאור נכס</h3><pre dir="rtl">אתה כותב תיאורי נכסים למתווך בישראל.
+אדביק מפרט יבש. הפק תיאור בעברית: פתיחה שמייצרת תמונה · 4 בולטים · פסקה על הסביבה · קריאה לפעולה.
+עד 130 מילה. בלי "נכס ייחודי במיקום מנצח". רק עובדות שאפשר לאמת.</pre></div>
+<div class="gp-card"><h3>השוואת מסלולים ללקוח</h3><pre dir="rtl">אני סוכן ביטוח. אדביק 3 מסלולים.
+הפק טבלת השוואה בעברית פשוטה: למי כל מסלול מתאים · מה כלול · מה לא כלול · העלות.
+הוסף שורה "מה לשאול אותי לפני שמחליטים". בלי להמליץ על מסלול — רק להציג.</pre></div>
+<div class="gp-card"><h3>מייל חימום לליד קר</h3><pre dir="rtl">כתוב מייל ראשון לליד שהשאיר פרטים לפני חודשיים ולא חזר.
+עד 70 מילה. בלי "נשמח לעמוד לשירותך".
+לפתוח במשהו קונקרטי שהשתנה בשוק מאז, ולסיים בשאלה אחת.</pre></div>
+
+<h2>🎓 מורים ומדריכים</h2>
+<div class="gp-card"><h3>תוכנית שיעור</h3><pre dir="rtl">אתה מתכנן שיעורים. אתן לך נושא, שכבת גיל ומשך.
+הפק תוכנית: מטרה אחת ברורה · פתיחה שמעוררת סקרנות (5 דק׳) · גוף עם 2 פעילויות · סיכום ובדיקת הבנה · מה להכין מראש.
+התאם את השפה לגיל שאציין.</pre></div>
+<div class="gp-card"><h3>דף עבודה מותאם רמה</h3><pre dir="rtl">אדביק נושא. הפק דף עבודה בשלוש רמות קושי — מתקשה, ממוצע, מתקדם — על אותו תוכן.
+כל רמה: 5 שאלות, מהקל לקשה. הוסף מחוון תשובות בסוף.</pre></div>
+<div class="gp-card"><h3>משוב לתלמיד</h3><pre dir="rtl">כתוב משוב לתלמיד שאתן לך את פרטיו.
+מבנה: מה עבד טוב וספציפית למה · נקודה אחת לשיפור עם צעד מעשי · משפט סיום מעודד שאינו חלול.
+עד 90 מילה, פונה לתלמיד עצמו.</pre></div>
+
+<h2>⚙️ שירות ותפעול</h2>
+<div class="gp-card"><h3>מענה לתלונה</h3><pre dir="rtl">אדביק תלונת לקוח.
+כתוב תשובה: מכירה בבעיה בלי להתגונן · מסבירה מה קרה אם ידוע · אומרת מה נעשה ומתי · מציעה פיצוי אם מתאים.
+עד 100 מילה. בלי "אנו מתנצלים על אי הנוחות".</pre></div>
+<div class="gp-card"><h3>כתיבת נוהל עבודה</h3><pre dir="rtl">אני אתאר תהליך שקורה אצלי בעסק.
+הפק נוהל כתוב: מטרה · מי אחראי · שלבים ממוספרים · מה עושים בחריגה · איך יודעים שהצליח.
+כתוב כך שעובד חדש יוכל לבצע בלי לשאול.</pre></div>
+<div class="gp-card"><h3>תסריט שיחה</h3><pre dir="rtl">כתוב תסריט לשיחת טלפון יוצאת בנושא שאציין.
+כולל: פתיחה של 15 שניות · שאלת אבחון · 3 התנגדויות נפוצות ומענה לכל אחת · סגירה.
+שפה מדוברת, לא כתובה. סמן איפה עוצרים ומקשיבים.</pre></div>
+
+<h2>תזכורת: שיטת CRAFT</h2>
+<div class="gp-tw"><table>
+<tr><th>אות</th><th>מה זה</th><th>שאלה שעונים עליה</th></tr>
+<tr><td><b>C · הקשר</b></td><td>הרקע</td><td>על מה מדובר, ולמי זה נוגע?</td></tr>
+<tr><td><b>R · תפקיד</b></td><td>מי הכלי</td><td>באיזה כובע הוא עונה לי?</td></tr>
+<tr><td><b>A · פעולה</b></td><td>מה לעשות</td><td>מה בדיוק אני מבקש שייעשה?</td></tr>
+<tr><td><b>F · פורמט</b></td><td>איך זה ייראה</td><td>אורך, מבנה, טבלה או טקסט?</td></tr>
+<tr><td><b>T · טון</b></td><td>באיזה קול</td><td>רשמי, חברי, ענייני?</td></tr>
+</table></div>
+<p><a class="gp-back" href="index.html#unlock">← חזרה למרכז הפתיחה</a></p>
+</div></main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="site-version" aria-label="version">V0.1 · שחר הפקות AI · נבנה עבור כל מי שרוצה ללמוד</p>
+            <p>© 2026 AI-learning-for-ALL - כל הזכויות שמורות לשמוליק שחר יועץ לימודי המנגיש לימודי בינה מלאכותית לכל אדם</p>
+            <p class="footer-contact">טלפון: <a href="tel:+972522603831">+972522603831</a> | אימייל: <a href="mailto:shaharprod@gmail.com">shaharprod@gmail.com</a></p>
+            <p class="footer-legal"><a href="privacy.html">מדיניות פרטיות</a> · <a href="terms.html">תנאי שימוש</a> · <a href="accessibility.html">הצהרת נגישות</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
