@@ -402,15 +402,9 @@ html{scroll-behavior:smooth}
 
 <script>
 (function () {
-  /* 1 · מקור ההגעה — נשמר מה-URL כדי לדעת איזה ערוץ באמת עובד.
-        דוגמה לשימוש בסרטון:  ...AI-learning-for-ALL/?src=youtube  */
-  try {
-    var src = new URLSearchParams(location.search).get('src');
-    if (src) {
-      var f = document.getElementById('lc-source');
-      if (f) f.value = src.slice(0, 40);
-    }
-  } catch (e) {}
+  /* 1 · מקור ההגעה — לא נדרש כאן קוד. טופס רב מסר שולח לבד שדה נסתר
+        בשם __ravxx_url__ שמכיל את הכתובת המלאה של הדף כולל הפרמטרים,
+        כך ש-?src=youtube נשמר אוטומטית עם כל נרשם. אומת בפועל 28.8.2026. */
 
   /* 2 · הפס התחתון — מופיע אחרי גלילה של מסך אחד, נעלם כשהטופס על המסך */
   var bar = document.getElementById('lcBar');
