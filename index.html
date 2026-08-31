@@ -238,9 +238,10 @@
     </ul>
 
     <div class="lc-card">
-      <!-- טופס רב מסר. הקוד למטה הוא ההטמעה החכמה: שורה אחת שמתעדכנת לבד
-           בכל שמירה של הטופס במערכת. לעדכון השדות — עורכים ברב מסר, לא כאן.
-           הרשימה המקבלת: aidigitalmedia news letter -->
+      <!-- טופס בשליטתנו. שולח ל-Apps Script → רשימה 116224 ברב-מסר (סדרת החימום)
+           ואז מפנה לדף התודה של RAVMESER.
+           אזהרה: אין להחזיר לכאן הטמעה של רב-מסר (form.ravpage.co.il).
+           ההפניה שלה אחרי שליחה הובילה לעמוד הקורס בתשלום ושרפה לידים קרים. -->
 
       <p class="lc-consent-note">
         בשליחת הטופס אני מאשר/ת קבלת תוכן, עדכונים והצעות במייל משמוליק שחר ·
@@ -248,12 +249,28 @@
         או בהודעה חוזרת. קראתי את <a href="privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a>.
       </p>
 
-      <div class="lc-embed">
-        <script type='text/javascript' src='//form.ravpage.co.il/199da4b239c59ef4915d05ca85d61f1665CEA402' charset='UTF-8'></script>
-        <noscript>
-          <p class="lc-fine">הטופס דורש JavaScript. אפשר גם לשלוח לי מייל ואוסיף אותך ידנית.</p>
-        </noscript>
-      </div>
+      <form class="lc-form" id="leadform" novalidate>
+        <div class="lc-row">
+          <label class="lc-field">
+            <span class="lc-label">שם פרטי</span>
+            <input type="text" id="lc-first" name="first" required autocomplete="given-name" placeholder="איך לפנות אליך">
+          </label>
+          <label class="lc-field">
+            <span class="lc-label">אימייל</span>
+            <input type="email" id="lc-email" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" dir="ltr">
+          </label>
+        </div>
+
+        <div class="lc-hp" aria-hidden="true">
+          <label for="lc-company">אל תמלאו שדה זה</label>
+          <input type="text" id="lc-company" name="company" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="lc-btn" id="lc-btn">קבלו גישה עכשיו</button>
+        <p class="lc-msg" id="lc-msg" role="status" aria-live="polite"></p>
+      </form>
+
+      <iframe name="lc_sink" id="lc_sink" style="display:none" title=""></iframe>
 
       <p class="lc-fine">
         בלי כרטיס אשראי. בלי התחייבות. בלי שיחת מכירה.<br>
@@ -359,9 +376,12 @@
   border-radius:10px;padding:13px 15px;
 }
 #signup .lc-consent-note a{color:inherit;text-decoration:underline}
-#signup .lc-embed{margin:0 0 18px;min-height:180px}
-#signup .lc-embed iframe,#signup .lc-embed form{max-width:100%}
-#signup .lc-embed *{max-width:100%;box-sizing:border-box}
+#signup .lc-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+#signup .lc-msg{margin:0;text-align:center;font-size:15px;min-height:22px;font-weight:600;color:var(--lc-ink-2)}
+#signup .lc-msg.err{color:#c02626}
+#signup .lc-msg.ok{color:#1a7f45}
+#signup .lc-form input.bad{border-color:#c02626;box-shadow:0 0 0 3px rgba(192,38,38,.12)}
+#signup .lc-btn[disabled]{opacity:.6;cursor:default}
 #signup .lc-proof{margin:0;font-size:14px;color:var(--lc-ink-2);line-height:1.75}
 
 /* מצב כהה — לפי העדפת המערכת */
@@ -695,6 +715,140 @@ html{scroll-behavior:smooth}
             <p class="footer-legal"><a href="privacy.html">מדיניות פרטיות</a> · <a href="terms.html">תנאי שימוש</a> · <a href="accessibility.html">הצהרת נגישות</a></p>
         </div>
     </footer>
+
+    <!-- ───── טופס הלידים · שולח ל-Apps Script ומפנה לדף התודה ───── -->
+    <script>
+    (function(){
+      var ENDPOINT = "https://script.google.com/macros/s/AKfycbw97fyIF5o4gpVw9XZbRsDGqMCOb0XkBY-npfr6Xjq46ATz3ZNZBZQRgy_x1vG66x73/exec";
+      var THANKYOU = "https://shaharprod.github.io/RAVMESER/thankyou.html";
+
+      var form = document.getElementById('leadform');
+      if(!form) return;
+      var btn  = document.getElementById('lc-btn');
+      var msg  = document.getElementById('lc-msg');
+      var fEl  = document.getElementById('lc-first');
+      var eEl  = document.getElementById('lc-email');
+      var hpEl = document.getElementById('lc-company');
+
+      function qp(){
+        var o={}, q=location.search.replace(/^\?/,'');
+        if(!q) return o;
+        q.split('&').forEach(function(kv){
+          var i=kv.indexOf('='); if(i<0) return;
+          try{ o[decodeURIComponent(kv.slice(0,i)).toLowerCase()] = decodeURIComponent(kv.slice(i+1).replace(/\+/g,' ')); }catch(e){}
+        });
+        return o;
+      }
+      function hostOf(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return ''; } }
+
+      function detectSource(){
+        var p = qp();
+        var click = p.fbclid||p.gclid||p.ttclid||p.li_fat_id||p.msclkid||p.twclid||'';
+        var ref = hostOf(document.referrer);
+        var net =
+          p.utm_source ? p.utm_source :
+          p.src        ? p.src :
+          p.fbclid    ? (ref.indexOf('instagram')>-1 ? 'instagram' : 'facebook') :
+          p.ttclid    ? 'tiktok'   :
+          p.gclid     ? 'google'   :
+          p.li_fat_id ? 'linkedin' :
+          ref.indexOf('instagram')>-1 ? 'instagram' :
+          ref.indexOf('facebook')>-1  ? 'facebook'  :
+          ref.indexOf('tiktok')>-1    ? 'tiktok'    :
+          ref.indexOf('linkedin')>-1  ? 'linkedin'  :
+          ref.indexOf('youtube')>-1   ? 'youtube'   :
+          ref.indexOf('t.co')>-1      ? 'twitter'   :
+          ref.indexOf('google')>-1    ? 'google'    :
+          ref ? ref : 'direct';
+        var medium = p.utm_medium || (click ? 'paid' : (ref ? 'organic' : 'direct'));
+        return {
+          utm_source: String(net).slice(0,30),
+          utm_medium: String(medium).slice(0,20),
+          utm_campaign: (p.utm_campaign||'').slice(0,60),
+          utm_content: (p.utm_content||'').slice(0,60),
+          utm_term: (p.utm_term||'').slice(0,60),
+          click_id: String(click).slice(0,120),
+          referrer: (document.referrer||'').slice(0,200),
+          landed: new Date().toISOString()
+        };
+      }
+
+      var FT_KEY = 'ravmeser_first_touch';
+      function firstTouch(){
+        var now = detectSource();
+        try{
+          var saved = JSON.parse(localStorage.getItem(FT_KEY) || 'null');
+          if(saved && saved.utm_source && saved.utm_source !== 'direct'){
+            saved.last_source = now.utm_source;
+            return saved;
+          }
+          localStorage.setItem(FT_KEY, JSON.stringify(now));
+        }catch(e){}
+        return now;
+      }
+      function sourceTag(a){
+        var m = a.utm_medium === 'paid' ? 'p' : (a.utm_medium === 'direct' ? 'd' : 'o');
+        var c = (a.utm_content || a.utm_campaign || '').slice(0,16);
+        return (a.utm_source + '/' + m + (c ? '/' + c : '')).slice(0,40);
+      }
+      var ATTR = firstTouch();
+
+      function say(t, cls){ msg.textContent = t; msg.className = 'lc-msg ' + (cls||''); }
+      function valid(e){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e); }
+      function done(){ location.href = THANKYOU; }   // אירוע Lead של הפיקסל נורה שם, ורק שם
+
+      // מסלול גיבוי: טופס אמיתי אל iframe נסתר — עוקף CORS לחלוטין
+      function fallbackSend(payload){
+        var f = document.createElement('form');
+        f.method='POST'; f.action=ENDPOINT; f.target='lc_sink';
+        Object.keys(payload).forEach(function(k){
+          var i=document.createElement('input');
+          i.type='hidden'; i.name=k; i.value=payload[k];
+          f.appendChild(i);
+        });
+        document.body.appendChild(f);
+        f.submit();
+        setTimeout(done, 1600);
+      }
+
+      form.addEventListener('submit', function(ev){
+        ev.preventDefault();
+        if(hpEl && hpEl.value){ say('נרשמת!','ok'); return; }   // מלכודת בוטים
+
+        var first = fEl.value.trim();
+        var email = eEl.value.trim().toLowerCase();
+        fEl.classList.remove('bad'); eEl.classList.remove('bad');
+        if(!first){ fEl.classList.add('bad'); fEl.focus(); return say('צריך שם פרטי','err'); }
+        if(!valid(email)){ eEl.classList.add('bad'); eEl.focus(); return say('כתובת המייל לא נראית תקינה','err'); }
+
+        btn.disabled = true;
+        say('רגע…','');
+
+        var payload = {
+          first: first, email: email,
+          source: sourceTag(ATTR),
+          utm_source: ATTR.utm_source, utm_medium: ATTR.utm_medium,
+          utm_campaign: ATTR.utm_campaign, utm_content: ATTR.utm_content,
+          utm_term: ATTR.utm_term, click_id: ATTR.click_id,
+          referrer: ATTR.referrer, landed: ATTR.landed,
+          page: 'AI-learning-for-ALL/index.html'
+        };
+
+        fetch(ENDPOINT, {
+          method:'POST',
+          headers:{'Content-Type':'text/plain;charset=utf-8'},
+          body: JSON.stringify(payload),
+          redirect:'follow'
+        })
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          if(d && d.ok){ say('נרשמת! מעבירים אותך…','ok'); done(); }
+          else { say('משהו השתבש. מנסים שוב…','err'); fallbackSend(payload); }
+        })
+        .catch(function(){ fallbackSend(payload); });
+      });
+    })();
+    </script>
 
     <script src="script.js"></script>
 </body>
