@@ -1313,14 +1313,20 @@ html.a11y-cursor, html.a11y-cursor * {
         margin-top: 0.2rem;
     }
 
-    /* 3 · שורת החיפוש — נשארת גלויה, נמוכה יותר */
+    /* 3 · שורת החיפוש — גם היא נכנסת לתפריט ההמבורגר ולא תופסת שורה קבועה */
     .nav-search {
+        display: none;
+    }
+
+    .nav-links.active ~ .nav-search {
+        display: flex;
+        margin-top: 0.2rem;
         padding: 0 0.2rem 0.1rem;
     }
 
     .nav-search input[type="search"] {
-        padding: 0.22rem 0.5rem;
-        font-size: 0.85rem;
+        padding: 0.3rem 0.55rem;
+        font-size: 0.9rem;
     }
 
     /* 4 · ה-hero לפי גובה התוכן, לא לפי גובה המסך */
