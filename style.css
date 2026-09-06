@@ -1266,3 +1266,77 @@ html.a11y-cursor, html.a11y-cursor * {
         font-size: 1rem;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   מובייל — כותרת קומפקטית ו-hero שאינו תופס מסך מלא · 6.9.2026
+   מטרה: הבאנר הקבוע חסם ~150px (18% מהמסך) וה-hero תפס 100svh.
+   כאן: הבאנר יורד לשורת לוגו + חיפוש, בורר השפות עובר להמבורגר,
+   וה-hero מתכווץ לגובה התוכן שלו.
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* 1 · הלוגו — שורה אחת במקום שלוש */
+    .logo-byline,
+    .logo-dedication,
+    html[dir="ltr"] .logo-byline,
+    html[dir="ltr"] .logo-dedication,
+    html[lang="en"] .logo-byline,
+    html[lang="en"] .logo-dedication {
+        display: none !important;
+    }
+
+    .logo-icon,
+    html[dir="ltr"] .logo-icon,
+    html[lang="en"] .logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .header .nav {
+        padding: 0.25rem 0.6rem;
+        row-gap: 0.2rem;
+    }
+
+    .header::after,
+    html[dir="ltr"] .header::after,
+    html[lang="en"] .header::after {
+        height: 5px;
+    }
+
+    /* 2 · בורר השפות — נכנס לתוך תפריט ההמבורגר במקום שורה קבועה */
+    .lang-switcher {
+        display: none;
+    }
+
+    .nav-links.active ~ .lang-switcher {
+        display: flex;
+        margin-top: 0.2rem;
+    }
+
+    /* 3 · שורת החיפוש — נשארת גלויה, נמוכה יותר */
+    .nav-search {
+        padding: 0 0.2rem 0.1rem;
+    }
+
+    .nav-search input[type="search"] {
+        padding: 0.22rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    /* 4 · ה-hero לפי גובה התוכן, לא לפי גובה המסך */
+    .hero {
+        min-height: 0;
+        padding: calc(var(--header-offset) + 1rem) 1rem 1.75rem;
+    }
+
+    .hero-tagline { margin-bottom: 0.5rem; }
+    .hero h1      { margin-bottom: 0.75rem; }
+    .hero p       { margin-bottom: 1.25rem; }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 0;
+        padding: calc(var(--header-offset) + 0.9rem) 0.75rem 1.5rem;
+    }
+}
