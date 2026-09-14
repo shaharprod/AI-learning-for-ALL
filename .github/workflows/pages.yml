@@ -34,6 +34,7 @@ jobs:
           cp terms.html terms-en.html terms-ar.html terms-hi.html terms-ru.html _site/
           cp style.css script.js a11y.js _site/
           cp tools.html kit.html _site/
+          cp sitemap.xml _site/
           mkdir -p _site/downloads
           cp downloads/glossary.pdf _site/downloads/
           cp -r pages _site/
