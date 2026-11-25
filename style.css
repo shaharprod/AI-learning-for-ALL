@@ -1346,3 +1346,9 @@ html.a11y-cursor, html.a11y-cursor * {
         padding: calc(var(--header-offset) + 0.9rem) 0.75rem 1.5rem;
     }
 }
+
+
+/* ===== Footer social links ===== */
+.footer-social { margin: 0.6rem 0; }
+.footer-social a { color: inherit; text-decoration: underline; margin: 0 0.35rem; white-space: nowrap; }
+.footer-social a:hover, .footer-social a:focus { opacity: 0.8; }
